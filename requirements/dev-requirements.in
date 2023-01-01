@@ -1,0 +1,6 @@
+-c requirements.txt
+nbmake
+pip-tools
+pre-commit
+pytest
+watchdog[watchmedo]

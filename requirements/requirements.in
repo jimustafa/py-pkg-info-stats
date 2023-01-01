@@ -1,0 +1,13 @@
+aiohttp
+ipykernel
+ipympl
+ipyvuetify
+ipywidgets
+jupytext
+lxml
+matplotlib
+nbclient==0.6.8
+pandas
+python-dotenv
+requests
+voila==0.5.0a0

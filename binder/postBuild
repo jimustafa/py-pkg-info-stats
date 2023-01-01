@@ -1,0 +1,5 @@
+set -ex
+
+make notebooks
+
+wget https://raw.githubusercontent.com/jimustafa/py-pkg-info-stats/data/table.csv -O ./build/table.csv

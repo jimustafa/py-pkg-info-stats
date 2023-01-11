@@ -23,7 +23,7 @@ initial_item = query_parameters.get('item', ['home'])[0]
 
 parameters = {
     'item': initial_item,
-    'normalization': 'rel',
+    'normalization': 'abs',
     'yscale': 'linear',
     'selected_labels': list(df[df['item']==initial_item]['label'].value_counts().index),
 }
@@ -151,14 +151,24 @@ item = v.Select(
 
 normalization = v.RadioGroup(
     v_model=parameters['normalization'],
+    v_slots=[{
+        'name': 'label',
+        'children': v.Html(tag='div', children=['Normalization:']),
+    }],
+    row=True,
     children=[
-        v.Radio(label='rel', value='rel'),
         v.Radio(label='abs', value='abs'),
+        v.Radio(label='rel', value='rel'),
     ]
 )
 
 yscale = v.RadioGroup(
     v_model=parameters['yscale'],
+    v_slots=[{
+        'name': 'label',
+        'children': v.Html(tag='div', children=['Scale:']),
+    }],
+    row=True,
     children=[
         v.Radio(label='linear', value='linear'),
         v.Radio(label='log', value='log'),
@@ -174,27 +184,23 @@ label_selector = v.Select(
 )
 
 
-def update():
-    figure.update()
-    table.update()
-
-
 def update_item(widget, event, data):
     parameters.update({'item': data})
     label_selector.items = list(df[df['item']==parameters['item']]['label'].value_counts().index)
     label_selector.value = list(df[df['item']==parameters['item']]['label'].value_counts().index)
     parameters.update({'selected_labels': list(df[df['item']==parameters['item']]['label'].value_counts().index)})
-    update()
+    figure.update()
+    table.update()
 
 
 def update_yscale(widget, event, data):
     parameters.update({'yscale': data})
-    update()
+    figure.update()
 
 
 def update_normalization(widget, event, data):
     parameters.update({'normalization': data})
-    update()
+    figure.update()
 
 
 def update_label_selector(widget, event, data):

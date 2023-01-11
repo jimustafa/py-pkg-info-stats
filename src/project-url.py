@@ -60,13 +60,22 @@ class Figure():
     def update(self):
         self.plot()
 
-        self.ax.set_yscale(parameters['yscale'])
+        if parameters['normalization'] == 'abs' and parameters['yscale'] == 'log':
+            self.ax.set_yscale('symlog', subs=[2, 3, 4, 5, 6, 7, 8, 9])
+        else:
+            self.ax.set_yscale(parameters['yscale'])
 
         if parameters['normalization'] == 'abs':
             self.ax.set_ylabel('Count')
+            self.ax.set_ylim(bottom=0)
+            self.ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%.0f'))
         if parameters['normalization'] == 'rel':
             self.ax.set_ylabel('Fraction')
             self.ax.set_ylim([1e-3, 1e0])
+            self.ax.yaxis.set_major_formatter(mpl.ticker.FormatStrFormatter('%g'))
+
+        self.ax.set_axisbelow(True)
+        self.ax.grid(True, which='both')
 
         self.fig.canvas.draw()
 

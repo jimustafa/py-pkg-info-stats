@@ -19,10 +19,13 @@ df = pd.read_csv(pathlib.Path().resolve() / 'table.csv')
 query_string = os.environ.get('QUERY_STRING', '')
 query_parameters = urllib.parse.parse_qs(query_string)
 
+initial_item = query_parameters.get('item', ['home'])[0]
+
 parameters = {
-    'item': query_parameters.get('item', ['home'])[0],
+    'item': initial_item,
     'normalization': 'rel',
     'yscale': 'linear',
+    'selected_labels': list(df[df['item']==initial_item]['label'].value_counts().index),
 }
 
 
@@ -112,7 +115,7 @@ class Table(v.DataTable):
         self.update()
 
     def update(self):
-        df_tmp = df[df['item']==parameters['item']]
+        df_tmp = df[(df['item']==parameters['item']) & (df['label'].isin(parameters['selected_labels']))]
 
         self.items = [
             {
@@ -162,6 +165,14 @@ yscale = v.RadioGroup(
     ]
 )
 
+label_selector = v.Select(
+    label='Labels',
+    multiple=True,
+    chips=True,
+    items=list(df[df['item']==parameters['item']]['label'].value_counts().index),
+    value=parameters['selected_labels']
+)
+
 
 def update():
     figure.update()
@@ -170,6 +181,9 @@ def update():
 
 def update_item(widget, event, data):
     parameters.update({'item': data})
+    label_selector.items = list(df[df['item']==parameters['item']]['label'].value_counts().index)
+    label_selector.value = list(df[df['item']==parameters['item']]['label'].value_counts().index)
+    parameters.update({'selected_labels': list(df[df['item']==parameters['item']]['label'].value_counts().index)})
     update()
 
 
@@ -183,9 +197,15 @@ def update_normalization(widget, event, data):
     update()
 
 
+def update_label_selector(widget, event, data):
+    parameters.update({'selected_labels': data})
+    table.update()
+
+
 item.on_event('change', update_item)
 normalization.on_event('change', update_normalization)
 yscale.on_event('change', update_yscale)
+label_selector.on_event('change', update_label_selector)
 
 
 v.Container(fluid=True, children=[
@@ -208,6 +228,7 @@ v.Container(fluid=True, children=[
                 children=[
                     v.CardTitle(children=['Results']),
                     v.CardText(children=[
+                        label_selector,
                         table,
                     ]),
             ]),

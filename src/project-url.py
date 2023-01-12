@@ -35,6 +35,7 @@ import ipyvuetify as v
 import ipywidgets as widgets
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import traitlets
 
 
 output = widgets.Output()
@@ -96,20 +97,38 @@ class Figure():
         self.ax.set_xticks(self.ax.get_xticks(), categories, rotation=45, ha='right')
 
 
-class Table(v.DataTable):
+class MyDataTable(v.VuetifyTemplate):
+    headers = traitlets.List([]).tag(sync=True, allow_null=True)
+    items = traitlets.List([]).tag(sync=True, allow_null=True)
+
+    @traitlets.default('template')
+    def _template(self):
+        return '''
+          <v-data-table
+            :headers="headers"
+            :items="items"
+            :items-per-page="20"
+            :footer-props="{
+                'items-per-page-options': [10, 20, 50, 100, -1]
+            }"
+            style="width: 100%"
+          >
+            <template v-slot:item.package="{ item }">
+              <a :href="`https://pypi.org/project/${item.package}`" target="_blank">{{ item.package }}</a>
+            </template>
+          </v-data-table>
+        '''
+
+
+class Table(MyDataTable):
     def __init__(self):
         super().__init__(
-            style_='width: 100%',
             headers=[
                 {'text': 'Package', 'value': 'package'},
                 {'text': 'SourceRank', 'value': 'rank'},
                 {'text': 'Item', 'value': 'item'},
                 {'text': 'Label', 'value': 'label'},
             ],
-            items_per_page=20,
-            footer_props={
-                'items-per-page-options': [10, 20, 50, 100, -1],
-            },
         )
 
         self.update()

@@ -108,7 +108,7 @@ class Table(v.DataTable):
             ],
             items_per_page=20,
             footer_props={
-                'items-per-page-options': [10, 20, 50, 100 -1],
+                'items-per-page-options': [10, 20, 50, 100, -1],
             },
         )
 
@@ -232,7 +232,7 @@ v.Container(fluid=True, children=[
                 class_='mb-4',
                 outlined=True,
                 children=[
-                    v.CardTitle(children=['Results']),
+                    v.CardTitle(children=['Table']),
                     v.CardText(children=[
                         label_selector,
                         table,

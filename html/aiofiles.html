@@ -1,0 +1,2269 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo">
+
+    
+
+    <title>aiofiles · PyPI</title>
+    <meta name="description" content="File support for asyncio.">
+
+    <link rel="stylesheet" href="/static/css/warehouse-ltr.3a9112f7.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.d37999f3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.35549fe8.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: latest releases for aiofiles" href="/rss/project/aiofiles/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/aiofiles/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/aiofiles/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title" content="aiofiles">
+    <meta property="og:description" content="File support for asyncio.">
+    
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script async
+            data-ga-id="UA-55961911-1"
+            data-ga4-id="G-RW7D75DF8V"
+            
+            src="/static/js/warehouse.e90282b8.js">
+    </script>
+    
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+</script>
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+  integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+  crossorigin="anonymous"
+></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW7D75DF8V"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&dnt=true"></script>
+    <script async
+        src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+        integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+        crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body data-controller="viewport-toggle">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-viewport-toggle-target="switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+      </div>
+      </noscript>
+
+      
+        <div data-html-include="/_includes/notification-banners/">
+        </div>
+      
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+      </div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+      </div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.2a411bc6.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false" data-controller="search-focus" data-action="keydown@window->search-focus#focusSearchField" data-search-focus-target="searchField">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+            <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="/sponsors/" class="horizontal-menu__link">Sponsors</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="View menu">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Main menu">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="/sponsors/">Sponsors</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div data-html-include="/_includes/administer-project-include/aiofiles">
+</div>
+
+<div class="hidden"
+  data-controller="github-repo-stats"
+  data-github-repo-stats-github-repo-info-outlet=".github-repo-info"
+  data-github-repo-stats-url-value="https://api.github.com/repos/Tinche/aiofiles"
+  data-github-repo-stats-issue-url-value="https://api.github.com/search/issues?q=repo:Tinche/aiofiles+type:issue+state:open&amp;per_page=1">
+</div>
+
+
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        aiofiles 23.1.0
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install aiofiles</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="/project/aiofiles/">
+        <span>Latest version</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Released: <time datetime="2023-02-09T01:15:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 9, 2023
+</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">File support for asyncio.</p>
+    
+    <div data-html-include="/_includes/edit-project-button/aiofiles">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for aiofiles">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="#description" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="#history" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="#files" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Bug Tracker
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles#history" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-scroll" aria-hidden="true"></i>Changelog
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Repository
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/aiofiles" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache Software License (Apache-2.0)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:tinchester@gmail.com">Tin Tvrtkovic</a></p>
+  
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=3.7, &lt;4.0
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/tinchester/" aria-label="tinchester">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0fa9824f1e3848facbe268d8763d7c81bb2fb2de/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31353764316665343833303934393065633434613066373563393333383339663f73697a653d3530" height="50" width="50" alt="Avatar for tinchester from gravatar.com" title="Avatar for tinchester from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          tinchester
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+            OSI Approved :: Apache Software License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+        <div class="sidebar-section" data-ea-publisher="psf" data-ea-type="psf" data-ea-keywords="pypi-sidebar"></div>
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for aiofiles">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="#description" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="#data" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="#history" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Release history. Focus will be moved to the history panel.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="#files" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Download files. Focus will be moved to the project files.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <a href="https://pypi.python.org/pypi/aiofiles" rel=nofollow><img alt="https://img.shields.io/pypi/v/aiofiles.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/fda524a4cfd31aa42fbb6823da2d07e846d1f6c2/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f61696f66696c65732e737667"></a>
+<a href="https://github.com/Tinche/aiofiles/actions" rel=nofollow><img alt="https://github.com/Tinche/aiofiles/actions/workflows/main.yml/badge.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/aebc0e67741645cab28a98e6d8178e8f43ebb920/68747470733a2f2f6769746875622e636f6d2f54696e6368652f61696f66696c65732f616374696f6e732f776f726b666c6f77732f6d61696e2e796d6c2f62616467652e737667"></a>
+<a href="https://codecov.io/gh/Tinche/aiofiles" rel=nofollow><img alt="https://codecov.io/gh/Tinche/aiofiles/branch/master/graph/badge.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8c3005a54873b06c82584622300069e164408820/68747470733a2f2f636f6465636f762e696f2f67682f54696e6368652f61696f66696c65732f6272616e63682f6d61737465722f67726170682f62616467652e737667"></a>
+<a href="https://github.com/Tinche/aiofiles" rel=nofollow><img alt="Supported Python versions" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/24a90b86a8996231bc01884e4ba6c19c24006d43/68747470733a2f2f696d672e736869656c64732e696f2f707970692f707976657273696f6e732f61696f66696c65732e737667"></a>
+<p><strong>aiofiles</strong> is an Apache2 licensed library, written in Python, for handling local
+disk files in asyncio applications.</p>
+<p>Ordinary local file IO is blocking, and cannot easily and portably made
+asynchronous. This means doing file IO may interfere with asyncio applications,
+which shouldn’t block the executing thread. aiofiles helps with this by
+introducing asynchronous versions of files that support delegating operations to
+a separate thread pool.</p>
+<pre><code><span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>open</span><span class=p>(</span><span class=s1>'filename'</span><span class=p>,</span> <span class=n>mode</span><span class=o>=</span><span class=s1>'r'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>    <span class=n>contents</span> <span class=o>=</span> <span class=k>await</span> <span class=n>f</span><span class=o>.</span><span class=n>read</span><span class=p>()</span><span class=w>
+</span><span class=nb>print</span><span class=p>(</span><span class=n>contents</span><span class=p>)</span><span class=w>
+</span><span class=s1>'My file contents'</span></code></pre>
+<p>Asynchronous iteration is also supported.</p>
+<pre><code><span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>open</span><span class=p>(</span><span class=s1>'filename'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>    <span class=k>async</span> <span class=k>for</span> <span class=n>line</span> <span class=ow>in</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>        <span class=o>...</span></code></pre>
+<p>Asynchronous interface to tempfile module.</p>
+<pre><code><span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>tempfile</span><span class=o>.</span><span class=n>TemporaryFile</span><span class=p>(</span><span class=s1>'wb'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>    <span class=k>await</span> <span class=n>f</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=sa>b</span><span class=s1>'Hello, World!'</span><span class=p>)</span></code></pre>
+<section id=features>
+<h2>Features</h2>
+<ul class=simple>
+<li><p>a file API very similar to Python’s standard, blocking API</li>
+<li><p>support for buffered and unbuffered binary files, and buffered text files</li>
+<li><p>support for <span class="docutils literal">async</span>/<span class="docutils literal">await</span> (<a href="https://peps.python.org/pep-0492" rel=nofollow>PEP 492</a>) constructs</li>
+<li><p>async interface to tempfile module</li>
+</ul>
+</section>
+<section id=installation>
+<h2>Installation</h2>
+<p>To install aiofiles, simply:</p>
+<pre><code>$<span class=w> </span>pip<span class=w> </span>install<span class=w> </span>aiofiles</code></pre>
+</section>
+<section id=usage>
+<h2>Usage</h2>
+<p>Files are opened using the <span class="docutils literal">aiofiles.open()</span> coroutine, which in addition to
+mirroring the builtin <span class="docutils literal">open</span> accepts optional <span class="docutils literal">loop</span> and <span class="docutils literal">executor</span>
+arguments. If <span class="docutils literal">loop</span> is absent, the default loop will be used, as per the
+set asyncio policy. If <span class="docutils literal">executor</span> is not specified, the default event loop
+executor will be used.</p>
+<p>In case of success, an asynchronous file object is returned with an
+API identical to an ordinary file, except the following methods are coroutines
+and delegate to an executor:</p>
+<ul class=simple>
+<li><p><span class="docutils literal">close</span></li>
+<li><p><span class="docutils literal">flush</span></li>
+<li><p><span class="docutils literal">isatty</span></li>
+<li><p><span class="docutils literal">read</span></li>
+<li><p><span class="docutils literal">readall</span></li>
+<li><p><span class="docutils literal">read1</span></li>
+<li><p><span class="docutils literal">readinto</span></li>
+<li><p><span class="docutils literal">readline</span></li>
+<li><p><span class="docutils literal">readlines</span></li>
+<li><p><span class="docutils literal">seek</span></li>
+<li><p><span class="docutils literal">seekable</span></li>
+<li><p><span class="docutils literal">tell</span></li>
+<li><p><span class="docutils literal">truncate</span></li>
+<li><p><span class="docutils literal">writable</span></li>
+<li><p><span class="docutils literal">write</span></li>
+<li><p><span class="docutils literal">writelines</span></li>
+</ul>
+<p>In case of failure, one of the usual exceptions will be raised.</p>
+<p><span class="docutils literal">aiofiles.stdin</span>, <span class="docutils literal">aiofiles.stdout</span>, <span class="docutils literal">aiofiles.stderr</span>,
+<span class="docutils literal">aiofiles.stdin_bytes</span>, <span class="docutils literal">aiofiles.stdout_bytes</span>, and
+<span class="docutils literal">aiofiles.stderr_bytes</span> provide async access to <span class="docutils literal">sys.stdin</span>,
+<span class="docutils literal">sys.stdout</span>, <span class="docutils literal">sys.stderr</span>, and their corresponding <span class="docutils literal">.buffer</span> properties.</p>
+<p>The <span class="docutils literal">aiofiles.os</span> module contains executor-enabled coroutine versions of
+several useful <span class="docutils literal">os</span> functions that deal with files:</p>
+<ul class=simple>
+<li><p><span class="docutils literal">stat</span></li>
+<li><p><span class="docutils literal">sendfile</span></li>
+<li><p><span class="docutils literal">rename</span></li>
+<li><p><span class="docutils literal">renames</span></li>
+<li><p><span class="docutils literal">replace</span></li>
+<li><p><span class="docutils literal">remove</span></li>
+<li><p><span class="docutils literal">unlink</span></li>
+<li><p><span class="docutils literal">mkdir</span></li>
+<li><p><span class="docutils literal">makedirs</span></li>
+<li><p><span class="docutils literal">rmdir</span></li>
+<li><p><span class="docutils literal">removedirs</span></li>
+<li><p><span class="docutils literal">link</span></li>
+<li><p><span class="docutils literal">symlink</span></li>
+<li><p><span class="docutils literal">readlink</span></li>
+<li><p><span class="docutils literal">listdir</span></li>
+<li><p><span class="docutils literal">scandir</span></li>
+<li><p><span class="docutils literal">access</span></li>
+<li><p><span class="docutils literal">path.exists</span></li>
+<li><p><span class="docutils literal">path.isfile</span></li>
+<li><p><span class="docutils literal">path.isdir</span></li>
+<li><p><span class="docutils literal">path.islink</span></li>
+<li><p><span class="docutils literal">path.getsize</span></li>
+<li><p><span class="docutils literal">path.getatime</span></li>
+<li><p><span class="docutils literal">path.getctime</span></li>
+<li><p><span class="docutils literal">path.samefile</span></li>
+<li><p><span class="docutils literal">path.sameopenfile</span></li>
+</ul>
+<section id=tempfile>
+<h3>Tempfile</h3>
+<p><strong>aiofiles.tempfile</strong> implements the following interfaces:</p>
+<ul class=simple>
+<li><p>TemporaryFile</li>
+<li><p>NamedTemporaryFile</li>
+<li><p>SpooledTemporaryFile</li>
+<li><p>TemporaryDirectory</li>
+</ul>
+<p>Results return wrapped with a context manager allowing use with async with and async for.</p>
+<pre><code><span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>tempfile</span><span class=o>.</span><span class=n>NamedTemporaryFile</span><span class=p>(</span><span class=s1>'wb+'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>    <span class=k>await</span> <span class=n>f</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=sa>b</span><span class=s1>'Line1</span><span class=se>\n</span><span class=s1> Line2'</span><span class=p>)</span><span class=w>
+</span>    <span class=k>await</span> <span class=n>f</span><span class=o>.</span><span class=n>seek</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span><span class=w>
+</span>    <span class=k>async</span> <span class=k>for</span> <span class=n>line</span> <span class=ow>in</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>        <span class=nb>print</span><span class=p>(</span><span class=n>line</span><span class=p>)</span><span class=w>
+
+</span><span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>tempfile</span><span class=o>.</span><span class=n>TemporaryDirectory</span><span class=p>()</span> <span class=k>as</span> <span class=n>d</span><span class=p>:</span><span class=w>
+</span>    <span class=n>filename</span> <span class=o>=</span> <span class=n>os</span><span class=o>.</span><span class=n>path</span><span class=o>.</span><span class=n>join</span><span class=p>(</span><span class=n>d</span><span class=p>,</span> <span class=s2>"file.ext"</span><span class=p>)</span></code></pre>
+</section>
+<section id=writing-tests-for-aiofiles>
+<h3>Writing tests for aiofiles</h3>
+<p>Real file IO can be mocked by patching <span class="docutils literal">aiofiles.threadpool.sync_open</span>
+as desired. The return type also needs to be registered with the
+<span class="docutils literal">aiofiles.threadpool.wrap</span> dispatcher:</p>
+<pre><code><span class=n>aiofiles</span><span class=o>.</span><span class=n>threadpool</span><span class=o>.</span><span class=n>wrap</span><span class=o>.</span><span class=n>register</span><span class=p>(</span><span class=n>mock</span><span class=o>.</span><span class=n>MagicMock</span><span class=p>)(</span><span class=w>
+</span>    <span class=k>lambda</span> <span class=o>*</span><span class=n>args</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>:</span> <span class=n>threadpool</span><span class=o>.</span><span class=n>AsyncBufferedIOBase</span><span class=p>(</span><span class=o>*</span><span class=n>args</span><span class=p>,</span> <span class=o>**</span><span class=n>kwargs</span><span class=p>))</span><span class=w>
+
+</span><span class=k>async</span> <span class=k>def</span> <span class=nf>test_stuff</span><span class=p>():</span><span class=w>
+</span>    <span class=n>data</span> <span class=o>=</span> <span class=s1>'data'</span><span class=w>
+</span>    <span class=n>mock_file</span> <span class=o>=</span> <span class=n>mock</span><span class=o>.</span><span class=n>MagicMock</span><span class=p>()</span><span class=w>
+
+</span>    <span class=k>with</span> <span class=n>mock</span><span class=o>.</span><span class=n>patch</span><span class=p>(</span><span class=s1>'aiofiles.threadpool.sync_open'</span><span class=p>,</span> <span class=n>return_value</span><span class=o>=</span><span class=n>mock_file</span><span class=p>)</span> <span class=k>as</span> <span class=n>mock_open</span><span class=p>:</span><span class=w>
+</span>        <span class=k>async</span> <span class=k>with</span> <span class=n>aiofiles</span><span class=o>.</span><span class=n>open</span><span class=p>(</span><span class=s1>'filename'</span><span class=p>,</span> <span class=s1>'w'</span><span class=p>)</span> <span class=k>as</span> <span class=n>f</span><span class=p>:</span><span class=w>
+</span>            <span class=k>await</span> <span class=n>f</span><span class=o>.</span><span class=n>write</span><span class=p>(</span><span class=n>data</span><span class=p>)</span><span class=w>
+
+</span>        <span class=n>mock_file</span><span class=o>.</span><span class=n>write</span><span class=o>.</span><span class=n>assert_called_once_with</span><span class=p>(</span><span class=n>data</span><span class=p>)</span></code></pre>
+</section>
+<section id=history>
+<h3>History</h3>
+<section id=section-1>
+<h4>23.1.0 (2023-02-09)</h4>
+<ul class=simple>
+<li><p>Added <span class="docutils literal">aiofiles.os.access</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/146" rel=nofollow>#146</a></li>
+<li><p>Removed <span class="docutils literal">aiofiles.tempfile.temptypes.AsyncSpooledTemporaryFile.softspace</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/151" rel=nofollow>#151</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.stdin</span>, <span class="docutils literal">aiofiles.stdin_bytes</span>, and other stdio streams.
+<a href="https://github.com/Tinche/aiofiles/pull/154" rel=nofollow>#154</a></li>
+<li><p>Transition to <span class="docutils literal">asyncio.get_running_loop</span> (vs <span class="docutils literal">asyncio.get_event_loop</span>) internally.</li>
+</ul>
+</section>
+<section id=section-2>
+<h4>22.1.0 (2022-09-04)</h4>
+<ul class=simple>
+<li><p>Added <span class="docutils literal">aiofiles.os.path.islink</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/126" rel=nofollow>#126</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.os.readlink</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/125" rel=nofollow>#125</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.os.symlink</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/124" rel=nofollow>#124</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.os.unlink</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/123" rel=nofollow>#123</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.os.link</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/121" rel=nofollow>#121</a></li>
+<li><p>Added <span class="docutils literal">aiofiles.os.renames</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/120" rel=nofollow>#120</a></li>
+<li><p>Added <span class="docutils literal"><span class=pre>aiofiles.os.{listdir,</span> scandir}</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/143" rel=nofollow>#143</a></li>
+<li><p>Switched to CalVer.</li>
+<li><p>Dropped Python 3.6 support. If you require it, use version 0.8.0.</li>
+<li><p>aiofiles is now tested on Python 3.11.</li>
+</ul>
+</section>
+<section id=section-3>
+<h4>0.8.0 (2021-11-27)</h4>
+<ul class=simple>
+<li><p>aiofiles is now tested on Python 3.10.</li>
+<li><p>Added <span class="docutils literal">aiofiles.os.replace</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/107" rel=nofollow>#107</a></li>
+<li><p>Added <span class="docutils literal"><span class=pre>aiofiles.os.{makedirs,</span> removedirs}</span>.</li>
+<li><p>Added <span class="docutils literal"><span class=pre>aiofiles.os.path.{exists,</span> isfile, isdir, getsize, getatime, getctime, samefile, sameopenfile}</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/63" rel=nofollow>#63</a></li>
+<li><p>Added <cite>suffix</cite>, <cite>prefix</cite>, <cite>dir</cite> args to <span class="docutils literal">aiofiles.tempfile.TemporaryDirectory</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/116" rel=nofollow>#116</a></li>
+</ul>
+</section>
+<section id=section-4>
+<h4>0.7.0 (2021-05-17)</h4>
+<ul class=simple>
+<li><p>Added the <span class="docutils literal">aiofiles.tempfile</span> module for async temporary files.
+<a href="https://github.com/Tinche/aiofiles/pull/56" rel=nofollow>#56</a></li>
+<li><p>Switched to Poetry and GitHub actions.</li>
+<li><p>Dropped 3.5 support.</li>
+</ul>
+</section>
+<section id=section-5>
+<h4>0.6.0 (2020-10-27)</h4>
+<ul class=simple>
+<li><p><cite>aiofiles</cite> is now tested on ppc64le.</li>
+<li><p>Added <cite>name</cite> and <cite>mode</cite> properties to async file objects.
+<a href="https://github.com/Tinche/aiofiles/pull/82" rel=nofollow>#82</a></li>
+<li><p>Fixed a DeprecationWarning internally.
+<a href="https://github.com/Tinche/aiofiles/pull/75" rel=nofollow>#75</a></li>
+<li><p>Python 3.9 support and tests.</li>
+</ul>
+</section>
+<section id=section-6>
+<h4>0.5.0 (2020-04-12)</h4>
+<ul class=simple>
+<li><p>Python 3.8 support. Code base modernization (using <span class="docutils literal">async/await</span> instead of <span class="docutils literal">asyncio.coroutine</span>/<span class="docutils literal">yield from</span>).</li>
+<li><p>Added <span class="docutils literal">aiofiles.os.remove</span>, <span class="docutils literal">aiofiles.os.rename</span>, <span class="docutils literal">aiofiles.os.mkdir</span>, <span class="docutils literal">aiofiles.os.rmdir</span>.
+<a href="https://github.com/Tinche/aiofiles/pull/62" rel=nofollow>#62</a></li>
+</ul>
+</section>
+<section id=section-7>
+<h4>0.4.0 (2018-08-11)</h4>
+<ul class=simple>
+<li><p>Python 3.7 support.</li>
+<li><p>Removed Python 3.3/3.4 support. If you use these versions, stick to aiofiles 0.3.x.</li>
+</ul>
+</section>
+<section id=section-8>
+<h4>0.3.2 (2017-09-23)</h4>
+<ul class=simple>
+<li><p>The LICENSE is now included in the sdist.
+<a href="https://github.com/Tinche/aiofiles/pull/31" rel=nofollow>#31</a></li>
+</ul>
+</section>
+<section id=section-9>
+<h4>0.3.1 (2017-03-10)</h4>
+<ul class=simple>
+<li><p>Introduced a changelog.</li>
+<li><p><span class="docutils literal">aiofiles.os.sendfile</span> will now work if the standard <span class="docutils literal">os</span> module contains a <span class="docutils literal">sendfile</span> function.</li>
+</ul>
+</section>
+</section>
+<section id=contributing>
+<h3>Contributing</h3>
+<p>Contributions are very welcome. Tests can be run with <span class="docutils literal">tox</span>, please ensure
+the coverage at least stays the same before you submit a pull request.</p>
+</section>
+</section>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Bug Tracker
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles#history" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-scroll" aria-hidden="true"></i>Changelog
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/Tinche/aiofiles" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Repository
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/aiofiles" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache Software License (Apache-2.0)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:tinchester@gmail.com">Tin Tvrtkovic</a></p>
+  
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=3.7, &lt;4.0
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/tinchester/" aria-label="tinchester">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0fa9824f1e3848facbe268d8763d7c81bb2fb2de/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31353764316665343833303934393065633434613066373563393333383339663f73697a653d3530" height="50" width="50" alt="Avatar for tinchester from gravatar.com" title="Avatar for tinchester from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          tinchester
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+Apache+Software+License">
+            OSI Approved :: Apache Software License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <span class="reset-text margin-top">
+              <a href="/help/#project-release-notifications">Release notifications</a> |
+              <a href="/rss/project/aiofiles/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/23.1.0/">
+                <p class="release__version">
+                  23.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-09T01:15:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 9, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/22.1.0/">
+                <p class="release__version">
+                  22.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-09-04T17:09:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 4, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.8.0/">
+                <p class="release__version">
+                  0.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-11-27T15:05:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 27, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.7.0/">
+                <p class="release__version">
+                  0.7.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-05-16T23:16:25+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 16, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.6.0/">
+                <p class="release__version">
+                  0.6.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-10-27T17:36:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 27, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.5.0/">
+                <p class="release__version">
+                  0.5.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-04-11T23:17:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 11, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.4.0/">
+                <p class="release__version">
+                  0.4.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-08-11T17:24:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 11, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.3.2/">
+                <p class="release__version">
+                  0.3.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-10-23T17:32:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 23, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.3.1/">
+                <p class="release__version">
+                  0.3.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-03-10T00:06:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 10, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.3.0/">
+                <p class="release__version">
+                  0.3.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-02-24T23:48:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 24, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.2.1/">
+                <p class="release__version">
+                  0.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-04-06T22:55:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 6, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/aiofiles/0.2/">
+                <p class="release__version">
+                  0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-02-24T23:48:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 24, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+            <h3>
+              Source Distribution
+            </h3>
+
+            
+              
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/40/a0/07be94aecba162ed5147359f9883e82afd2ac13aed33678a008fc8c36f8b/aiofiles-23.1.0.tar.gz">
+          aiofiles-23.1.0.tar.gz
+        </a>
+        (15.6 kB
+        <a href="#copy-hash-modal-add3951f-2a83-4a7d-8724-8e6257fe6109">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-09T01:15:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 9, 2023
+</time>
+          
+          
+          <code>source</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+
+            
+            <h3>
+              Built Distribution
+            </h3>
+
+            
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/a8/76/635aa4f210d46ca105bfedd42d41f649b91d3e58422912726fc5e7965442/aiofiles-23.1.0-py3-none-any.whl">
+          aiofiles-23.1.0-py3-none-any.whl
+        </a>
+        (14.9 kB
+        <a href="#copy-hash-modal-df173ce9-2658-4b77-8cc5-70725000d290">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-09T01:15:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 9, 2023
+</time>
+          
+          
+          <code>py3</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+          </div>
+
+          
+          <div id="copy-hash-modal-add3951f-2a83-4a7d-8724-8e6257fe6109" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for aiofiles-23.1.0.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for aiofiles-23.1.0.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>edd247df9a19e0db16534d4baaf536d6609a43e1de5401d7a4c1c148753a1635</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="edd247df9a19e0db16534d4baaf536d6609a43e1de5401d7a4c1c148753a1635">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>d648a31366030470c97401741747065f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d648a31366030470c97401741747065f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>40a007be94aecba162ed5147359f9883e82afd2ac13aed33678a008fc8c36f8b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="40a007be94aecba162ed5147359f9883e82afd2ac13aed33678a008fc8c36f8b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-df173ce9-2658-4b77-8cc5-70725000d290" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for aiofiles-23.1.0-py3-none-any.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for aiofiles-23.1.0-py3-none-any.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>9312414ae06472eb6f1d163f555e466a23aed1c8f60c30cccf7121dba2e53eb2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9312414ae06472eb6f1d163f555e466a23aed1c8f60c30cccf7121dba2e53eb2">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>b47ce0f79821dcbc185ab303fe4aaeae</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b47ce0f79821dcbc185ab303fe4aaeae">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>a876635aa4f210d46ca105bfedd42d41f649b91d3e58422912726fc5e7965442</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a876635aa4f210d46ca105bfedd42d41f649b91d3e58422912726fc5e7965442">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.2351a86c.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Project name retention</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="/stats/">Statistics</a></li>
+              <li><a href="/trademarks/">Logos & trademarks</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypi/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="External link" target="_blank" rel="noopener">Translate PyPI</a></li>
+              <li><a href="/sponsors/">Sponsor PyPI</a></li>
+              <li><a href="https://github.com/pypi/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+              <li><a href="/policy/acceptable-use-policy/">Acceptable Use Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status:<a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>
+          
+"PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+<br>
+        </p>
+        <p>
+          © 2023 <a href="https://www.python.org/psf-landing/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop hidden" data-viewport-toggle-target="switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="/locale/">
+        <ul>
+          
+          <li>
+            <button
+              
+              class="language-switcher__selected"
+              
+              name="locale_id" value="en" type="submit"
+            >
+              English
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="es" type="submit"
+            >
+              español
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="fr" type="submit"
+            >
+              français
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ja" type="submit"
+            >
+              日本語
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="pt_BR" type="submit"
+            >
+              português (Brasil)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="uk" type="submit"
+            >
+              українська
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="el" type="submit"
+            >
+              Ελληνικά
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="de" type="submit"
+            >
+              Deutsch
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hans" type="submit"
+            >
+              中文 (简体)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hant" type="submit"
+            >
+              中文 (繁體)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ru" type="submit"
+            >
+              русский
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="he" type="submit"
+            >
+              עברית
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="eo" type="submit"
+            >
+              esperanto
+            </button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    <div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt=AWS loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+          
+          
+            Cloud computing
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt=Datadog loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://research.fb.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/e338a8302eed851d9793e0a4a92f57b315eb5998/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f66616365626f6f6b2d696e7374616772616d2d77686974652d6c6f676f2d6750686a57647a722e706e67" alt="Facebook / Instagram" loading=lazy>
+          <span class="sponsors__name">Facebook / Instagram</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt=Fastly loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+          
+          
+            CDN
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://careers.google.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt=Google loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+          
+          
+            Object Storage and Download Analytics
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#huawei">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/656ae2011c837dba1e2de4c8f85815eed86c0878/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6875617765692d77686974652d6c6f676f2d416a465f553652312e706e67" alt=Huawei loading=lazy>
+          <span class="sponsors__name">Huawei</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#microsoft">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/524d1ce72f7772294ca4c1fe05d21dec8fa3f8ea/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6d6963726f736f66742d77686974652d6c6f676f2d5a443172685444462e706e67" alt=Microsoft loading=lazy>
+          <span class="sponsors__name">Microsoft</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#nvidia">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/19eae9e26a9a9ffacc134095642b1392737c58fb/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6e76696469612d77686974652d6c6f676f2d46394c393761474c2e706e67" alt=NVIDIA loading=lazy>
+          <span class="sponsors__name">NVIDIA</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt=Pingdom loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#salesforce">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/932f54a6c688f0bbc0e2f4e7b7dc5c067eed6c55/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73616c6573666f7263652d77686974652d6c6f676f2d4539677a3053782d2e706e67" alt=Salesforce loading=lazy>
+          <span class="sponsors__name">Salesforce</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b1dc2c04aa1a8efbacd6dc6254bb63429af47b41/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d31556836754c32452e706e67" alt=Sentry loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+          
+          
+            Error logging
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt=StatusPage loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+          
+          
+            Status page
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</div>
+
+    
+  </body>
+
+</html>

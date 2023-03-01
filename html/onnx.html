@@ -1,0 +1,4823 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo">
+
+    
+
+    <title>onnx · PyPI</title>
+    <meta name="description" content="Open Neural Network Exchange">
+
+    <link rel="stylesheet" href="/static/css/warehouse-ltr.3a9112f7.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.d37999f3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.35549fe8.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: latest releases for onnx" href="/rss/project/onnx/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/onnx/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/onnx/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title" content="onnx">
+    <meta property="og:description" content="Open Neural Network Exchange">
+    
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script async
+            data-ga-id="UA-55961911-1"
+            data-ga4-id="G-RW7D75DF8V"
+            
+            src="/static/js/warehouse.e90282b8.js">
+    </script>
+    
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+</script>
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+  integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+  crossorigin="anonymous"
+></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW7D75DF8V"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&dnt=true"></script>
+    <script async
+        src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+        integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+        crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body data-controller="viewport-toggle">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-viewport-toggle-target="switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+      </div>
+      </noscript>
+
+      
+        <div data-html-include="/_includes/notification-banners/">
+        </div>
+      
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+      </div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+      </div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.2a411bc6.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false" data-controller="search-focus" data-action="keydown@window->search-focus#focusSearchField" data-search-focus-target="searchField">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+            <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="/sponsors/" class="horizontal-menu__link">Sponsors</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="View menu">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Main menu">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="/sponsors/">Sponsors</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div data-html-include="/_includes/administer-project-include/onnx">
+</div>
+
+<div class="hidden"
+  data-controller="github-repo-stats"
+  data-github-repo-stats-github-repo-info-outlet=".github-repo-info"
+  data-github-repo-stats-url-value="https://api.github.com/repos/onnx/onnx"
+  data-github-repo-stats-issue-url-value="https://api.github.com/search/issues?q=repo:onnx/onnx+type:issue+state:open&amp;per_page=1">
+</div>
+
+
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        onnx 1.13.1
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install onnx</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="/project/onnx/">
+        <span>Latest version</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Released: <time datetime="2023-02-22T18:33:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">Open Neural Network Exchange</p>
+    
+    <div data-html-include="/_includes/edit-project-button/onnx">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for onnx">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="#description" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="#history" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="#files" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/onnx/onnx" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/onnx" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache License v2.0</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:onnx-technical-discuss@lists.lfaidata.foundation">ONNX</a></p>
+  
+  
+  
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/onnx/" aria-label="onnx">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/93c9c11b757ee88bd4aebb4c3b44559b19f13e5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64643332623463326336343738363035383237396335623932666537356164303f73697a653d3530" height="50" width="50" alt="Avatar for onnx from gravatar.com" title="Avatar for onnx from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          onnx
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+        <div class="sidebar-section" data-ea-publisher="psf" data-ea-type="psf" data-ea-keywords="pypi-sidebar"></div>
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for onnx">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="#description" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="#data" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="#history" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Release history. Focus will be moved to the history panel.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="#files" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Download files. Focus will be moved to the project files.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <p align=center><img width=40% src="https://warehouse-camo.ingress.cmh1.psfhosted.org/a9e1f31f00b5e066d807512c86c93911952a2d81/68747470733a2f2f6769746875622e636f6d2f6f6e6e782f6f6e6e782f7261772f6d61696e2f646f63732f6f6e6e782d686f72697a6f6e74616c2d636f6c6f722e706e67"></p>
+<p><a href="https://dev.azure.com/onnx-pipelines/onnx/_build/latest?definitionId=5&amp;branchName=main" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/76f9d04bbcfff0e7a883ae14038d6a984d686e15/68747470733a2f2f6465762e617a7572652e636f6d2f6f6e6e782d706970656c696e65732f6f6e6e782f5f617069732f6275696c642f7374617475732f57696e646f77732d43493f6272616e63684e616d653d6d61696e" alt="Build Status"></a>
+<a href="https://dev.azure.com/onnx-pipelines/onnx/_build/latest?definitionId=7&amp;branchName=main" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/548b2e95727561d41dd99b32dab55a52668b772a/68747470733a2f2f6465762e617a7572652e636f6d2f6f6e6e782d706970656c696e65732f6f6e6e782f5f617069732f6275696c642f7374617475732f4c696e75782d43493f6272616e63684e616d653d6d61696e" alt="Build Status"></a>
+<a href="https://dev.azure.com/onnx-pipelines/onnx/_build/latest?definitionId=6&amp;branchName=main" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/4e74f61715aab8e280ed621222daac49965d34e8/68747470733a2f2f6465762e617a7572652e636f6d2f6f6e6e782d706970656c696e65732f6f6e6e782f5f617069732f6275696c642f7374617475732f4d61634f532d43493f6272616e63684e616d653d6d61696e" alt="Build Status"></a>
+<a href="https://bestpractices.coreinfrastructure.org/projects/3313" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/86c5632ccab0c8f4917213b1ad018cce67744f75/68747470733a2f2f626573747072616374696365732e636f7265696e6672617374727563747572652e6f72672f70726f6a656374732f333331332f6261646765" alt="CII Best Practices"></a></p>
+<p><a href="https://onnx.ai" rel=nofollow>Open Neural Network Exchange (ONNX)</a> is an open ecosystem that empowers AI developers
+to choose the right tools as their project evolves. ONNX provides an open source format for AI models, both deep learning and traditional ML. It defines an extensible computation graph model, as well as definitions of built-in operators and standard
+data types. Currently we focus on the capabilities needed for inferencing (scoring).</p>
+<p>ONNX is <a href="http://onnx.ai/supported-tools" rel=nofollow>widely supported</a> and can be found in many frameworks, tools, and hardware. Enabling interoperability between different frameworks and streamlining the path from research to production helps increase the speed of innovation in the AI community. We invite the community to join us and further evolve ONNX.</p>
+<h1>Use ONNX</h1>
+<ul>
+<li><a href="https://onnx.ai/onnx/" rel=nofollow>Documentation of ONNX Python Package</a></li>
+<li><a href="https://github.com/onnx/tutorials" rel=nofollow>Tutorials for creating ONNX models</a>.</li>
+<li><a href="https://github.com/onnx/models" rel=nofollow>Pre-trained ONNX models</a></li>
+</ul>
+<h1>Learn about the ONNX spec</h1>
+<ul>
+<li><a href="docs/Overview.md" rel=nofollow>Overview</a></li>
+<li><a href="docs/IR.md" rel=nofollow>ONNX intermediate representation spec</a></li>
+<li><a href="docs/Versioning.md" rel=nofollow>Versioning principles of the spec</a></li>
+<li><a href="docs/Operators.md" rel=nofollow>Operators documentation</a> (development version)</li>
+<li><a href="https://onnx.ai/onnx/operators/index.html" rel=nofollow>Operators documentation</a> (latest release)</li>
+<li><a href="docs/PythonAPIOverview.md" rel=nofollow>Python API Overview</a></li>
+</ul>
+<h1>Programming utilities for working with ONNX Graphs</h1>
+<ul>
+<li><a href="docs/ShapeInference.md" rel=nofollow>Shape and Type Inference</a></li>
+<li><a href="https://github.com/onnx/optimizer" rel=nofollow>Graph Optimization</a></li>
+<li><a href="docs/VersionConverter.md" rel=nofollow>Opset Version Conversion</a></li>
+</ul>
+<h1>Contribute</h1>
+<p>ONNX is a <a href="community/readme.md" rel=nofollow>community project</a>. We encourage you to join the effort and contribute feedback, ideas, and code. You can participate in the <a href="community/sigs.md" rel=nofollow>Special Interest Groups</a> and <a href="community/working-groups.md" rel=nofollow>Working Groups</a> to shape the future of ONNX.</p>
+<p>Check out our <a href="docs/CONTRIBUTING.md" rel=nofollow>contribution guide</a> to get started.</p>
+<p>If you think some operator should be added to ONNX specification, please read
+<a href="docs/AddNewOp.md" rel=nofollow>this document</a>.</p>
+<h1>Discuss</h1>
+<p>We encourage you to open <a href="https://github.com/onnx/onnx/issues" rel=nofollow>Issues</a>, or use <a href="https://lfaifoundation.slack.com/" rel=nofollow>Slack</a> (If you have not joined yet, please use this <a href="https://join.slack.com/t/lfaifoundation/shared_invite/zt-o65errpw-gMTbwNr7FnNbVXNVFkmyNA" rel=nofollow>link</a> to join the group) for more real-time discussion.</p>
+<h1>Follow Us</h1>
+<p>Stay up to date with the latest ONNX news. [<a href="https://www.facebook.com/onnxai/" rel=nofollow>Facebook</a>] [<a href="https://twitter.com/onnxai" rel=nofollow>Twitter</a>]</p>
+<h1>Installation</h1>
+<h2>Official Python packages</h2>
+<p>ONNX released packages are published in PyPi.</p>
+<pre><code>pip install onnx
+</code></pre>
+<p><a href="https://test.pypi.org/project/onnx-weekly/" rel=nofollow>Weekly packages</a> are published in test pypi to enable experimentation and early testing.</p>
+<h2>vcpkg packages</h2>
+<p>onnx is in the maintenance list of <a href="https://github.com/microsoft/vcpkg" rel=nofollow>vcpkg</a>, you can easily use vcpkg to build and install it.</p>
+<pre><code>git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.bat # For powershell
+./bootstrap-vcpkg.sh # For bash
+./vcpkg install onnx
+</code></pre>
+<h2>Conda packages</h2>
+<p>A binary build of ONNX is available from <a href="https://conda.io" rel=nofollow>Conda</a>, in <a href="https://conda-forge.org/" rel=nofollow>conda-forge</a>:</p>
+<pre><code>conda install -c conda-forge onnx
+</code></pre>
+<h2>Build ONNX from Source</h2>
+<p>Before building from source uninstall any existing versions of onnx <code>pip uninstall onnx</code>.</p>
+<p>c++17 or higher C++ compiler version is required to build ONNX from source on Windows. For other platforms, please use C++11 or higher versions.</p>
+<p>Generally speaking, you need to install <a href="https://github.com/protocolbuffers/protobuf" rel=nofollow>protobuf C/C++ libraries and tools</a> before proceeding forward. Then depending on how you installed protobuf, you need to set environment variable CMAKE_ARGS to "-DONNX_USE_PROTOBUF_SHARED_LIBS=ON" or "-DONNX_USE_PROTOBUF_SHARED_LIBS=OFF".  For example, you may need to run the following command:</p>
+<p>Linux:</p>
+<pre lang=bash><span class=nb>export</span><span class=w> </span><span class=nv>CMAKE_ARGS</span><span class=o>=</span><span class=s2>"-DONNX_USE_PROTOBUF_SHARED_LIBS=ON"</span>
+</pre>
+<p>Windows:</p>
+<pre lang=bat><span class=k>set</span> <span class=nv>CMAKE_ARGS</span><span class=p>=</span><span class=s2>"-DONNX_USE_PROTOBUF_SHARED_LIBS=ON"</span>
+</pre>
+<p>The ON/OFF depends on what kind of protobuf library you have. Shared libraries are files ending with *.dll/*.so/*.dylib. Static libraries are files ending with *.a/*.lib. This option depends on how you get your protobuf library and how it was built. And it is default OFF. You don't need to run the commands above if you'd prefer to use a static protobuf library.</p>
+<h3>Windows</h3>
+<p>If you are building ONNX from source, it is recommended that you also build Protobuf locally as a static library. The version distributed with conda-forge is a DLL, but ONNX expects it to be a static library. Building protobuf locally also lets you control the version of protobuf. The tested and recommended version is 3.20.2.</p>
+<p>The instructions in this README assume you are using Visual Studio.  It is recommended that you run all the commands from a shell started from "x64 Native Tools Command Prompt for VS 2019" and keep the build system generator for cmake (e.g., cmake -G "Visual Studio 16 2019") consistent while building protobuf as well as ONNX.</p>
+<p>You can get protobuf by running the following commands:</p>
+<pre lang=bat>git clone https://github.com/protocolbuffers/protobuf.git
+<span class=k>cd</span> protobuf
+git checkout v3.20.2
+<span class=k>cd</span> cmake
+cmake -G <span class=s2>"Visual Studio 16 2019"</span> -A x64 -DCMAKE_INSTALL_PREFIX=<span class=p>&lt;</span>protobuf_install_dir<span class=p>&gt;</span> -Dprotobuf_MSVC_STATIC_RUNTIME=OFF -Dprotobuf_BUILD_SHARED_LIBS=OFF -Dprotobuf_BUILD_TESTS=OFF -Dprotobuf_BUILD_EXAMPLES=OFF .
+msbuild protobuf.sln /m /p:Configuration=Release
+msbuild INSTALL.vcxproj /p:Configuration=Release
+</pre>
+<p>Then it will be built as a static library and installed to &lt;protobuf_install_dir&gt;. Please add the bin directory(which contains protoc.exe) to your PATH.</p>
+<pre lang=bat><span class=k>set</span> <span class=nv>PATH</span><span class=p>=&lt;</span>protobuf_install_dir<span class=p>&gt;</span>/bin;<span class=nv>%PATH%</span>
+</pre>
+<p>Please note: if your protobuf_install_dir contains spaces, <strong>do not</strong> add quotation marks around it.</p>
+<p>Alternative: if you don't want to change your PATH, you can set ONNX_PROTOC_EXECUTABLE instead.</p>
+<pre lang=bat><span class=k>set</span> <span class=nv>CMAKE_ARGS</span><span class=p>=</span>-DONNX_PROTOC_EXECUTABLE=<span class=p>&lt;</span>full_path_to_protoc.exe&gt;
+</pre>
+<p>Then you can build ONNX as:</p>
+<pre><code>git clone https://github.com/onnx/onnx.git
+cd onnx
+git submodule update --init --recursive
+# prefer lite proto
+set CMAKE_ARGS=-DONNX_USE_LITE_PROTO=ON
+pip install -e .
+</code></pre>
+<h3>Linux</h3>
+<p>First, you need to install protobuf. The minimum Protobuf compiler (protoc) version required by ONNX is 3.0.0. Please note that old protoc versions might not work with <code>CMAKE_ARGS=-DONNX_USE_LITE_PROTO=ON</code>.</p>
+<p>Ubuntu 18.04 (and newer) users may choose to install protobuf via</p>
+<pre lang=bash>apt-get<span class=w> </span>install<span class=w> </span>python3-pip<span class=w> </span>python3-dev<span class=w> </span>libprotobuf-dev<span class=w> </span>protobuf-compiler
+</pre>
+<p>In this case, it is required to add <code>-DONNX_USE_PROTOBUF_SHARED_LIBS=ON</code> to CMAKE_ARGS in the ONNX build step.</p>
+<p>A more general way is to build and install it from source. See the instructions below for more details.</p>
+<details>
+  <summary> Installing Protobuf from source </summary>
+<p>Debian/Ubuntu:</p>
+<pre lang=bash><span class=w>  </span>git<span class=w> </span>clone<span class=w> </span>https://github.com/protocolbuffers/protobuf.git
+<span class=w>  </span><span class=nb>cd</span><span class=w> </span>protobuf
+<span class=w>  </span>git<span class=w> </span>checkout<span class=w> </span>v3.20.2
+<span class=w>  </span>git<span class=w> </span>submodule<span class=w> </span>update<span class=w> </span>--init<span class=w> </span>--recursive
+<span class=w>  </span>mkdir<span class=w> </span>build_source<span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nb>cd</span><span class=w> </span>build_source
+<span class=w>  </span>cmake<span class=w> </span>../cmake<span class=w> </span>-Dprotobuf_BUILD_SHARED_LIBS<span class=o>=</span>OFF<span class=w> </span>-DCMAKE_INSTALL_PREFIX<span class=o>=</span>/usr<span class=w> </span>-DCMAKE_INSTALL_SYSCONFDIR<span class=o>=</span>/etc<span class=w> </span>-DCMAKE_POSITION_INDEPENDENT_CODE<span class=o>=</span>ON<span class=w> </span>-Dprotobuf_BUILD_TESTS<span class=o>=</span>OFF<span class=w> </span>-DCMAKE_BUILD_TYPE<span class=o>=</span>Release
+<span class=w>  </span>make<span class=w> </span>-j<span class=k>$(</span>nproc<span class=k>)</span>
+<span class=w>  </span>make<span class=w> </span>install
+</pre>
+<p>CentOS/RHEL/Fedora:</p>
+<pre lang=bash><span class=w>  </span>git<span class=w> </span>clone<span class=w> </span>https://github.com/protocolbuffers/protobuf.git
+<span class=w>  </span><span class=nb>cd</span><span class=w> </span>protobuf
+<span class=w>  </span>git<span class=w> </span>checkout<span class=w> </span>v3.20.2
+<span class=w>  </span>git<span class=w> </span>submodule<span class=w> </span>update<span class=w> </span>--init<span class=w> </span>--recursive
+<span class=w>  </span>mkdir<span class=w> </span>build_source<span class=w> </span><span class=o>&amp;&amp;</span><span class=w> </span><span class=nb>cd</span><span class=w> </span>build_source
+<span class=w>  </span>cmake<span class=w> </span>../cmake<span class=w>  </span>-DCMAKE_INSTALL_LIBDIR<span class=o>=</span>lib64<span class=w> </span>-Dprotobuf_BUILD_SHARED_LIBS<span class=o>=</span>OFF<span class=w> </span>-DCMAKE_INSTALL_PREFIX<span class=o>=</span>/usr<span class=w> </span>-DCMAKE_INSTALL_SYSCONFDIR<span class=o>=</span>/etc<span class=w> </span>-DCMAKE_POSITION_INDEPENDENT_CODE<span class=o>=</span>ON<span class=w> </span>-Dprotobuf_BUILD_TESTS<span class=o>=</span>OFF<span class=w> </span>-DCMAKE_BUILD_TYPE<span class=o>=</span>Release
+<span class=w>  </span>make<span class=w> </span>-j<span class=k>$(</span>nproc<span class=k>)</span>
+<span class=w>  </span>make<span class=w> </span>install
+</pre>
+<p>Here "-DCMAKE_POSITION_INDEPENDENT_CODE=ON" is crucial. By default static libraries are built without "-fPIC" flag, they are not position independent code. But shared libraries must be position independent code. Python C/C++ extensions(like ONNX) are shared libraries. So if a static library was not built with "-fPIC", it can't be linked to such a shared library.</p>
+<p>Once build is successful, update PATH to include protobuf paths.</p>
+</details>
+<p>Then you can build ONNX as:</p>
+<pre><code>git clone https://github.com/onnx/onnx.git
+cd onnx
+git submodule update --init --recursive
+# Optional: prefer lite proto
+export CMAKE_ARGS=-DONNX_USE_LITE_PROTO=ON
+pip install -e .
+</code></pre>
+<h3>Mac</h3>
+<pre><code>export NUM_CORES=`sysctl -n hw.ncpu`
+brew update
+brew install autoconf &amp;&amp; brew install automake
+wget https://github.com/protocolbuffers/protobuf/releases/download/v3.20.2/protobuf-cpp-3.20.2.tar.gz
+tar -xvf protobuf-cpp-3.20.2.tar.gz
+cd protobuf-3.20.2
+mkdir build_source &amp;&amp; cd build_source
+cmake ../cmake -Dprotobuf_BUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON -Dprotobuf_BUILD_TESTS=OFF -DCMAKE_BUILD_TYPE=Release
+make -j${NUM_CORES}
+make install
+</code></pre>
+<p>Once build is successful, update PATH to include protobuf paths.</p>
+<p>Then you can build ONNX as:</p>
+<pre><code>git clone --recursive https://github.com/onnx/onnx.git
+cd onnx
+# Optional: prefer lite proto
+set CMAKE_ARGS=-DONNX_USE_LITE_PROTO=ON
+pip install -e .
+</code></pre>
+<h2>Verify Installation</h2>
+<p>After installation, run</p>
+<pre><code>python -c "import onnx"
+</code></pre>
+<p>to verify it works.</p>
+<h2>Common Build Options</h2>
+<p>For full list refer to CMakeLists.txt
+<strong>Environment variables</strong></p>
+<ul>
+<li>
+<p><code>USE_MSVC_STATIC_RUNTIME</code> should be 1 or 0, not ON or OFF. When set to 1 onnx links statically to runtime library.
+<strong>Default</strong>: USE_MSVC_STATIC_RUNTIME=0</p>
+</li>
+<li>
+<p><code>DEBUG</code> should be 0 or 1. When set to 1 onnx is built in debug mode. or debug versions of the dependencies, you need to open the <a href=CMakeLists.txt rel=nofollow>CMakeLists file</a> and append a letter <code>d</code> at the end of the package name lines. For example, <code>NAMES protobuf-lite</code> would become <code>NAMES protobuf-lited</code>.
+<strong>Default</strong>: Debug=0</p>
+</li>
+</ul>
+<p><strong>CMake variables</strong></p>
+<ul>
+<li>
+<p><code>ONNX_USE_PROTOBUF_SHARED_LIBS</code> should be ON or OFF.
+<strong>Default</strong>: ONNX_USE_PROTOBUF_SHARED_LIBS=OFF USE_MSVC_STATIC_RUNTIME=0
+<code>ONNX_USE_PROTOBUF_SHARED_LIBS</code> determines how onnx links to protobuf libraries.</p>
+<ul>
+<li>When set to ON - onnx will dynamically link to protobuf shared libs, PROTOBUF_USE_DLLS will be defined as described <a href="https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md#dlls-vs-static-linking" rel=nofollow>here</a>, Protobuf_USE_STATIC_LIBS will be set to OFF and <code>USE_MSVC_STATIC_RUNTIME</code> must be 0.</li>
+<li>When set to OFF - onnx will link statically to protobuf, and Protobuf_USE_STATIC_LIBS will be set to ON (to force the use of the static libraries) and <code>USE_MSVC_STATIC_RUNTIME</code> can be 0 or 1.</li>
+</ul>
+</li>
+<li>
+<p><code>ONNX_USE_LITE_PROTO</code> should be ON or OFF. When set to ON onnx uses lite protobuf instead of full protobuf.
+<strong>Default</strong>: ONNX_USE_LITE_PROTO=OFF</p>
+</li>
+<li>
+<p><code>ONNX_WERROR</code> should be ON or OFF. When set to ON warnings are treated as errors.
+<strong>Default</strong>: ONNX_WERROR=OFF in local builds, ON in CI and release pipelines.</p>
+</li>
+</ul>
+<h2>Common Errors</h2>
+<ul>
+<li>
+<p>Note: the <code>import onnx</code> command does not work from the source checkout directory; in this case you'll see <code>ModuleNotFoundError: No module named 'onnx.onnx_cpp2py_export'</code>. Change into another directory to fix this error.</p>
+</li>
+<li>
+<p>If you run into any issues while building Protobuf as a static library, please ensure that shared Protobuf libraries, like libprotobuf, are not installed on your device or in the conda environment. If these shared libraries exist, either remove them to build Protobuf from source as a static library, or skip the Protobuf build from source to use the shared version directly.</p>
+</li>
+<li>
+<p>If you run into any issues while building ONNX from source, and your error message reads, "Could not find pythonXX.lib", ensure that you have consistent Python versions for common commands, such as <code>python</code> and <code>pip</code>. Clean all existing build files and rebuild ONNX again.</p>
+</li>
+</ul>
+<h1>Testing</h1>
+<p>ONNX uses <a href="https://docs.pytest.org" rel=nofollow>pytest</a> as test driver. In order to run tests, you will first need to install pytest:</p>
+<pre><code>pip install pytest nbval
+</code></pre>
+<p>After installing pytest, use the following command to run tests.</p>
+<pre><code>pytest
+</code></pre>
+<h1>Development</h1>
+<p>Check out the <a href="docs/CONTRIBUTING.md" rel=nofollow>contributor guide</a> for instructions.</p>
+<h1>License</h1>
+<p><a href=LICENSE rel=nofollow>Apache License v2.0</a></p>
+<h1>Code of Conduct</h1>
+<p><a href="https://onnx.ai/codeofconduct.html" rel=nofollow>ONNX Open Source Code of Conduct</a></p>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/onnx/onnx" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/onnx" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> Apache License v2.0</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:onnx-technical-discuss@lists.lfaidata.foundation">ONNX</a></p>
+  
+  
+  
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/onnx/" aria-label="onnx">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/93c9c11b757ee88bd4aebb4c3b44559b19f13e5f/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64643332623463326336343738363035383237396335623932666537356164303f73697a653d3530" height="50" width="50" alt="Avatar for onnx from gravatar.com" title="Avatar for onnx from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          onnx
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <span class="reset-text margin-top">
+              <a href="/help/#project-release-notifications">Release notifications</a> |
+              <a href="/rss/project/onnx/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.13.1/">
+                <p class="release__version">
+                  1.13.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-22T18:33:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.13.0/">
+                <p class="release__version">
+                  1.13.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-12-12T13:24:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 12, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.12.0/">
+                <p class="release__version">
+                  1.12.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-06-18T02:36:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 18, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.11.0/">
+                <p class="release__version">
+                  1.11.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-02-17T19:16:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 17, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.10.2/">
+                <p class="release__version">
+                  1.10.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-10-26T19:14:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 26, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.10.1/">
+                <p class="release__version">
+                  1.10.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-08-02T20:15:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 2, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.10.0/">
+                <p class="release__version">
+                  1.10.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-07-31T00:59:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 31, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.9.0/">
+                <p class="release__version">
+                  1.9.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-04-19T19:22:57+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 19, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.8.1/">
+                <p class="release__version">
+                  1.8.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-01-29T23:47:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 29, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.8.0/">
+                <p class="release__version">
+                  1.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-11-06T22:26:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 6, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.7.0/">
+                <p class="release__version">
+                  1.7.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-05-08T22:49:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 8, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.6.0/">
+                <p class="release__version">
+                  1.6.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-09-28T00:01:22+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 28, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.5.0/">
+                <p class="release__version">
+                  1.5.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-04-24T17:32:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 24, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.4.1/">
+                <p class="release__version">
+                  1.4.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-01-23T23:23:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 23, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.4.0/">
+                <p class="release__version">
+                  1.4.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-01-23T03:30:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 23, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.3.0/">
+                <p class="release__version">
+                  1.3.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-08-30T23:26:03+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 30, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.2.3/">
+                <p class="release__version">
+                  1.2.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-09-10T18:23:03+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 10, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.2.2/">
+                <p class="release__version">
+                  1.2.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-06-19T18:45:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 19, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.2.1/">
+                <p class="release__version">
+                  1.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-05-25T02:41:20+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 25, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.1.2/">
+                <p class="release__version">
+                  1.1.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-04-27T17:45:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 27, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.1.1/">
+                <p class="release__version">
+                  1.1.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-03-22T17:29:41+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 22, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.1.0/">
+                <p class="release__version">
+                  1.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-03-21T06:06:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 21, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.0.1/">
+                <p class="release__version">
+                  1.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-01-26T22:22:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 26, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/1.0.0/">
+                <p class="release__version">
+                  1.0.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-12-04T23:39:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 4, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/0.2.1/">
+                <p class="release__version">
+                  0.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-10-25T02:27:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 25, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/0.2/">
+                <p class="release__version">
+                  0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-10-10T04:54:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 10, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/onnx/0.1/">
+                <p class="release__version">
+                  0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-09-07T07:46:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 7, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+            <h3>
+              Source Distribution
+            </h3>
+
+            
+              
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/56/b5/f5889d518276061f999d7cda5714f288b1718cbbc3f538e943822626eead/onnx-1.13.1.tar.gz">
+          onnx-1.13.1.tar.gz
+        </a>
+        (10.4 MB
+        <a href="#copy-hash-modal-a8908548-4f30-4082-80fc-021476085ff9">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:46:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>source</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+
+            
+            <h3>
+              Built Distributions
+            </h3>
+
+            
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/94/8e/51df1e36a5c33393cc3f43a1d87888fcf0954a47ae43dc2628cfbe7f4af1/onnx-1.13.1-cp311-cp311-win_amd64.whl">
+          onnx-1.13.1-cp311-cp311-win_amd64.whl
+        </a>
+        (12.2 MB
+        <a href="#copy-hash-modal-a5597c72-3417-48e8-af21-a5fe3448d44f">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:36:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/76/c5/9029c2a3754b9862bf5c0d0ba64aed707c62d694d82842679ac6cbdc68cc/onnx-1.13.1-cp311-cp311-win32.whl">
+          onnx-1.13.1-cp311-cp311-win32.whl
+        </a>
+        (12.1 MB
+        <a href="#copy-hash-modal-08faf4c2-e357-452d-8dc2-55f7da49c2bc">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:36:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/c1/85/7f9672e3f58516dea28a851278bcc71dd13904df041baec76178ce235f62/onnx-1.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          onnx-1.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.5 MB
+        <a href="#copy-hash-modal-8c84d7e8-21ad-4ea6-87fe-f7c8195ed9a3">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:36:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/19/10/8424cb68cc8a7cf3821cc840bfbd2df099286aead728f751a460726b54c9/onnx-1.13.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          onnx-1.13.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (13.8 MB
+        <a href="#copy-hash-modal-4d9145d0-ce50-4a97-91e9-e76629115d47">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:36:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/70/72/67f1a4e0212811e10967c5a1d1438c410f9dc0547ceff17e5b3988988d14/onnx-1.13.1-cp311-cp311-macosx_10_12_x86_64.whl">
+          onnx-1.13.1-cp311-cp311-macosx_10_12_x86_64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-5d1ca01d-9bad-4c91-937a-cdd91dafc80c">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:35:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/88/57/0d698e4152cc2be51ae328b5dfe4b6e11c3a880a13419ee52abaa04e528e/onnx-1.13.1-cp311-cp311-macosx_10_12_universal2.whl">
+          onnx-1.13.1-cp311-cp311-macosx_10_12_universal2.whl
+        </a>
+        (14.1 MB
+        <a href="#copy-hash-modal-46727040-e375-47a2-a02f-dcfd0218f43a">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:35:22+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/bb/cd/e2e63b1f0922dd45f6941a3422ccdb400360955064654a1a3a20e6a613fb/onnx-1.13.1-cp310-cp310-win_amd64.whl">
+          onnx-1.13.1-cp310-cp310-win_amd64.whl
+        </a>
+        (12.2 MB
+        <a href="#copy-hash-modal-2fbd11b4-a4f8-40b4-a6a1-78cb4022a9ba">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:34:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/01/95/01dea95f2909a333411caf35d95d1521e01ef947a459e0da40403c143693/onnx-1.13.1-cp310-cp310-win32.whl">
+          onnx-1.13.1-cp310-cp310-win32.whl
+        </a>
+        (12.1 MB
+        <a href="#copy-hash-modal-d5bd483d-39f9-4fc4-8c79-7ae1a214d288">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:34:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/b1/dd/f2b9ee2a902c9d8ac01d018d999d1906f60b6facc8cd69426ad75090199a/onnx-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          onnx-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.5 MB
+        <a href="#copy-hash-modal-04e91bc6-1103-499b-bf2d-0548c4c2d4f2">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:34:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e3/e0/911b9061944b7e2e66c8f06ea47c07db39f088e811b2bebd6c0225e7b93b/onnx-1.13.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          onnx-1.13.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (13.8 MB
+        <a href="#copy-hash-modal-9cc37178-bdea-4782-8cca-01563a99c8dd">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:33:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/a7/0e/3fa9585054ad604e459a50383ffa90e3cb0b5d956760b793fd03901086f5/onnx-1.13.1-cp310-cp310-macosx_10_12_x86_64.whl">
+          onnx-1.13.1-cp310-cp310-macosx_10_12_x86_64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-7c9c3f2a-2bec-429b-9e7b-3ade25731fb0">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:33:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/5d/18/d528748b15a57ab6d526710c84ffdd56d283e290616ce0f6ba93e911b2c6/onnx-1.13.1-cp310-cp310-macosx_10_12_universal2.whl">
+          onnx-1.13.1-cp310-cp310-macosx_10_12_universal2.whl
+        </a>
+        (14.1 MB
+        <a href="#copy-hash-modal-6c3e7d2f-8688-431d-9832-64dc2205fd78">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:33:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/ff/80/a95f990446af6428f754f7af93c1db6962acc8e0ed8f6f31d414badc140b/onnx-1.13.1-cp39-cp39-win_amd64.whl">
+          onnx-1.13.1-cp39-cp39-win_amd64.whl
+        </a>
+        (12.2 MB
+        <a href="#copy-hash-modal-4a626801-3258-412e-98a8-532202aea328">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:43:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e2/b2/3a427414083903aa9c66ce502cc6211b30d28e27042c22e63c17a869b240/onnx-1.13.1-cp39-cp39-win32.whl">
+          onnx-1.13.1-cp39-cp39-win32.whl
+        </a>
+        (12.1 MB
+        <a href="#copy-hash-modal-517d947c-d853-48fe-a0fc-326b658f6d62">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:43:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/5b/bd/512979f78e9ff43aa80daed15018f66337d36c0c359c75d0d76e84f3995e/onnx-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          onnx-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.5 MB
+        <a href="#copy-hash-modal-8162b2c1-f2b6-43e4-bc44-692a965449e6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:43:18+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/f1/45/a1a19749416cc701fb94d5283cdc33c5aecab09d2911f00195146e29b969/onnx-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          onnx-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (13.8 MB
+        <a href="#copy-hash-modal-f5027eec-e867-44d2-af31-8457885a6259">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:42:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/7b/c8/1f0eeb318a85542c920062259eea032023fb75883736f551dc52f034db7d/onnx-1.13.1-cp39-cp39-macosx_10_12_x86_64.whl">
+          onnx-1.13.1-cp39-cp39-macosx_10_12_x86_64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-6e623909-ba31-4251-901c-e513051fc4f4">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:42:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/b1/e1/96f3d1ef4ff49f9c20d386b127b674f826156d4ec1aa96dce8e28b717ad6/onnx-1.13.1-cp39-cp39-macosx_10_12_universal2.whl">
+          onnx-1.13.1-cp39-cp39-macosx_10_12_universal2.whl
+        </a>
+        (14.1 MB
+        <a href="#copy-hash-modal-fee901ed-9737-4072-aa0d-c9cfd328bae8">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:42:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d6/c8/bff3f0ce912b49fe97c98cd35a2df8bfc62fa134aa08b3d49cb5badf2c39/onnx-1.13.1-cp38-cp38-win_amd64.whl">
+          onnx-1.13.1-cp38-cp38-win_amd64.whl
+        </a>
+        (12.2 MB
+        <a href="#copy-hash-modal-6c276262-db0c-412d-a478-91e2824b2982">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:41:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e1/0c/ba6da0a035d147a3920f074315b1a902a23bb346601be8d424db41a5695d/onnx-1.13.1-cp38-cp38-win32.whl">
+          onnx-1.13.1-cp38-cp38-win32.whl
+        </a>
+        (12.1 MB
+        <a href="#copy-hash-modal-1afed59b-5205-4ace-a352-7e997fe957e6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:41:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/15/51/a3cf9d237c81d26abc1c78e8355b1a777fbafcb0c35c07f086a8f4721c67/onnx-1.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          onnx-1.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.5 MB
+        <a href="#copy-hash-modal-4c8c7622-18fc-460a-b2b0-8f856a5675f1">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:40:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/bb/4e/999bc85d7e744806019cf25ca3829a68edf3afad8c730ec857316540d620/onnx-1.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          onnx-1.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (13.8 MB
+        <a href="#copy-hash-modal-0c915d0b-9b43-4f68-8075-c76ed0db5312">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:40:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/47/53/b5f9c5756b5a767bca5af69527c8883e57e5cc2b21e9433985a3bea42995/onnx-1.13.1-cp38-cp38-macosx_10_12_x86_64.whl">
+          onnx-1.13.1-cp38-cp38-macosx_10_12_x86_64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-18029cc9-2d93-4798-9a48-a6f71520754a">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:40:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/c7/1d/f779f3bbbc78331eb56e75b6ad42f8d0b4935f24b44e6be2ec61462b18ee/onnx-1.13.1-cp38-cp38-macosx_10_12_universal2.whl">
+          onnx-1.13.1-cp38-cp38-macosx_10_12_universal2.whl
+        </a>
+        (14.1 MB
+        <a href="#copy-hash-modal-324be92b-a4cb-4873-bac2-bed34edf0339">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:39:29+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d9/9a/eb008df4ac35ed3cdf9b0df311c49cc788e18ce6ae3340ded5b0a0424c3b/onnx-1.13.1-cp37-cp37m-win_amd64.whl">
+          onnx-1.13.1-cp37-cp37m-win_amd64.whl
+        </a>
+        (12.2 MB
+        <a href="#copy-hash-modal-96e8c318-0b3d-41d9-b418-a7b916b63943">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:39:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/dd/7e/cb0f7a132b6dd2c921c519afbf15e37c637b7b99adb7517916478ee40c8e/onnx-1.13.1-cp37-cp37m-win32.whl">
+          onnx-1.13.1-cp37-cp37m-win32.whl
+        </a>
+        (12.1 MB
+        <a href="#copy-hash-modal-a5bc8bd7-7f9e-4706-9c1f-e1afd6d53be3">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:38:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/62/79/76eb10b85257a36c632aa92dd37685fdb9142a736ceb02a1edfe7c846122/onnx-1.13.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          onnx-1.13.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.5 MB
+        <a href="#copy-hash-modal-c922b84f-41d5-4861-83e1-c1b958d5132c">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:38:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/85/ea/4ff8468d7e0919e23517a457745a8b6324906d9e29028f09c0ba4e91b54b/onnx-1.13.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          onnx-1.13.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (13.8 MB
+        <a href="#copy-hash-modal-40b9597c-38ce-436e-b851-3ab4ce67f7d7">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:37:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/eb/38/095d4357c56d10c76ac293b499f9abec6deea4f24ffa34d03d4c01711342/onnx-1.13.1-cp37-cp37m-macosx_10_12_x86_64.whl">
+          onnx-1.13.1-cp37-cp37m-macosx_10_12_x86_64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-60916eb6-b355-4135-a83a-43f0e4abd538">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:37:34+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/43/2f/8ee75021f7765b38064f385d85f989d59035bf05914ea44e28af6c8adc21/onnx-1.13.1-cp37-cp37m-macosx_10_12_universal2.whl">
+          onnx-1.13.1-cp37-cp37m-macosx_10_12_universal2.whl
+        </a>
+        (14.1 MB
+        <a href="#copy-hash-modal-cf123265-355c-4276-96ef-a2f36f987f2d">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-22T18:37:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2023
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+          </div>
+
+          
+          <div id="copy-hash-modal-a8908548-4f30-4082-80fc-021476085ff9" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>0bdcc25c2c1ce4a8750e4ffbd93ae945442e7fac6e51176f38e366b74a97dfd9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0bdcc25c2c1ce4a8750e4ffbd93ae945442e7fac6e51176f38e366b74a97dfd9">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>545b06eed91fac085ef7d4780f89e9b3</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="545b06eed91fac085ef7d4780f89e9b3">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>56b5f5889d518276061f999d7cda5714f288b1718cbbc3f538e943822626eead</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="56b5f5889d518276061f999d7cda5714f288b1718cbbc3f538e943822626eead">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-a5597c72-3417-48e8-af21-a5fe3448d44f" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>9af2b1cf28c6fc9ded4292fa844a5687619be231375db9b8e4029c2c66a06299</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9af2b1cf28c6fc9ded4292fa844a5687619be231375db9b8e4029c2c66a06299">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2baf22a8cd95038719673023d10e7c38</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2baf22a8cd95038719673023d10e7c38">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>948e51df1e36a5c33393cc3f43a1d87888fcf0954a47ae43dc2628cfbe7f4af1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="948e51df1e36a5c33393cc3f43a1d87888fcf0954a47ae43dc2628cfbe7f4af1">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-08faf4c2-e357-452d-8dc2-55f7da49c2bc" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-win32.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-win32.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>6173c798344ee9c9b6d8f55174627c9e6e95e1e527cdf254b76f2e294e84a2b1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6173c798344ee9c9b6d8f55174627c9e6e95e1e527cdf254b76f2e294e84a2b1">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>20defbbbfe4e7c44961efcb14ef3c96f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="20defbbbfe4e7c44961efcb14ef3c96f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>76c59029c2a3754b9862bf5c0d0ba64aed707c62d694d82842679ac6cbdc68cc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="76c59029c2a3754b9862bf5c0d0ba64aed707c62d694d82842679ac6cbdc68cc">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-8c84d7e8-21ad-4ea6-87fe-f7c8195ed9a3" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>fb7951ed7c13383223bc57c4aacd2c07f3b35c8e6b3959c0e56b19f4bf22d193</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="fb7951ed7c13383223bc57c4aacd2c07f3b35c8e6b3959c0e56b19f4bf22d193">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>9eff022259a11c1022335070c18a3379</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9eff022259a11c1022335070c18a3379">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>c1857f9672e3f58516dea28a851278bcc71dd13904df041baec76178ce235f62</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c1857f9672e3f58516dea28a851278bcc71dd13904df041baec76178ce235f62">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-4d9145d0-ce50-4a97-91e9-e76629115d47" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>ade8260e6d42c6258502f534bc5564820442a3775a0e8614f28cdaf1ac07d0f7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ade8260e6d42c6258502f534bc5564820442a3775a0e8614f28cdaf1ac07d0f7">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>e51e525006c992bae0afe505b5215d2f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e51e525006c992bae0afe505b5215d2f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>19108424cb68cc8a7cf3821cc840bfbd2df099286aead728f751a460726b54c9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="19108424cb68cc8a7cf3821cc840bfbd2df099286aead728f751a460726b54c9">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-5d1ca01d-9bad-4c91-937a-cdd91dafc80c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-macosx_10_12_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-macosx_10_12_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>efa32f2fbdf68324579ab7c50ed08d178b38a2300a31e38856bab8108596200b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="efa32f2fbdf68324579ab7c50ed08d178b38a2300a31e38856bab8108596200b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2668af86230f88b749fd73ad6f58dec5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2668af86230f88b749fd73ad6f58dec5">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>707267f1a4e0212811e10967c5a1d1438c410f9dc0547ceff17e5b3988988d14</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="707267f1a4e0212811e10967c5a1d1438c410f9dc0547ceff17e5b3988988d14">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-46727040-e375-47a2-a02f-dcfd0218f43a" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp311-cp311-macosx_10_12_universal2.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp311-cp311-macosx_10_12_universal2.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b939dd1a32b728cd5c461b2fedfa53e0d0d2b400d5b714858205adb6f9dea722</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b939dd1a32b728cd5c461b2fedfa53e0d0d2b400d5b714858205adb6f9dea722">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>7ce1c9bd0486537853fd5a2f78bbe5c6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="7ce1c9bd0486537853fd5a2f78bbe5c6">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>88570d698e4152cc2be51ae328b5dfe4b6e11c3a880a13419ee52abaa04e528e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="88570d698e4152cc2be51ae328b5dfe4b6e11c3a880a13419ee52abaa04e528e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-2fbd11b4-a4f8-40b4-a6a1-78cb4022a9ba" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>4a91fa57abd05da2a3bb20b3695af62ccde83de0b8b2bac86495383a72fc23c9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="4a91fa57abd05da2a3bb20b3695af62ccde83de0b8b2bac86495383a72fc23c9">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>1b6186f356949007144b61f6e2a4f503</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1b6186f356949007144b61f6e2a4f503">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>bbcde2e63b1f0922dd45f6941a3422ccdb400360955064654a1a3a20e6a613fb</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="bbcde2e63b1f0922dd45f6941a3422ccdb400360955064654a1a3a20e6a613fb">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-d5bd483d-39f9-4fc4-8c79-7ae1a214d288" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-win32.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-win32.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1a62e0e7ba0546e2165c7e269e09be9a76281ed9273568bce08ebc4f86a6e168</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1a62e0e7ba0546e2165c7e269e09be9a76281ed9273568bce08ebc4f86a6e168">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>f4241cc1a811a7bc9cdc1f24a3eb1d98</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f4241cc1a811a7bc9cdc1f24a3eb1d98">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>019501dea95f2909a333411caf35d95d1521e01ef947a459e0da40403c143693</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="019501dea95f2909a333411caf35d95d1521e01ef947a459e0da40403c143693">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-04e91bc6-1103-499b-bf2d-0548c4c2d4f2" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1810655a12a470ac2fa978b43fa71e5d8e8d5648ba3b71086da2e51272947fd8</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1810655a12a470ac2fa978b43fa71e5d8e8d5648ba3b71086da2e51272947fd8">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>6d20a35d954cf25b456d74b04afdddb4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6d20a35d954cf25b456d74b04afdddb4">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>b1ddf2b9ee2a902c9d8ac01d018d999d1906f60b6facc8cd69426ad75090199a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b1ddf2b9ee2a902c9d8ac01d018d999d1906f60b6facc8cd69426ad75090199a">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-9cc37178-bdea-4782-8cca-01563a99c8dd" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b1d06ab65b3a5ae030e55916aebc26cd02d058cf74b0224676f34bdd2f06501a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b1d06ab65b3a5ae030e55916aebc26cd02d058cf74b0224676f34bdd2f06501a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>05273335a8a644cfa66e7946570a6e40</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="05273335a8a644cfa66e7946570a6e40">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e3e0911b9061944b7e2e66c8f06ea47c07db39f088e811b2bebd6c0225e7b93b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e3e0911b9061944b7e2e66c8f06ea47c07db39f088e811b2bebd6c0225e7b93b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-7c9c3f2a-2bec-429b-9e7b-3ade25731fb0" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-macosx_10_12_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-macosx_10_12_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>48f28bd276c0f4083f7664ae237f37678db627851963f2e0090635f6be5a4b6f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="48f28bd276c0f4083f7664ae237f37678db627851963f2e0090635f6be5a4b6f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>ad4a4376130ed717f93256bc7a9b57c0</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ad4a4376130ed717f93256bc7a9b57c0">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>a70e3fa9585054ad604e459a50383ffa90e3cb0b5d956760b793fd03901086f5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a70e3fa9585054ad604e459a50383ffa90e3cb0b5d956760b793fd03901086f5">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6c3e7d2f-8688-431d-9832-64dc2205fd78" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp310-cp310-macosx_10_12_universal2.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp310-cp310-macosx_10_12_universal2.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b309adf38ac4ba0402b007c62660a899aae98c9a207afe8c4f4e1fee8c385af8</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b309adf38ac4ba0402b007c62660a899aae98c9a207afe8c4f4e1fee8c385af8">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>e320884b69f691a35fe1400d2819c9e1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e320884b69f691a35fe1400d2819c9e1">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>5d18d528748b15a57ab6d526710c84ffdd56d283e290616ce0f6ba93e911b2c6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5d18d528748b15a57ab6d526710c84ffdd56d283e290616ce0f6ba93e911b2c6">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-4a626801-3258-412e-98a8-532202aea328" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>cd88a6b51d07ac8b3b88f2398256b4389ca4b84fe45acd1f8a0cb10425ae801d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="cd88a6b51d07ac8b3b88f2398256b4389ca4b84fe45acd1f8a0cb10425ae801d">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>7ff0a455dd22cd695bce24049e755499</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="7ff0a455dd22cd695bce24049e755499">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>ff80a95f990446af6428f754f7af93c1db6962acc8e0ed8f6f31d414badc140b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ff80a95f990446af6428f754f7af93c1db6962acc8e0ed8f6f31d414badc140b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-517d947c-d853-48fe-a0fc-326b658f6d62" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-win32.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-win32.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>d07b578589ffdf9d2e0ca6fb7dad5ffa8f2d2d1e4f210aa464fb229c5cf868e1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d07b578589ffdf9d2e0ca6fb7dad5ffa8f2d2d1e4f210aa464fb229c5cf868e1">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>9f6f69791127218b80531baf4f5e830a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9f6f69791127218b80531baf4f5e830a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e2b23a427414083903aa9c66ce502cc6211b30d28e27042c22e63c17a869b240</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e2b23a427414083903aa9c66ce502cc6211b30d28e27042c22e63c17a869b240">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-8162b2c1-f2b6-43e4-bc44-692a965449e6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>c55918281d561edc5a2434b3aa50e827864896ee9e65f3194ea3fda87a1b4281</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c55918281d561edc5a2434b3aa50e827864896ee9e65f3194ea3fda87a1b4281">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>dcbe9ca40f11dedf6e3f78b519ae1605</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="dcbe9ca40f11dedf6e3f78b519ae1605">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>5bbd512979f78e9ff43aa80daed15018f66337d36c0c359c75d0d76e84f3995e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5bbd512979f78e9ff43aa80daed15018f66337d36c0c359c75d0d76e84f3995e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-f5027eec-e867-44d2-af31-8457885a6259" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>dc04158a3180c6a713394e0a4cd64abff026be790e06d7522de7d3ec1080611d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="dc04158a3180c6a713394e0a4cd64abff026be790e06d7522de7d3ec1080611d">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>91f7b4138cba3b6210c941dcb7ee878f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="91f7b4138cba3b6210c941dcb7ee878f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>f145a1a19749416cc701fb94d5283cdc33c5aecab09d2911f00195146e29b969</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f145a1a19749416cc701fb94d5283cdc33c5aecab09d2911f00195146e29b969">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6e623909-ba31-4251-901c-e513051fc4f4" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-macosx_10_12_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-macosx_10_12_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>0325e9c3bf6fcb1369871a1357de1c1f37ad18efdb5a01c8bc9a4b4f1037fa28</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0325e9c3bf6fcb1369871a1357de1c1f37ad18efdb5a01c8bc9a4b4f1037fa28">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>e0de4dd9f53cafa7587e82854a824b0d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e0de4dd9f53cafa7587e82854a824b0d">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>7bc81f0eeb318a85542c920062259eea032023fb75883736f551dc52f034db7d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="7bc81f0eeb318a85542c920062259eea032023fb75883736f551dc52f034db7d">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-fee901ed-9737-4072-aa0d-c9cfd328bae8" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp39-cp39-macosx_10_12_universal2.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp39-cp39-macosx_10_12_universal2.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>e3ee28611421fc04b5a4804fc0e802d215193308458593497f5d26c164ee52fc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e3ee28611421fc04b5a4804fc0e802d215193308458593497f5d26c164ee52fc">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>b3677f2cde20dec3c7d2c0da9ebdde39</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b3677f2cde20dec3c7d2c0da9ebdde39">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>b1e196f3d1ef4ff49f9c20d386b127b674f826156d4ec1aa96dce8e28b717ad6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b1e196f3d1ef4ff49f9c20d386b127b674f826156d4ec1aa96dce8e28b717ad6">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6c276262-db0c-412d-a478-91e2824b2982" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>e68ca8e43fa790c1bd772f706282788bd1187ca7d1aadf69af4bab2f4566edc0</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e68ca8e43fa790c1bd772f706282788bd1187ca7d1aadf69af4bab2f4566edc0">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>831ea22136283f65e5011da9cacc7059</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="831ea22136283f65e5011da9cacc7059">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>d6c8bff3f0ce912b49fe97c98cd35a2df8bfc62fa134aa08b3d49cb5badf2c39</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d6c8bff3f0ce912b49fe97c98cd35a2df8bfc62fa134aa08b3d49cb5badf2c39">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-1afed59b-5205-4ace-a352-7e997fe957e6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-win32.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-win32.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>d03e09cb1fa9dbdaf3269cae9c8c186d422ec061ed40f393092b0dc67dd1b43c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d03e09cb1fa9dbdaf3269cae9c8c186d422ec061ed40f393092b0dc67dd1b43c">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>76c4dc27801e5630a5fcf331bc2a4f0b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="76c4dc27801e5630a5fcf331bc2a4f0b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e10cba6da0a035d147a3920f074315b1a902a23bb346601be8d424db41a5695d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e10cba6da0a035d147a3920f074315b1a902a23bb346601be8d424db41a5695d">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-4c8c7622-18fc-460a-b2b0-8f856a5675f1" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>e980706de4dc94ffafc57e4ae7e7f4117dbd4c377882637c28a261a6aed38246</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e980706de4dc94ffafc57e4ae7e7f4117dbd4c377882637c28a261a6aed38246">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>46671e3d12f12a49652743ab9b535201</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="46671e3d12f12a49652743ab9b535201">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>1551a3cf9d237c81d26abc1c78e8355b1a777fbafcb0c35c07f086a8f4721c67</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1551a3cf9d237c81d26abc1c78e8355b1a777fbafcb0c35c07f086a8f4721c67">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-0c915d0b-9b43-4f68-8075-c76ed0db5312" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>15b7a41b21b61c09cf4535a69364ca69e3593f47d09d85752c0f6d07c6b337b4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="15b7a41b21b61c09cf4535a69364ca69e3593f47d09d85752c0f6d07c6b337b4">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>4bc733c193d76a1a30f8a323b2796637</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="4bc733c193d76a1a30f8a323b2796637">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>bb4e999bc85d7e744806019cf25ca3829a68edf3afad8c730ec857316540d620</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="bb4e999bc85d7e744806019cf25ca3829a68edf3afad8c730ec857316540d620">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-18029cc9-2d93-4798-9a48-a6f71520754a" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-macosx_10_12_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-macosx_10_12_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>64fb0d5573419f26f3c1b3f6b63850569a8684d360b482c164b75701bfeaae1e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="64fb0d5573419f26f3c1b3f6b63850569a8684d360b482c164b75701bfeaae1e">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>51c132e7ae258757f31d10909ae032e9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="51c132e7ae258757f31d10909ae032e9">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>4753b5f9c5756b5a767bca5af69527c8883e57e5cc2b21e9433985a3bea42995</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="4753b5f9c5756b5a767bca5af69527c8883e57e5cc2b21e9433985a3bea42995">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-324be92b-a4cb-4873-bac2-bed34edf0339" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp38-cp38-macosx_10_12_universal2.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp38-cp38-macosx_10_12_universal2.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>5e2fe69e51157e7aa00e959059981ce74b5c5bd6edd4512079fc4c10fb95d28a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5e2fe69e51157e7aa00e959059981ce74b5c5bd6edd4512079fc4c10fb95d28a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>90db26e4b47bfffbbc2171adf9b44791</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="90db26e4b47bfffbbc2171adf9b44791">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>c71df779f3bbbc78331eb56e75b6ad42f8d0b4935f24b44e6be2ec61462b18ee</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c71df779f3bbbc78331eb56e75b6ad42f8d0b4935f24b44e6be2ec61462b18ee">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-96e8c318-0b3d-41d9-b418-a7b916b63943" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>fd3bd0e12beee800ac736002ef9b488d69b2ef392444f1d8ae9dfec60629f190</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="fd3bd0e12beee800ac736002ef9b488d69b2ef392444f1d8ae9dfec60629f190">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>47df12a40efb39f42c5cfae9228f1361</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="47df12a40efb39f42c5cfae9228f1361">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>d99aeb008df4ac35ed3cdf9b0df311c49cc788e18ce6ae3340ded5b0a0424c3b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d99aeb008df4ac35ed3cdf9b0df311c49cc788e18ce6ae3340ded5b0a0424c3b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-a5bc8bd7-7f9e-4706-9c1f-e1afd6d53be3" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-win32.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-win32.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>01e853e3dc90da05f1b985e8ea2db5910128dd0555dc79fef26ef72948be2a32</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="01e853e3dc90da05f1b985e8ea2db5910128dd0555dc79fef26ef72948be2a32">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>0a98ad5bcee43fdd1712c9036658ff2e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0a98ad5bcee43fdd1712c9036658ff2e">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>dd7ecb0f7a132b6dd2c921c519afbf15e37c637b7b99adb7517916478ee40c8e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="dd7ecb0f7a132b6dd2c921c519afbf15e37c637b7b99adb7517916478ee40c8e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-c922b84f-41d5-4861-83e1-c1b958d5132c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>9700d8b368eb385648804ccbd4e06e125560e77293150643040360be9748dbdd</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9700d8b368eb385648804ccbd4e06e125560e77293150643040360be9748dbdd">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>ec1da6a1f2bfde3b880139fbda2274f7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ec1da6a1f2bfde3b880139fbda2274f7">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>627976eb10b85257a36c632aa92dd37685fdb9142a736ceb02a1edfe7c846122</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="627976eb10b85257a36c632aa92dd37685fdb9142a736ceb02a1edfe7c846122">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-40b9597c-38ce-436e-b851-3ab4ce67f7d7" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>94ecceedc1625d087a7e398dc30ec6b3f2eb649e7b445b0bfc9632d6013b3acf</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="94ecceedc1625d087a7e398dc30ec6b3f2eb649e7b445b0bfc9632d6013b3acf">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>55dfa1ad0c560a0842034e9d5c7f01c5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="55dfa1ad0c560a0842034e9d5c7f01c5">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>85ea4ff8468d7e0919e23517a457745a8b6324906d9e29028f09c0ba4e91b54b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="85ea4ff8468d7e0919e23517a457745a8b6324906d9e29028f09c0ba4e91b54b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-60916eb6-b355-4135-a83a-43f0e4abd538" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-macosx_10_12_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-macosx_10_12_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>826858018694244e9c41cf50f58761f59b947e289e8c1a0e441043e290d101b7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="826858018694244e9c41cf50f58761f59b947e289e8c1a0e441043e290d101b7">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>f8c1fc14f5c40612bc9c308522f8ec39</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f8c1fc14f5c40612bc9c308522f8ec39">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>eb38095d4357c56d10c76ac293b499f9abec6deea4f24ffa34d03d4c01711342</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="eb38095d4357c56d10c76ac293b499f9abec6deea4f24ffa34d03d4c01711342">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-cf123265-355c-4276-96ef-a2f36f987f2d" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for onnx-1.13.1-cp37-cp37m-macosx_10_12_universal2.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for onnx-1.13.1-cp37-cp37m-macosx_10_12_universal2.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>39bc23dcea2384423b0ad31267207484bf98ac246e5bf08bd3eb2f67cabf092e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="39bc23dcea2384423b0ad31267207484bf98ac246e5bf08bd3eb2f67cabf092e">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>46449d7dd6e289dedf3b69c733086608</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="46449d7dd6e289dedf3b69c733086608">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>432f8ee75021f7765b38064f385d85f989d59035bf05914ea44e28af6c8adc21</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="432f8ee75021f7765b38064f385d85f989d59035bf05914ea44e28af6c8adc21">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.2351a86c.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Project name retention</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="/stats/">Statistics</a></li>
+              <li><a href="/trademarks/">Logos & trademarks</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypi/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="External link" target="_blank" rel="noopener">Translate PyPI</a></li>
+              <li><a href="/sponsors/">Sponsor PyPI</a></li>
+              <li><a href="https://github.com/pypi/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+              <li><a href="/policy/acceptable-use-policy/">Acceptable Use Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status:<a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>
+          
+"PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+<br>
+        </p>
+        <p>
+          © 2023 <a href="https://www.python.org/psf-landing/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop hidden" data-viewport-toggle-target="switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="/locale/">
+        <ul>
+          
+          <li>
+            <button
+              
+              class="language-switcher__selected"
+              
+              name="locale_id" value="en" type="submit"
+            >
+              English
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="es" type="submit"
+            >
+              español
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="fr" type="submit"
+            >
+              français
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ja" type="submit"
+            >
+              日本語
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="pt_BR" type="submit"
+            >
+              português (Brasil)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="uk" type="submit"
+            >
+              українська
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="el" type="submit"
+            >
+              Ελληνικά
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="de" type="submit"
+            >
+              Deutsch
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hans" type="submit"
+            >
+              中文 (简体)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hant" type="submit"
+            >
+              中文 (繁體)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ru" type="submit"
+            >
+              русский
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="he" type="submit"
+            >
+              עברית
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="eo" type="submit"
+            >
+              esperanto
+            </button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    <div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt=AWS loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+          
+          
+            Cloud computing
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt=Datadog loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://research.fb.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/e338a8302eed851d9793e0a4a92f57b315eb5998/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f66616365626f6f6b2d696e7374616772616d2d77686974652d6c6f676f2d6750686a57647a722e706e67" alt="Facebook / Instagram" loading=lazy>
+          <span class="sponsors__name">Facebook / Instagram</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt=Fastly loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+          
+          
+            CDN
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://careers.google.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt=Google loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+          
+          
+            Object Storage and Download Analytics
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#huawei">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/656ae2011c837dba1e2de4c8f85815eed86c0878/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6875617765692d77686974652d6c6f676f2d416a465f553652312e706e67" alt=Huawei loading=lazy>
+          <span class="sponsors__name">Huawei</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#microsoft">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/524d1ce72f7772294ca4c1fe05d21dec8fa3f8ea/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6d6963726f736f66742d77686974652d6c6f676f2d5a443172685444462e706e67" alt=Microsoft loading=lazy>
+          <span class="sponsors__name">Microsoft</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#nvidia">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/19eae9e26a9a9ffacc134095642b1392737c58fb/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6e76696469612d77686974652d6c6f676f2d46394c393761474c2e706e67" alt=NVIDIA loading=lazy>
+          <span class="sponsors__name">NVIDIA</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt=Pingdom loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#salesforce">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/932f54a6c688f0bbc0e2f4e7b7dc5c067eed6c55/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73616c6573666f7263652d77686974652d6c6f676f2d4539677a3053782d2e706e67" alt=Salesforce loading=lazy>
+          <span class="sponsors__name">Salesforce</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b1dc2c04aa1a8efbacd6dc6254bb63429af47b41/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d31556836754c32452e706e67" alt=Sentry loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+          
+          
+            Error logging
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt=StatusPage loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+          
+          
+            Status page
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</div>
+
+    
+  </body>
+
+</html>

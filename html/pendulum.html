@@ -1,0 +1,4947 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo">
+
+    
+
+    <title>pendulum · PyPI</title>
+    <meta name="description" content="Python datetimes made easy">
+
+    <link rel="stylesheet" href="/static/css/warehouse-ltr.3a9112f7.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.d37999f3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.35549fe8.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: latest releases for pendulum" href="/rss/project/pendulum/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/pendulum/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/pendulum/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title" content="pendulum">
+    <meta property="og:description" content="Python datetimes made easy">
+    
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script async
+            data-ga-id="UA-55961911-1"
+            data-ga4-id="G-RW7D75DF8V"
+            
+            src="/static/js/warehouse.e90282b8.js">
+    </script>
+    
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+</script>
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+  integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+  crossorigin="anonymous"
+></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW7D75DF8V"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&dnt=true"></script>
+    <script async
+        src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+        integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+        crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body data-controller="viewport-toggle">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-viewport-toggle-target="switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+      </div>
+      </noscript>
+
+      
+        <div data-html-include="/_includes/notification-banners/">
+        </div>
+      
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+      </div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+      </div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.2a411bc6.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false" data-controller="search-focus" data-action="keydown@window->search-focus#focusSearchField" data-search-focus-target="searchField">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+            <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="/sponsors/" class="horizontal-menu__link">Sponsors</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="View menu">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Main menu">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="/sponsors/">Sponsors</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div data-html-include="/_includes/administer-project-include/pendulum">
+</div>
+
+<div class="hidden"
+  data-controller="github-repo-stats"
+  data-github-repo-stats-github-repo-info-outlet=".github-repo-info"
+  data-github-repo-stats-url-value="https://api.github.com/repos/sdispater/pendulum"
+  data-github-repo-stats-issue-url-value="https://api.github.com/search/issues?q=repo:sdispater/pendulum+type:issue+state:open&amp;per_page=1">
+</div>
+
+
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        pendulum 2.1.2
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install pendulum</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="/project/pendulum/">
+        <span>Latest version</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Released: <time datetime="2020-07-24T18:16:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">Python datetimes made easy</p>
+    
+    <div data-html-include="/_includes/edit-project-button/pendulum">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for pendulum">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="#description" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="#history" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="#files" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pendulum.eustace.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pendulum.eustace.io/docs" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/sdispater/pendulum" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Repository
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/pendulum" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> MIT License (MIT)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:sebastien@eustace.io">Sébastien Eustace</a></p>
+  
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Tags</span>
+    
+    <span class="package-keyword">
+      datetime,
+    </span>
+    
+    <span class="package-keyword">
+      date,
+    </span>
+    
+    <span class="package-keyword">
+      time
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*,  !=3.4.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/SDisPater/" aria-label="SDisPater">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/9475855ead27d4839822439e3604f548f7935aac/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f34373135376234616631616131373266666439663431306365346438666664653f73697a653d3530" height="50" width="50" alt="Avatar for SDisPater from gravatar.com" title="Avatar for SDisPater from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          SDisPater
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+            OSI Approved :: MIT License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+        <div class="sidebar-section" data-ea-publisher="psf" data-ea-type="psf" data-ea-keywords="pypi-sidebar"></div>
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for pendulum">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="#description" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="#data" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="#history" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Release history. Focus will be moved to the history panel.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="#files" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Download files. Focus will be moved to the project files.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <a href="https://pypi.python.org/pypi/pendulum" rel=nofollow><img alt="https://img.shields.io/pypi/v/pendulum.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8d012f0b4510f163214b60c76407efb5a145e798/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f70656e64756c756d2e737667"></a>
+<a href="https://pypi.python.org/pypi/pendulum" rel=nofollow><img alt="https://img.shields.io/pypi/l/pendulum.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/1628906211d0d3d2f6e13b0f0ef99f0abc7442d6/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f70656e64756c756d2e737667"></a>
+<a href="https://codecov.io/gh/sdispater/pendulum/branch/master" rel=nofollow><img alt="https://img.shields.io/codecov/c/github/sdispater/pendulum/master.svg" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/feb2e3e46162921bbac05d2817f8c7fdd8ac8374/68747470733a2f2f696d672e736869656c64732e696f2f636f6465636f762f632f6769746875622f7364697370617465722f70656e64756c756d2f6d61737465722e737667"></a>
+<a href="https://travis-ci.org/sdispater/pendulum" rel=nofollow><img alt="Pendulum Build status" src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0e792cc53e338d7dff8354cbd52e6a3ff315c188/68747470733a2f2f7472617669732d63692e6f72672f7364697370617465722f70656e64756c756d2e737667"></a>
+<p>Python datetimes made easy.</p>
+<p>Supports Python <strong>2.7</strong> and <strong>3.4+</strong>.</p>
+<pre><code><span class=o>&gt;&gt;&gt;</span> <span class=kn>import</span> <span class=nn>pendulum</span>
+
+<span class=o>&gt;&gt;&gt;</span> <span class=n>now_in_paris</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>now</span><span class=p>(</span><span class=s1>'Europe/Paris'</span><span class=p>)</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>now_in_paris</span>
+<span class=s1>'2016-07-04T00:49:58.502116+02:00'</span>
+
+<span class=c1># Seamless timezone switching</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>now_in_paris</span><span class=o>.</span><span class=n>in_timezone</span><span class=p>(</span><span class=s1>'UTC'</span><span class=p>)</span>
+<span class=s1>'2016-07-03T22:49:58.502116+00:00'</span>
+
+<span class=o>&gt;&gt;&gt;</span> <span class=n>tomorrow</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>now</span><span class=p>()</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>days</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>last_week</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>now</span><span class=p>()</span><span class=o>.</span><span class=n>subtract</span><span class=p>(</span><span class=n>weeks</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+
+<span class=o>&gt;&gt;&gt;</span> <span class=n>past</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>now</span><span class=p>()</span><span class=o>.</span><span class=n>subtract</span><span class=p>(</span><span class=n>minutes</span><span class=o>=</span><span class=mi>2</span><span class=p>)</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>past</span><span class=o>.</span><span class=n>diff_for_humans</span><span class=p>()</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=s1>'2 minutes ago'</span>
+
+<span class=o>&gt;&gt;&gt;</span> <span class=n>delta</span> <span class=o>=</span> <span class=n>past</span> <span class=o>-</span> <span class=n>last_week</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>delta</span><span class=o>.</span><span class=n>hours</span>
+<span class=mi>23</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>delta</span><span class=o>.</span><span class=n>in_words</span><span class=p>(</span><span class=n>locale</span><span class=o>=</span><span class=s1>'en'</span><span class=p>)</span>
+<span class=s1>'6 days 23 hours 58 minutes'</span>
+
+<span class=c1># Proper handling of datetime normalization</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>datetime</span><span class=p>(</span><span class=mi>2013</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>31</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>30</span><span class=p>,</span> <span class=n>tz</span><span class=o>=</span><span class=s1>'Europe/Paris'</span><span class=p>)</span>
+<span class=s1>'2013-03-31T03:30:00+02:00'</span> <span class=c1># 2:30 does not exist (Skipped time)</span>
+
+<span class=c1># Proper handling of dst transitions</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>just_before</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>datetime</span><span class=p>(</span><span class=mi>2013</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>31</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>999999</span><span class=p>,</span> <span class=n>tz</span><span class=o>=</span><span class=s1>'Europe/Paris'</span><span class=p>)</span>
+<span class=s1>'2013-03-31T01:59:59.999999+01:00'</span>
+<span class=o>&gt;&gt;&gt;</span> <span class=n>just_before</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>microseconds</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+<span class=s1>'2013-03-31T03:00:00+02:00'</span></code></pre>
+<section id=why-pendulum>
+<h2>Why Pendulum?</h2>
+<p>Native <span class="docutils literal">datetime</span> instances are enough for basic cases but when you face more complex use-cases
+they often show limitations and are not so intuitive to work with.
+<span class="docutils literal">Pendulum</span> provides a cleaner and more easy to use API while still relying on the standard library.
+So it’s still <span class="docutils literal">datetime</span> but better.</p>
+<p>Unlike other datetime libraries for Python, Pendulum is a drop-in replacement
+for the standard <span class="docutils literal">datetime</span> class (it inherits from it), so, basically, you can replace all your <span class="docutils literal">datetime</span>
+instances by <span class="docutils literal">DateTime</span> instances in you code (exceptions exist for libraries that check
+the type of the objects by using the <span class="docutils literal">type</span> function like <span class="docutils literal">sqlite3</span> or <span class="docutils literal">PyMySQL</span> for instance).</p>
+<p>It also removes the notion of naive datetimes: each <span class="docutils literal">Pendulum</span> instance is timezone-aware
+and by default in <span class="docutils literal">UTC</span> for ease of use.</p>
+<p>Pendulum also improves the standard <span class="docutils literal">timedelta</span> class by providing more intuitive methods and properties.</p>
+</section>
+<section id=why-not-arrow>
+<h2>Why not Arrow?</h2>
+<p>Arrow is the most popular datetime library for Python right now, however its behavior
+and API can be erratic and unpredictable. The <span class="docutils literal">get()</span> method can receive pretty much anything
+and it will try its best to return something while silently failing to handle some cases:</p>
+<pre><code><span class=n>arrow</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>'2016-1-17'</span><span class=p>)</span>
+<span class=c1># &lt;Arrow [2016-01-01T00:00:00+00:00]&gt;</span>
+
+<span class=n>pendulum</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s1>'2016-1-17'</span><span class=p>)</span>
+<span class=c1># &lt;Pendulum [2016-01-17T00:00:00+00:00]&gt;</span>
+
+<span class=n>arrow</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>'20160413'</span><span class=p>)</span>
+<span class=c1># &lt;Arrow [1970-08-22T08:06:53+00:00]&gt;</span>
+
+<span class=n>pendulum</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s1>'20160413'</span><span class=p>)</span>
+<span class=c1># &lt;Pendulum [2016-04-13T00:00:00+00:00]&gt;</span>
+
+<span class=n>arrow</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s1>'2016-W07-5'</span><span class=p>)</span>
+<span class=c1># &lt;Arrow [2016-01-01T00:00:00+00:00]&gt;</span>
+
+<span class=n>pendulum</span><span class=o>.</span><span class=n>parse</span><span class=p>(</span><span class=s1>'2016-W07-5'</span><span class=p>)</span>
+<span class=c1># &lt;Pendulum [2016-02-19T00:00:00+00:00]&gt;</span>
+
+<span class=c1># Working with DST</span>
+<span class=n>just_before</span> <span class=o>=</span> <span class=n>arrow</span><span class=o>.</span><span class=n>Arrow</span><span class=p>(</span><span class=mi>2013</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>31</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>999999</span><span class=p>,</span> <span class=s1>'Europe/Paris'</span><span class=p>)</span>
+<span class=n>just_after</span> <span class=o>=</span> <span class=n>just_before</span><span class=o>.</span><span class=n>replace</span><span class=p>(</span><span class=n>microseconds</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+<span class=s1>'2013-03-31T02:00:00+02:00'</span>
+<span class=c1># Should be 2013-03-31T03:00:00+02:00</span>
+
+<span class=p>(</span><span class=n>just_after</span><span class=o>.</span><span class=n>to</span><span class=p>(</span><span class=s1>'utc'</span><span class=p>)</span> <span class=o>-</span> <span class=n>just_before</span><span class=o>.</span><span class=n>to</span><span class=p>(</span><span class=s1>'utc'</span><span class=p>))</span><span class=o>.</span><span class=n>total_seconds</span><span class=p>()</span>
+<span class=o>-</span><span class=mf>3599.999999</span>
+<span class=c1># Should be 1e-06</span>
+
+<span class=n>just_before</span> <span class=o>=</span> <span class=n>pendulum</span><span class=o>.</span><span class=n>datetime</span><span class=p>(</span><span class=mi>2013</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>31</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>59</span><span class=p>,</span> <span class=mi>999999</span><span class=p>,</span> <span class=s1>'Europe/Paris'</span><span class=p>)</span>
+<span class=n>just_after</span> <span class=o>=</span> <span class=n>just_before</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=n>microseconds</span><span class=o>=</span><span class=mi>1</span><span class=p>)</span>
+<span class=s1>'2013-03-31T03:00:00+02:00'</span>
+
+<span class=p>(</span><span class=n>just_after</span><span class=o>.</span><span class=n>in_timezone</span><span class=p>(</span><span class=s1>'utc'</span><span class=p>)</span> <span class=o>-</span> <span class=n>just_before</span><span class=o>.</span><span class=n>in_timezone</span><span class=p>(</span><span class=s1>'utc'</span><span class=p>))</span><span class=o>.</span><span class=n>total_seconds</span><span class=p>()</span>
+<span class=mf>1e-06</span></code></pre>
+<p>Those are a few examples showing that Arrow cannot always be trusted to have a consistent
+behavior with the data you are passing to it.</p>
+</section>
+<section id=limitations>
+<h2>Limitations</h2>
+<p>Even though the <span class="docutils literal">DateTime</span> class is a subclass of <span class="docutils literal">datetime</span> there are some rare cases where
+it can’t replace the native class directly. Here is a list (non-exhaustive) of the reported cases with
+a possible solution, if any:</p>
+<ul class=simple>
+<li><p><span class="docutils literal">sqlite3</span> will use the <span class="docutils literal">type()</span> function to determine the type of the object by default. To work around it you can register a new adapter:</li>
+</ul>
+<pre><code><span class=kn>from</span> <span class=nn>pendulum</span> <span class=kn>import</span> <span class=n>DateTime</span>
+<span class=kn>from</span> <span class=nn>sqlite3</span> <span class=kn>import</span> <span class=n>register_adapter</span>
+
+<span class=n>register_adapter</span><span class=p>(</span><span class=n>DateTime</span><span class=p>,</span> <span class=k>lambda</span> <span class=n>val</span><span class=p>:</span> <span class=n>val</span><span class=o>.</span><span class=n>isoformat</span><span class=p>(</span><span class=s1>' '</span><span class=p>))</span></code></pre>
+<ul class=simple>
+<li><p><span class="docutils literal">mysqlclient</span> (former <span class="docutils literal">MySQLdb</span>) and <span class="docutils literal">PyMySQL</span> will use the <span class="docutils literal">type()</span> function to determine the type of the object by default. To work around it you can register a new adapter:</li>
+</ul>
+<pre><code><span class=kn>import</span> <span class=nn>MySQLdb.converters</span>
+<span class=kn>import</span> <span class=nn>pymysql.converters</span>
+
+<span class=kn>from</span> <span class=nn>pendulum</span> <span class=kn>import</span> <span class=n>DateTime</span>
+
+<span class=n>MySQLdb</span><span class=o>.</span><span class=n>converters</span><span class=o>.</span><span class=n>conversions</span><span class=p>[</span><span class=n>DateTime</span><span class=p>]</span> <span class=o>=</span> <span class=n>MySQLdb</span><span class=o>.</span><span class=n>converters</span><span class=o>.</span><span class=n>DateTime2literal</span>
+<span class=n>pymysql</span><span class=o>.</span><span class=n>converters</span><span class=o>.</span><span class=n>conversions</span><span class=p>[</span><span class=n>DateTime</span><span class=p>]</span> <span class=o>=</span> <span class=n>pymysql</span><span class=o>.</span><span class=n>converters</span><span class=o>.</span><span class=n>escape_datetime</span></code></pre>
+<ul class=simple>
+<li><p><span class="docutils literal">django</span> will use the <span class="docutils literal">isoformat()</span> method to store datetimes in the database. However since <span class="docutils literal">pendulum</span> is always timezone aware the offset information will always be returned by <span class="docutils literal">isoformat()</span> raising an error, at least for MySQL databases. To work around it you can either create your own <span class="docutils literal">DateTimeField</span> or use the previous workaround for <span class="docutils literal">MySQLdb</span>:</li>
+</ul>
+<pre><code><span class=kn>from</span> <span class=nn>django.db.models</span> <span class=kn>import</span> <span class=n>DateTimeField</span> <span class=k>as</span> <span class=n>BaseDateTimeField</span>
+<span class=kn>from</span> <span class=nn>pendulum</span> <span class=kn>import</span> <span class=n>DateTime</span>
+
+
+<span class=k>class</span> <span class=nc>DateTimeField</span><span class=p>(</span><span class=n>BaseDateTimeField</span><span class=p>):</span>
+
+    <span class=k>def</span> <span class=nf>value_to_string</span><span class=p>(</span><span class=bp>self</span><span class=p>,</span> <span class=n>obj</span><span class=p>):</span>
+        <span class=n>val</span> <span class=o>=</span> <span class=bp>self</span><span class=o>.</span><span class=n>value_from_object</span><span class=p>(</span><span class=n>obj</span><span class=p>)</span>
+
+        <span class=k>if</span> <span class=nb>isinstance</span><span class=p>(</span><span class=n>value</span><span class=p>,</span> <span class=n>DateTime</span><span class=p>):</span>
+            <span class=k>return</span> <span class=n>value</span><span class=o>.</span><span class=n>to_datetime_string</span><span class=p>()</span>
+
+        <span class=k>return</span> <span class=s1>''</span> <span class=k>if</span> <span class=n>val</span> <span class=ow>is</span> <span class=kc>None</span> <span class=k>else</span> <span class=n>val</span><span class=o>.</span><span class=n>isoformat</span><span class=p>()</span></code></pre>
+</section>
+<section id=resources>
+<h2>Resources</h2>
+<ul class=simple>
+<li><p><a href="https://pendulum.eustace.io" rel=nofollow>Official Website</a></li>
+<li><p><a href="https://pendulum.eustace.io/docs/" rel=nofollow>Documentation</a></li>
+<li><p><a href="https://github.com/sdispater/pendulum/issues" rel=nofollow>Issue Tracker</a></li>
+</ul>
+</section>
+<section id=contributing>
+<h2>Contributing</h2>
+<p>Contributions are welcome, especially with localization.</p>
+<section id=getting-started>
+<h3>Getting started</h3>
+<p>To work on the Pendulum codebase, you’ll want to clone the project locally
+and install the required depedendencies via <a href="https://poetry.eustace.io" rel=nofollow>poetry</a>.</p>
+<pre><code>$ git clone git@github.com:sdispater/pendulum.git
+$ poetry install</code></pre>
+</section>
+<section id=localization>
+<h3>Localization</h3>
+<p>If you want to help with localization, there are two different cases: the locale already exists
+or not.</p>
+<p>If the locale does not exist you will need to create it by using the <span class="docutils literal">clock</span> utility:</p>
+<pre><code>./clock locale create &lt;your-locale&gt;</code></pre>
+<p>It will generate a directory in <span class="docutils literal">pendulum/locales</span> named after your locale, with the following
+structure:</p>
+<pre><code>&lt;your-locale&gt;/
+    - custom.py
+    - locale.py</code></pre>
+<p>The <span class="docutils literal">locale.py</span> file must not be modified. It contains the translations provided by
+the CLDR database.</p>
+<p>The <span class="docutils literal">custom.py</span> file is the one you want to modify. It contains the data needed
+by Pendulum that are not provided by the CLDR database. You can take the <a href="https://github.com/sdispater/pendulum/tree/master/pendulum/locales/en/custom.py" rel=nofollow>en</a>
+data as a reference to see which data is needed.</p>
+<p>You should also add tests for the created or modified locale.</p>
+</section>
+</section>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pendulum.eustace.io" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pendulum.eustace.io/docs" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/sdispater/pendulum" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Repository
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/pendulum" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> MIT License (MIT)</p>
+  
+  
+    <p><strong>Author:</strong> <a href="mailto:sebastien@eustace.io">Sébastien Eustace</a></p>
+  
+  
+  
+  <p class="tags">
+    <i class="fa fa-tags" aria-hidden="true"></i>
+    <span class="sr-only">Tags</span>
+    
+    <span class="package-keyword">
+      datetime,
+    </span>
+    
+    <span class="package-keyword">
+      date,
+    </span>
+    
+    <span class="package-keyword">
+      time
+    </span>
+    
+  </p>
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=2.7,  !=3.0.*,  !=3.1.*,  !=3.2.*,  !=3.3.*,  !=3.4.*
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/SDisPater/" aria-label="SDisPater">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/9475855ead27d4839822439e3604f548f7935aac/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f34373135376234616631616131373266666439663431306365346438666664653f73697a653d3530" height="50" width="50" alt="Avatar for SDisPater from gravatar.com" title="Avatar for SDisPater from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          SDisPater
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+MIT+License">
+            OSI Approved :: MIT License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2">
+            Python :: 2
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+2.7">
+            Python :: 2.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.5">
+            Python :: 3.5
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.6">
+            Python :: 3.6
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.7">
+            Python :: 3.7
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <span class="reset-text margin-top">
+              <a href="/help/#project-release-notifications">Release notifications</a> |
+              <a href="/rss/project/pendulum/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/3.0.0a1/">
+                <p class="release__version">
+                  3.0.0a1
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-11-23T22:29:18+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 23, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.1.2/">
+                <p class="release__version">
+                  2.1.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-07-24T18:16:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.1.1/">
+                <p class="release__version">
+                  2.1.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-07-13T11:51:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 13, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.1.0/">
+                <p class="release__version">
+                  2.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-03-07T11:32:15+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 7, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.5/">
+                <p class="release__version">
+                  2.0.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-07-03T19:55:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 3, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.4/">
+                <p class="release__version">
+                  2.0.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-10-30T17:58:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 30, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.3/">
+                <p class="release__version">
+                  2.0.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-07-30T21:18:21+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 30, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.2/">
+                <p class="release__version">
+                  2.0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-05-29T15:44:08+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.1/">
+                <p class="release__version">
+                  2.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-05-10T22:31:33+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 10, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.0/">
+                <p class="release__version">
+                  2.0.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-05-08T20:10:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 8, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/2.0.0a0/">
+                <p class="release__version">
+                  2.0.0a0
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-04-16T22:31:52+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 16, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.5.1/">
+                <p class="release__version">
+                  1.5.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-04-25T00:03:55+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 25, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.5.0/">
+                <p class="release__version">
+                  1.5.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-04-16T22:49:35+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 16, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.4.4/">
+                <p class="release__version">
+                  1.4.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-03-21T06:54:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 21, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.4.3/">
+                <p class="release__version">
+                  1.4.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-03-20T23:52:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 20, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.4.2/">
+                <p class="release__version">
+                  1.4.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-02-22T20:31:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 22, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.4.1/">
+                <p class="release__version">
+                  1.4.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-02-05T19:42:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 5, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.4.0/">
+                <p class="release__version">
+                  1.4.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-01-22T16:01:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 22, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.3.2/">
+                <p class="release__version">
+                  1.3.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-11-16T20:20:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 16, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.3.1/">
+                <p class="release__version">
+                  1.3.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-10-22T21:08:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 22, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.3.0/">
+                <p class="release__version">
+                  1.3.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-09-25T20:16:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 25, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.5/">
+                <p class="release__version">
+                  1.2.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-09-04T12:27:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 4, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.4/">
+                <p class="release__version">
+                  1.2.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-06-20T20:04:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 20, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.3/">
+                <p class="release__version">
+                  1.2.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-06-19T00:38:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 19, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.2/">
+                <p class="release__version">
+                  1.2.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-06-15T16:41:58+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 15, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.1/">
+                <p class="release__version">
+                  1.2.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-05-23T20:32:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 23, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.2.0/">
+                <p class="release__version">
+                  1.2.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-03-24T20:18:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 24, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.1.1/">
+                <p class="release__version">
+                  1.1.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-03-14T19:54:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 14, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.1.0/">
+                <p class="release__version">
+                  1.1.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-02-20T19:36:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 20, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.0.2/">
+                <p class="release__version">
+                  1.0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-02-04T19:32:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 4, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.0.1/">
+                <p class="release__version">
+                  1.0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-01-25T21:48:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 25, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/1.0.0/">
+                <p class="release__version">
+                  1.0.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-01-17T19:30:14+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 17, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.8.0/">
+                <p class="release__version">
+                  0.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-12-23T15:25:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 23, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.7.0/">
+                <p class="release__version">
+                  0.7.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-12-07T16:50:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 7, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.6/">
+                <p class="release__version">
+                  0.6.6
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-11-25T21:57:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 25, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.5/">
+                <p class="release__version">
+                  0.6.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-10-31T17:48:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 31, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.4/">
+                <p class="release__version">
+                  0.6.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-10-22T23:55:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 22, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.3/">
+                <p class="release__version">
+                  0.6.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-10-19T21:57:05+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 19, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.2/">
+                <p class="release__version">
+                  0.6.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-09-26T22:27:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 26, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.1/">
+                <p class="release__version">
+                  0.6.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-09-19T17:41:13+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 19, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.6.0/">
+                <p class="release__version">
+                  0.6.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-09-12T16:54:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 12, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5.5/">
+                <p class="release__version">
+                  0.5.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-09-01T15:32:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 1, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5.4/">
+                <p class="release__version">
+                  0.5.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-30T05:38:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 30, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5.3/">
+                <p class="release__version">
+                  0.5.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-29T17:11:23+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 29, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5.2/">
+                <p class="release__version">
+                  0.5.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-22T16:29:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 22, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5.1/">
+                <p class="release__version">
+                  0.5.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-18T16:15:05+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 18, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.5/">
+                <p class="release__version">
+                  0.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-08-15T20:04:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 15, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.4/">
+                <p class="release__version">
+                  0.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-25T22:58:09+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 25, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.3.1/">
+                <p class="release__version">
+                  0.3.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-13T16:30:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 13, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.3/">
+                <p class="release__version">
+                  0.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-11T04:04:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 11, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.2/">
+                <p class="release__version">
+                  0.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-04T22:39:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 4, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.1.1/">
+                <p class="release__version">
+                  0.1.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-04T16:35:08+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 4, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/pendulum/0.1/">
+                <p class="release__version">
+                  0.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-07-04T05:00:27+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 4, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+            <h3>
+              Source Distribution
+            </h3>
+
+            
+              
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/db/15/6e89ae7cde7907118769ed3d2481566d05b5fd362724025198bb95faf599/pendulum-2.1.2.tar.gz">
+          pendulum-2.1.2.tar.gz
+        </a>
+        (81.2 kB
+        <a href="#copy-hash-modal-0faea4f7-5209-4c2f-89ce-43f9a65f8ac6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:17:03+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>source</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+
+            
+            <h3>
+              Built Distributions
+            </h3>
+
+            
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/8e/4b/b2042f5122a4b3508c736304e38e8b41e2feed9f3d8c08a03d1de10a2a2b/pendulum-2.1.2-cp39-cp39-manylinux1_x86_64.whl">
+          pendulum-2.1.2-cp39-cp39-manylinux1_x86_64.whl
+        </a>
+        (155.3 kB
+        <a href="#copy-hash-modal-cfe1672a-c603-42b3-97be-42cb3b4b4de0">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:17:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e3/30/e695237aa47fda242a1ca7b3bcb75ae0cd9588a2cf94737eb5b0dc4caa8f/pendulum-2.1.2-cp39-cp39-manylinux1_i686.whl">
+          pendulum-2.1.2-cp39-cp39-manylinux1_i686.whl
+        </a>
+        (154.4 kB
+        <a href="#copy-hash-modal-67874bdc-24e2-4297-ac44-a85e4e68ec17">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:17:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/2e/fb/32f72dfc7124fa311493607cd5d37438b0f0013bd40b27a44cd5606b35f6/pendulum-2.1.2-cp38-cp38-win_amd64.whl">
+          pendulum-2.1.2-cp38-cp38-win_amd64.whl
+        </a>
+        (129.6 kB
+        <a href="#copy-hash-modal-149bca97-1019-4bcb-83c4-23172d3fe123">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:17:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/5d/d0/75835105fb4951b5195bbaa3b9797c258bbf9aa211c6f26b26a68ebf6cee/pendulum-2.1.2-cp38-cp38-manylinux1_x86_64.whl">
+          pendulum-2.1.2-cp38-cp38-manylinux1_x86_64.whl
+        </a>
+        (155.7 kB
+        <a href="#copy-hash-modal-5a658165-786b-47c9-bfb0-ae3bf96ff1d6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/a2/90/3020eeb52dd3c6c01eb5009304c6947dfb08daf46eb29c3a33a5ea5fbccd/pendulum-2.1.2-cp38-cp38-manylinux1_i686.whl">
+          pendulum-2.1.2-cp38-cp38-manylinux1_i686.whl
+        </a>
+        (154.7 kB
+        <a href="#copy-hash-modal-607b843c-4595-477b-9a47-ec9a867cecb2">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:58+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/3e/f8/f7a2d67c65c6bfd53fbb1abd856c395c22cf991b92ea77a35af88f7e96b2/pendulum-2.1.2-cp38-cp38-macosx_10_15_x86_64.whl">
+          pendulum-2.1.2-cp38-cp38-macosx_10_15_x86_64.whl
+        </a>
+        (124.8 kB
+        <a href="#copy-hash-modal-9f8f99f7-6718-484b-bb51-8bc6aaab4258">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:57+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/f6/fa/fcddef6138ced8b676e50f1f7d66ea9081b647810b86d52b29e1a653b9a1/pendulum-2.1.2-cp37-cp37m-win_amd64.whl">
+          pendulum-2.1.2-cp37-cp37m-win_amd64.whl
+        </a>
+        (129.6 kB
+        <a href="#copy-hash-modal-3c651549-4457-4d27-a97e-f2fc941fde57">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/3e/40/bcf73cf69ffc4d68b80b68b5ce4e5f9d8185170e9fac65a73e247e948ff3/pendulum-2.1.2-cp37-cp37m-manylinux1_x86_64.whl">
+          pendulum-2.1.2-cp37-cp37m-manylinux1_x86_64.whl
+        </a>
+        (155.1 kB
+        <a href="#copy-hash-modal-6c453661-d54a-4287-a3b1-0bf0a5373059">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:55+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/64/c9/96ebff288bba66c049398404491a3d1abe9446e5501e78aa5473589ebb5e/pendulum-2.1.2-cp37-cp37m-manylinux1_i686.whl">
+          pendulum-2.1.2-cp37-cp37m-manylinux1_i686.whl
+        </a>
+        (154.2 kB
+        <a href="#copy-hash-modal-e19bc59f-2cbf-41ba-89b2-ca127170c076">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d0/21/284171c69ef27d1173e8997ec73c5551f9491459b48003b64d191a0c7082/pendulum-2.1.2-cp37-cp37m-macosx_10_15_x86_64.whl">
+          pendulum-2.1.2-cp37-cp37m-macosx_10_15_x86_64.whl
+        </a>
+        (124.8 kB
+        <a href="#copy-hash-modal-a47bb1c1-caad-4f63-b272-80ba377648ce">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp37</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/c0/09/8e7c65e347e71baf8dfd799f03983f22eeb4d591e10e90da026037ddad64/pendulum-2.1.2-cp36-cp36m-win_amd64.whl">
+          pendulum-2.1.2-cp36-cp36m-win_amd64.whl
+        </a>
+        (119.5 kB
+        <a href="#copy-hash-modal-c730f69d-ae75-4b81-ada5-07f14ec8ac6d">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:52+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp36</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/6f/d0/3b9ebd15ae3d4e079d6174ee49b19c113189558d3c5e1e641d03bc4560d2/pendulum-2.1.2-cp36-cp36m-manylinux1_x86_64.whl">
+          pendulum-2.1.2-cp36-cp36m-manylinux1_x86_64.whl
+        </a>
+        (155.0 kB
+        <a href="#copy-hash-modal-9398585d-28d9-4aef-b270-7cbfe1e70cff">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp36</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/48/1c/dbca87b468531618c215bb5c5f438fa98ad9213f50f76bbb14836a7c0d4e/pendulum-2.1.2-cp36-cp36m-manylinux1_i686.whl">
+          pendulum-2.1.2-cp36-cp36m-manylinux1_i686.whl
+        </a>
+        (154.1 kB
+        <a href="#copy-hash-modal-a2d04b08-9242-43f2-8e5a-2192758c1df1">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp36</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/7d/09/47ce955fbd41b2930430a78c744c903b79e552c54fb38a3283d7640454fd/pendulum-2.1.2-cp36-cp36m-macosx_10_15_x86_64.whl">
+          pendulum-2.1.2-cp36-cp36m-macosx_10_15_x86_64.whl
+        </a>
+        (124.8 kB
+        <a href="#copy-hash-modal-eff3f4c2-58c7-48ca-91dc-b4fc5dcbe4c6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:48+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp36</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/cd/15/3ee08d358a88f9a871b2ef8b25896f9bc6b6fe4d05fb5587c5c9e29950dc/pendulum-2.1.2-cp35-cp35m-win_amd64.whl">
+          pendulum-2.1.2-cp35-cp35m-win_amd64.whl
+        </a>
+        (109.8 kB
+        <a href="#copy-hash-modal-136cd01f-7247-4944-972d-35191eeb48e9">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:47+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp35</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e2/d9/909cab9450467aeae5aea140ac108624b1aa1d40446050e96f394a95e0ab/pendulum-2.1.2-cp35-cp35m-manylinux1_x86_64.whl">
+          pendulum-2.1.2-cp35-cp35m-manylinux1_x86_64.whl
+        </a>
+        (154.8 kB
+        <a href="#copy-hash-modal-3f9b94b2-cccc-4875-9355-f798696599bf">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:46+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp35</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/d4/75/f1faafe184d6fa15a7f983165b2fa495a721ff04a92c08199a9f5399b4d4/pendulum-2.1.2-cp35-cp35m-manylinux1_i686.whl">
+          pendulum-2.1.2-cp35-cp35m-manylinux1_i686.whl
+        </a>
+        (154.0 kB
+        <a href="#copy-hash-modal-c2a66d5d-52c8-4c1b-883b-d2179a778ca1">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp35</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/bd/c9/e8ca81966ba87f977ca5fba8822be2e96848d079e5afcc38e538234301a0/pendulum-2.1.2-cp35-cp35m-macosx_10_15_x86_64.whl">
+          pendulum-2.1.2-cp35-cp35m-macosx_10_15_x86_64.whl
+        </a>
+        (124.8 kB
+        <a href="#copy-hash-modal-72a583c1-69f1-4576-8bb9-932b3c797470">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:43+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp35</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/2f/df/dc70182a5857819210711d17b343391dd2db84d0a8d756797972364608d1/pendulum-2.1.2-cp27-cp27m-win_amd64.whl">
+          pendulum-2.1.2-cp27-cp27m-win_amd64.whl
+        </a>
+        (109.8 kB
+        <a href="#copy-hash-modal-4fb6a601-1ac8-4741-8d42-c1a1c3ee3f05">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp27</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/95/13/e7598039a7c2be1c74538125c035f866189897291f12da029a2a1008dc3e/pendulum-2.1.2-cp27-cp27m-macosx_10_15_x86_64.whl">
+          pendulum-2.1.2-cp27-cp27m-macosx_10_15_x86_64.whl
+        </a>
+        (108.8 kB
+        <a href="#copy-hash-modal-83ec4e37-db32-4f8b-b2db-d3cb8166cc08">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2020-07-24T18:16:40+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jul 24, 2020
+</time>
+          
+          
+          <code>cp27</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+          </div>
+
+          
+          <div id="copy-hash-modal-0faea4f7-5209-4c2f-89ce-43f9a65f8ac6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b06a0ca1bfe41c990bbf0c029f0b6501a7f2ec4e38bfec730712015e8860f207</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b06a0ca1bfe41c990bbf0c029f0b6501a7f2ec4e38bfec730712015e8860f207">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>b5c76f3b4253666e964ca9ec6251928d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b5c76f3b4253666e964ca9ec6251928d">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>db156e89ae7cde7907118769ed3d2481566d05b5fd362724025198bb95faf599</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="db156e89ae7cde7907118769ed3d2481566d05b5fd362724025198bb95faf599">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-cfe1672a-c603-42b3-97be-42cb3b4b4de0" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp39-cp39-manylinux1_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp39-cp39-manylinux1_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>94b1fc947bfe38579b28e1cccb36f7e28a15e841f30384b5ad6c5e31055c85d7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="94b1fc947bfe38579b28e1cccb36f7e28a15e841f30384b5ad6c5e31055c85d7">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>cd0ae4d2ca3eebd302d1527675e37557</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="cd0ae4d2ca3eebd302d1527675e37557">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>8e4bb2042f5122a4b3508c736304e38e8b41e2feed9f3d8c08a03d1de10a2a2b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8e4bb2042f5122a4b3508c736304e38e8b41e2feed9f3d8c08a03d1de10a2a2b">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-67874bdc-24e2-4297-ac44-a85e4e68ec17" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp39-cp39-manylinux1_i686.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp39-cp39-manylinux1_i686.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>29c40a6f2942376185728c9a0347d7c0f07905638c83007e1d262781f1e6953a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="29c40a6f2942376185728c9a0347d7c0f07905638c83007e1d262781f1e6953a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>97bbb951256258af17c5b5cc19898161</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="97bbb951256258af17c5b5cc19898161">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e330e695237aa47fda242a1ca7b3bcb75ae0cd9588a2cf94737eb5b0dc4caa8f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e330e695237aa47fda242a1ca7b3bcb75ae0cd9588a2cf94737eb5b0dc4caa8f">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-149bca97-1019-4bcb-83c4-23172d3fe123" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp38-cp38-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp38-cp38-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>33fb61601083f3eb1d15edeb45274f73c63b3c44a8524703dc143f4212bf3269</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="33fb61601083f3eb1d15edeb45274f73c63b3c44a8524703dc143f4212bf3269">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>922d896fd871d8004000563b622ef164</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="922d896fd871d8004000563b622ef164">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>2efb32f72dfc7124fa311493607cd5d37438b0f0013bd40b27a44cd5606b35f6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2efb32f72dfc7124fa311493607cd5d37438b0f0013bd40b27a44cd5606b35f6">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-5a658165-786b-47c9-bfb0-ae3bf96ff1d6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp38-cp38-manylinux1_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp38-cp38-manylinux1_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>7c5ec650cb4bec4c63a89a0242cc8c3cebcec92fcfe937c417ba18277d8560be</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="7c5ec650cb4bec4c63a89a0242cc8c3cebcec92fcfe937c417ba18277d8560be">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>dab4b0a337ce627382d1ad20eeb289be</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="dab4b0a337ce627382d1ad20eeb289be">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>5dd075835105fb4951b5195bbaa3b9797c258bbf9aa211c6f26b26a68ebf6cee</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5dd075835105fb4951b5195bbaa3b9797c258bbf9aa211c6f26b26a68ebf6cee">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-607b843c-4595-477b-9a47-ec9a867cecb2" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp38-cp38-manylinux1_i686.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp38-cp38-manylinux1_i686.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>de42ea3e2943171a9e95141f2eecf972480636e8e484ccffaf1e833929e9e052</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="de42ea3e2943171a9e95141f2eecf972480636e8e484ccffaf1e833929e9e052">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>f013a5196883d664938ce40fbc563e23</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f013a5196883d664938ce40fbc563e23">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>a2903020eeb52dd3c6c01eb5009304c6947dfb08daf46eb29c3a33a5ea5fbccd</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a2903020eeb52dd3c6c01eb5009304c6947dfb08daf46eb29c3a33a5ea5fbccd">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-9f8f99f7-6718-484b-bb51-8bc6aaab4258" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp38-cp38-macosx_10_15_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp38-cp38-macosx_10_15_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>f5e236e7730cab1644e1b87aca3d2ff3e375a608542e90fe25685dae46310116</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f5e236e7730cab1644e1b87aca3d2ff3e375a608542e90fe25685dae46310116">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>5229fcbe41cf3c0f59150d74ff72c6b3</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5229fcbe41cf3c0f59150d74ff72c6b3">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>3ef8f7a2d67c65c6bfd53fbb1abd856c395c22cf991b92ea77a35af88f7e96b2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3ef8f7a2d67c65c6bfd53fbb1abd856c395c22cf991b92ea77a35af88f7e96b2">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-3c651549-4457-4d27-a97e-f2fc941fde57" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp37-cp37m-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp37-cp37m-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>db0a40d8bcd27b4fb46676e8eb3c732c67a5a5e6bfab8927028224fbced0b40b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="db0a40d8bcd27b4fb46676e8eb3c732c67a5a5e6bfab8927028224fbced0b40b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>a84a08476fb1b1b169d614323997968e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a84a08476fb1b1b169d614323997968e">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>f6fafcddef6138ced8b676e50f1f7d66ea9081b647810b86d52b29e1a653b9a1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f6fafcddef6138ced8b676e50f1f7d66ea9081b647810b86d52b29e1a653b9a1">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-6c453661-d54a-4287-a3b1-0bf0a5373059" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp37-cp37m-manylinux1_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp37-cp37m-manylinux1_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1245cd0075a3c6d889f581f6325dd8404aca5884dea7223a5566c38aab94642b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1245cd0075a3c6d889f581f6325dd8404aca5884dea7223a5566c38aab94642b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>15cb44818928f1d1019fe02f889cdc12</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="15cb44818928f1d1019fe02f889cdc12">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>3e40bcf73cf69ffc4d68b80b68b5ce4e5f9d8185170e9fac65a73e247e948ff3</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3e40bcf73cf69ffc4d68b80b68b5ce4e5f9d8185170e9fac65a73e247e948ff3">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-e19bc59f-2cbf-41ba-89b2-ca127170c076" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp37-cp37m-manylinux1_i686.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp37-cp37m-manylinux1_i686.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>4c9c689747f39d0d02a9f94fcee737b34a5773803a64a5fdb046ee9cac7442c5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="4c9c689747f39d0d02a9f94fcee737b34a5773803a64a5fdb046ee9cac7442c5">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>60e90d8d42fe21f9873da860777d2392</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="60e90d8d42fe21f9873da860777d2392">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>64c996ebff288bba66c049398404491a3d1abe9446e5501e78aa5473589ebb5e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="64c996ebff288bba66c049398404491a3d1abe9446e5501e78aa5473589ebb5e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-a47bb1c1-caad-4f63-b272-80ba377648ce" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp37-cp37m-macosx_10_15_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp37-cp37m-macosx_10_15_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>e95d329384717c7bf627bf27e204bc3b15c8238fa8d9d9781d93712776c14002</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e95d329384717c7bf627bf27e204bc3b15c8238fa8d9d9781d93712776c14002">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>ac05d1528541ce9c7d5596106823b483</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ac05d1528541ce9c7d5596106823b483">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>d021284171c69ef27d1173e8997ec73c5551f9491459b48003b64d191a0c7082</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d021284171c69ef27d1173e8997ec73c5551f9491459b48003b64d191a0c7082">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-c730f69d-ae75-4b81-ada5-07f14ec8ac6d" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp36-cp36m-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp36-cp36m-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>f888f2d2909a414680a29ae74d0592758f2b9fcdee3549887779cd4055e975db</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f888f2d2909a414680a29ae74d0592758f2b9fcdee3549887779cd4055e975db">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>fa918a1bf5d591bf32d9ebb940c148da</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="fa918a1bf5d591bf32d9ebb940c148da">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>c0098e7c65e347e71baf8dfd799f03983f22eeb4d591e10e90da026037ddad64</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c0098e7c65e347e71baf8dfd799f03983f22eeb4d591e10e90da026037ddad64">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-9398585d-28d9-4aef-b270-7cbfe1e70cff" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp36-cp36m-manylinux1_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp36-cp36m-manylinux1_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>2d1619a721df661e506eff8db8614016f0720ac171fe80dda1333ee44e684087</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2d1619a721df661e506eff8db8614016f0720ac171fe80dda1333ee44e684087">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>8336638415a310dde70792af2682a685</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8336638415a310dde70792af2682a685">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>6fd03b9ebd15ae3d4e079d6174ee49b19c113189558d3c5e1e641d03bc4560d2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6fd03b9ebd15ae3d4e079d6174ee49b19c113189558d3c5e1e641d03bc4560d2">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-a2d04b08-9242-43f2-8e5a-2192758c1df1" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp36-cp36m-manylinux1_i686.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp36-cp36m-manylinux1_i686.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>c807a578a532eeb226150d5006f156632df2cc8c5693d778324b43ff8c515dd0</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c807a578a532eeb226150d5006f156632df2cc8c5693d778324b43ff8c515dd0">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>72fb64665d34a6b20bc7efe626878688</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="72fb64665d34a6b20bc7efe626878688">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>481cdbca87b468531618c215bb5c5f438fa98ad9213f50f76bbb14836a7c0d4e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="481cdbca87b468531618c215bb5c5f438fa98ad9213f50f76bbb14836a7c0d4e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-eff3f4c2-58c7-48ca-91dc-b4fc5dcbe4c6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp36-cp36m-macosx_10_15_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp36-cp36m-macosx_10_15_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>c501749fdd3d6f9e726086bf0cd4437281ed47e7bca132ddb522f86a1645d360</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c501749fdd3d6f9e726086bf0cd4437281ed47e7bca132ddb522f86a1645d360">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2dd472d5f156e0857b7cefde653e8b3f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2dd472d5f156e0857b7cefde653e8b3f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>7d0947ce955fbd41b2930430a78c744c903b79e552c54fb38a3283d7640454fd</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="7d0947ce955fbd41b2930430a78c744c903b79e552c54fb38a3283d7640454fd">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-136cd01f-7247-4944-972d-35191eeb48e9" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp35-cp35m-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp35-cp35m-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>fb53ffa0085002ddd43b6ca61a7b34f2d4d7c3ed66f931fe599e1a531b42af9b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="fb53ffa0085002ddd43b6ca61a7b34f2d4d7c3ed66f931fe599e1a531b42af9b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>a2e8542ea701133ebf6fa69e3904444c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a2e8542ea701133ebf6fa69e3904444c">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>cd153ee08d358a88f9a871b2ef8b25896f9bc6b6fe4d05fb5587c5c9e29950dc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="cd153ee08d358a88f9a871b2ef8b25896f9bc6b6fe4d05fb5587c5c9e29950dc">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-3f9b94b2-cccc-4875-9355-f798696599bf" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp35-cp35m-manylinux1_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp35-cp35m-manylinux1_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>9702069c694306297ed362ce7e3c1ef8404ac8ede39f9b28b7c1a7ad8c3959e3</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9702069c694306297ed362ce7e3c1ef8404ac8ede39f9b28b7c1a7ad8c3959e3">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>6e7f5cad5d31336978637b52e3c3a0fe</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6e7f5cad5d31336978637b52e3c3a0fe">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e2d9909cab9450467aeae5aea140ac108624b1aa1d40446050e96f394a95e0ab</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e2d9909cab9450467aeae5aea140ac108624b1aa1d40446050e96f394a95e0ab">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-c2a66d5d-52c8-4c1b-883b-d2179a778ca1" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp35-cp35m-manylinux1_i686.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp35-cp35m-manylinux1_i686.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>3481fad1dc3f6f6738bd575a951d3c15d4b4ce7c82dce37cf8ac1483fde6e8b0</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3481fad1dc3f6f6738bd575a951d3c15d4b4ce7c82dce37cf8ac1483fde6e8b0">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>0098799759042c17d85e258d492fdca5</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0098799759042c17d85e258d492fdca5">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>d475f1faafe184d6fa15a7f983165b2fa495a721ff04a92c08199a9f5399b4d4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d475f1faafe184d6fa15a7f983165b2fa495a721ff04a92c08199a9f5399b4d4">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-72a583c1-69f1-4576-8bb9-932b3c797470" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp35-cp35m-macosx_10_15_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp35-cp35m-macosx_10_15_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>0731f0c661a3cb779d398803655494893c9f581f6488048b3fb629c2342b5394</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0731f0c661a3cb779d398803655494893c9f581f6488048b3fb629c2342b5394">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>8510c78f3b6cfa1c9dba738ea6b44e8b</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8510c78f3b6cfa1c9dba738ea6b44e8b">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>bdc9e8ca81966ba87f977ca5fba8822be2e96848d079e5afcc38e538234301a0</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="bdc9e8ca81966ba87f977ca5fba8822be2e96848d079e5afcc38e538234301a0">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-4fb6a601-1ac8-4741-8d42-c1a1c3ee3f05" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp27-cp27m-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp27-cp27m-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>318f72f62e8e23cd6660dbafe1e346950281a9aed144b5c596b2ddabc1d19739</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="318f72f62e8e23cd6660dbafe1e346950281a9aed144b5c596b2ddabc1d19739">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>bff5f8aa7c76c3d0f1fa63d979f6ce04</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="bff5f8aa7c76c3d0f1fa63d979f6ce04">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>2fdfdc70182a5857819210711d17b343391dd2db84d0a8d756797972364608d1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2fdfdc70182a5857819210711d17b343391dd2db84d0a8d756797972364608d1">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-83ec4e37-db32-4f8b-b2db-d3cb8166cc08" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for pendulum-2.1.2-cp27-cp27m-macosx_10_15_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for pendulum-2.1.2-cp27-cp27m-macosx_10_15_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b6c352f4bd32dff1ea7066bd31ad0f71f8d8100b9ff709fb343f3b86cee43efe</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b6c352f4bd32dff1ea7066bd31ad0f71f8d8100b9ff709fb343f3b86cee43efe">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>dbcd19549692e93230bb9b0766ed0d3d</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="dbcd19549692e93230bb9b0766ed0d3d">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>9513e7598039a7c2be1c74538125c035f866189897291f12da029a2a1008dc3e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9513e7598039a7c2be1c74538125c035f866189897291f12da029a2a1008dc3e">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.2351a86c.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Project name retention</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="/stats/">Statistics</a></li>
+              <li><a href="/trademarks/">Logos & trademarks</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypi/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="External link" target="_blank" rel="noopener">Translate PyPI</a></li>
+              <li><a href="/sponsors/">Sponsor PyPI</a></li>
+              <li><a href="https://github.com/pypi/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+              <li><a href="/policy/acceptable-use-policy/">Acceptable Use Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status:<a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>
+          
+"PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+<br>
+        </p>
+        <p>
+          © 2023 <a href="https://www.python.org/psf-landing/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop hidden" data-viewport-toggle-target="switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="/locale/">
+        <ul>
+          
+          <li>
+            <button
+              
+              class="language-switcher__selected"
+              
+              name="locale_id" value="en" type="submit"
+            >
+              English
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="es" type="submit"
+            >
+              español
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="fr" type="submit"
+            >
+              français
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ja" type="submit"
+            >
+              日本語
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="pt_BR" type="submit"
+            >
+              português (Brasil)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="uk" type="submit"
+            >
+              українська
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="el" type="submit"
+            >
+              Ελληνικά
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="de" type="submit"
+            >
+              Deutsch
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hans" type="submit"
+            >
+              中文 (简体)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hant" type="submit"
+            >
+              中文 (繁體)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ru" type="submit"
+            >
+              русский
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="he" type="submit"
+            >
+              עברית
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="eo" type="submit"
+            >
+              esperanto
+            </button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    <div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt=AWS loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+          
+          
+            Cloud computing
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt=Datadog loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://research.fb.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/e338a8302eed851d9793e0a4a92f57b315eb5998/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f66616365626f6f6b2d696e7374616772616d2d77686974652d6c6f676f2d6750686a57647a722e706e67" alt="Facebook / Instagram" loading=lazy>
+          <span class="sponsors__name">Facebook / Instagram</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt=Fastly loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+          
+          
+            CDN
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://careers.google.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt=Google loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+          
+          
+            Object Storage and Download Analytics
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#huawei">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/656ae2011c837dba1e2de4c8f85815eed86c0878/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6875617765692d77686974652d6c6f676f2d416a465f553652312e706e67" alt=Huawei loading=lazy>
+          <span class="sponsors__name">Huawei</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#microsoft">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/524d1ce72f7772294ca4c1fe05d21dec8fa3f8ea/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6d6963726f736f66742d77686974652d6c6f676f2d5a443172685444462e706e67" alt=Microsoft loading=lazy>
+          <span class="sponsors__name">Microsoft</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#nvidia">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/19eae9e26a9a9ffacc134095642b1392737c58fb/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6e76696469612d77686974652d6c6f676f2d46394c393761474c2e706e67" alt=NVIDIA loading=lazy>
+          <span class="sponsors__name">NVIDIA</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt=Pingdom loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#salesforce">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/932f54a6c688f0bbc0e2f4e7b7dc5c067eed6c55/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73616c6573666f7263652d77686974652d6c6f676f2d4539677a3053782d2e706e67" alt=Salesforce loading=lazy>
+          <span class="sponsors__name">Salesforce</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b1dc2c04aa1a8efbacd6dc6254bb63429af47b41/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d31556836754c32452e706e67" alt=Sentry loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+          
+          
+            Error logging
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt=StatusPage loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+          
+          
+            Status page
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</div>
+
+    
+  </body>
+
+</html>

@@ -1,0 +1,5120 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="defaultLanguage" content="en">
+    <meta name="availableLanguages" content="en, es, fr, ja, pt_BR, uk, el, de, zh_Hans, zh_Hant, ru, he, eo">
+
+    
+
+    <title>scikit-image · PyPI</title>
+    <meta name="description" content="Image processing in Python">
+
+    <link rel="stylesheet" href="/static/css/warehouse-ltr.3a9112f7.css">
+    <link rel="stylesheet" href="/static/css/fontawesome.d37999f3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic%7CSource+Code+Pro:500">
+    <noscript>
+      <link rel="stylesheet" href="/static/css/noscript.0673c9ea.css">
+    </noscript>
+
+    
+
+    <link rel="icon" href="/static/images/favicon.35549fe8.ico" type="image/x-icon">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 latest updates" href="/rss/updates.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: 40 newest packages" href="/rss/packages.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS: latest releases for scikit-image" href="/rss/project/scikit-image/releases.xml">
+    
+    <link rel="canonical" href="https://pypi.org/project/scikit-image/">
+    
+
+    <meta property="og:url" content="https://pypi.org/project/scikit-image/">
+    <meta property="og:site_name" content="PyPI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pypi.org/static/images/twitter.abaf4b19.webp">
+    <meta property="og:title" content="scikit-image">
+    <meta property="og:description" content="Image processing in Python">
+    
+
+
+
+    <link rel="search" type="application/opensearchdescription+xml" title="PyPI" href="/opensearch.xml">
+
+    
+    <script async
+            data-ga-id="UA-55961911-1"
+            data-ga4-id="G-RW7D75DF8V"
+            
+            src="/static/js/warehouse.e90282b8.js">
+    </script>
+    
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+};
+</script>
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-svg.js"
+  integrity="sha256-1CldwzdEg2k1wTmf7s5RWVd7NMXI/7nxxjJM2C4DqII="
+  crossorigin="anonymous"
+></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55961911-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RW7D75DF8V"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=6a52360a-f306-421e-8ed5-7417d0d4a4e9&dnt=true"></script>
+    <script async
+        src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+        integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+        crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body data-controller="viewport-toggle">
+    
+
+    <!-- Accessibility: this link should always be the first piece of content inside the body-->
+    <a href="#content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="button button--primary button--switch-to-mobile hidden" data-viewport-toggle-target="switchToMobile" data-action="viewport-toggle#switchToMobile">
+      Switch to mobile version
+    </button>
+
+    <div id="sticky-notifications" class="stick-to-top js-stick-to-top">
+      <!-- Add browser warning. Will show for ie9 and below -->
+      <!--[if IE]>
+      <div class="notification-bar notification-bar--warning" role="status">
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">You are using an unsupported browser, upgrade to a newer version.</span>
+      </div>
+      <![endif]-->
+      
+      <noscript>
+      <div class="notification-bar notification-bar--warning" role="status">
+        
+        <span class="notification-bar__icon">
+          <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+          <span class="sr-only">Warning</span>
+        </span>
+        <span class="notification-bar__message">Some features may not work without JavaScript. Please try enabling it if you encounter problems.</span>
+      </div>
+      </noscript>
+
+      
+        <div data-html-include="/_includes/notification-banners/">
+        </div>
+      
+    </div>
+
+    
+      <div data-html-include="/_includes/flash-messages/">
+      </div>
+    
+
+    
+
+    
+      <div data-html-include="/_includes/session-notifications/">
+      </div>
+    
+
+    <header class="site-header ">
+      <div class="site-container">
+        <div class="split-layout">
+          
+          <div class="split-layout">
+            <div>
+              <a class="site-header__logo" href="/">
+                <img alt="PyPI" src="/static/images/logo-small.2a411bc6.svg">
+              </a>
+            </div>
+
+            <form class="search-form search-form--primary" action="/search/" role="search">
+              <label for="search" class="sr-only">Search PyPI</label>
+              <input id="search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false" data-controller="search-focus" data-action="keydown@window->search-focus#focusSearchField" data-search-focus-target="searchField">
+              
+              <button type="submit" class="search-form__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+              </button>
+            </form>
+          </div>
+          
+
+          <div data-html-include="/_includes/current-user-indicator/">
+            <div id="user-indicator" class="horizontal-menu horizontal-menu--light horizontal-menu--tall">
+  <nav class="horizontal-menu horizontal-menu--light horizontal-menu--tall hide-on-tablet" aria-label="Main navigation">
+    <ul>
+      <li class="horizontal-menu__item"><a href="/help/" class="horizontal-menu__link">Help</a></li>
+      <li class="horizontal-menu__item"><a href="/sponsors/" class="horizontal-menu__link">Sponsors</a></li>
+      <li class="horizontal-menu__item"><a href="/account/login/" class="horizontal-menu__link">Log in</a></li>
+      <li class="horizontal-menu__item"><a href="/account/register/" class="horizontal-menu__link">Register</a></li>
+    </ul>
+  </nav>
+  <nav class="dropdown dropdown--on-menu hidden show-on-tablet" aria-label="Main navigation">
+    <button type="button" class="horizontal-menu__link dropdown__trigger" aria-haspopup="true" aria-expanded="false" aria-label="View menu">
+      Menu
+      <span class="dropdown__trigger-caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </button>
+    <ul class="dropdown__content" aria-hidden="true" aria-label="Main menu">
+      <li><a class="dropdown__link" href="/help/">Help</a></li>
+      <li><a class="dropdown__link" href="/sponsors/">Sponsors</a></li>
+      <li><a class="dropdown__link" href="/account/login/">Log in</a></li>
+      <li><a class="dropdown__link" href="/account/register/">Register</a></li>
+    </ul>
+  </nav>
+</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+    <div class="mobile-search">
+      <form class="search-form search-form--fullwidth" action="/search/" role="search">
+        <label for="mobile-search" class="sr-only">Search PyPI</label>
+        <input id="mobile-search" class="search-form__search" type="text" name="q" placeholder="Search projects" value="" autocomplete="off" autocapitalize="off" spellcheck="false">
+        
+        <button type="submit" class="search-form__button">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span class="sr-only">Search</span>
+        </button>
+      </form>
+    </div>
+    
+
+    <main id="content">
+      
+<div data-html-include="/_includes/administer-project-include/scikit-image">
+</div>
+
+<div class="hidden"
+  data-controller="github-repo-stats"
+  data-github-repo-stats-github-repo-info-outlet=".github-repo-info"
+  data-github-repo-stats-url-value="https://api.github.com/repos/scikit-image/scikit-image"
+  data-github-repo-stats-issue-url-value="https://api.github.com/search/issues?q=repo:scikit-image/scikit-image+type:issue+state:open&amp;per_page=1">
+</div>
+
+
+<div class="banner">
+  <div class="package-header">
+    <div class="package-header__left">
+      <h1 class="package-header__name">
+        scikit-image 0.20.0
+      </h1>
+
+      
+      <p class="package-header__pip-instructions">
+        <span id="pip-command">pip install scikit-image</span>
+        <button type="button" class="copy-tooltip copy-tooltip-s" data-clipboard-target="#pip-command" data-tooltip-label="Copy to clipboard">
+          <i class="fa fa-copy" aria-hidden="true"></i>
+          <span class="sr-only">Copy PIP instructions</span>
+        </button>
+      </p>
+      
+    </div>
+
+    <div class="package-header__right">
+    
+      
+      <a class="status-badge status-badge--good" href="/project/scikit-image/">
+        <span>Latest version</span>
+      </a>
+      
+    
+      <p class="package-header__date">
+        Released: <time datetime="2023-02-28T23:31:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="horizontal-section horizontal-section--grey horizontal-section--thin">
+  <div class="site-container">
+    <div class="split-layout split-layout--middle package-description">
+    
+      <p class="package-description__summary">Image processing in Python</p>
+    
+    <div data-html-include="/_includes/edit-project-button/scikit-image">
+    </div>
+    </div>
+  </div>
+</div>
+
+<div data-controller="project-tabs">
+  <div class="tabs-container">
+    <div class="vertical-tabs">
+      <div class="vertical-tabs__tabs">
+        <div class="sidebar-section">
+          <h3 class="sidebar-section__title">Navigation</h3>
+          <nav aria-label="Navigation for scikit-image">
+            <ul class="vertical-tabs__list" role="tablist">
+              <li role="tab">
+                <a id="description-tab" href="#description" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                  <i class="fa fa-align-left" aria-hidden="true"></i>
+                  Project description
+                </a>
+              </li>
+              <li role="tab">
+                <a id="history-tab" href="#history" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Release history. Focus will be moved to the history panel.">
+                  <i class="fa fa-history" aria-hidden="true"></i>
+                  Release history
+                </a>
+              </li>
+              
+              <li role="tab">
+                <a id="files-tab" href="#files" data-project-tabs-target="tab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon" aria-label="Download files. Focus will be moved to the project files.">
+                  <i class="fa fa-download" aria-hidden="true"></i>
+                  Download files
+                </a>
+              </li>
+              
+            </ul>
+          </nav>
+        </div>
+        
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://scikit-image.org" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://scikit-image.org/docs/stable" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pypi.org/project/scikit-image/#files" rel="nofollow">
+        
+
+
+   
+
+
+<i class="fas fa-cloud-download-alt" aria-hidden="true"></i>Download
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/scikit-image/scikit-image" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/scikit-image/scikit-image/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Tracker
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/scikit-image" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> BSD License (Files: * Copyright: 2009-2022 the scikit-image team License: BSD-3-Clause  Files: doc/source/themes/...)</p>
+  
+  
+  
+    <p><strong>Maintainer:</strong> <a href="mailto:scikit-image developers &lt;skimage-core@discuss.scientific-python.org&gt;">scikit-image developers &lt;skimage-core@discuss.scientific-python.org&gt;</a></p>
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=3.8
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Emmanuelle/" aria-label="Emmanuelle">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/aae806a0b069775ac2c9a8adcf465777be7dba57/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62613962326135336536623564386366313933353866353631346133623236373f73697a653d3530" height="50" width="50" alt="Avatar for Emmanuelle from gravatar.com" title="Avatar for Emmanuelle from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Emmanuelle
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/grlee77/" aria-label="grlee77">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/58e7245551733cd46b3143cca911f6f945a46d99/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64346531663963393530623766643538353863623966306237633763383566643f73697a653d3530" height="50" width="50" alt="Avatar for grlee77 from gravatar.com" title="Avatar for grlee77 from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          grlee77
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/hmaarrfk/" aria-label="hmaarrfk">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0c86d9987861352f4c2b73718a870a15a6c4ca18/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f38613634343766366466393233633961616163373461336234376131653831633f73697a653d3530" height="50" width="50" alt="Avatar for hmaarrfk from gravatar.com" title="Avatar for hmaarrfk from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          hmaarrfk
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jarrodmillman/" aria-label="jarrodmillman">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0354b3aa1d9685db6261600559f9ff2b07f6f173/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35343736363537393061303731626237346336366666313063633361333738613f73697a653d3530" height="50" width="50" alt="Avatar for jarrodmillman from gravatar.com" title="Avatar for jarrodmillman from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jarrodmillman
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jni/" aria-label="jni">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8fc6e263cb1f4484622f1fb22314dacbc530914c/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30303862353530333063666662396134633466376438343232653130333433653f73697a653d3530" height="50" width="50" alt="Avatar for jni from gravatar.com" title="Avatar for jni from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jni
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/matthew.brett/" aria-label="matthew.brett">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/54713a5a3bc7c9274a1382b73b76ef9906f3ddc7/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62343932393239343431376539616334346331373936376261616537356133363f73697a653d3530" height="50" width="50" alt="Avatar for matthew.brett from gravatar.com" title="Avatar for matthew.brett from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          matthew.brett
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/NelleV/" aria-label="NelleV">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/669179ef09b12ea4777cfa998c160da018832953/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31386637313961373163643935376463366637393635353434386361636164313f73697a653d3530" height="50" width="50" alt="Avatar for NelleV from gravatar.com" title="Avatar for NelleV from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          NelleV
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/sjvdwalt/" aria-label="sjvdwalt">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/af9080bc025fcf648c962772e409fa03dc316f81/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64396163393231336164613461383037333232663939303831323936373834623f73697a653d3530" height="50" width="50" alt="Avatar for sjvdwalt from gravatar.com" title="Avatar for sjvdwalt from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          sjvdwalt
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/soupault/" aria-label="soupault">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b8000f8cc9e92b448129bc479ce9be2ae9fe078b/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61303961646630353737636461353339313762623330386565666333623934633f73697a653d3530" height="50" width="50" alt="Avatar for soupault from gravatar.com" title="Avatar for soupault from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          soupault
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+4+-+Beta">
+            4 - Beta
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Environment</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Environment+%3A%3A+Console">
+            Console
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Science%2FResearch">
+            Science/Research
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+BSD+License">
+            OSI Approved :: BSD License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+MacOS">
+            MacOS
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+            Microsoft :: Windows
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+            POSIX
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Unix">
+            Unix
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+C">
+            C
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python">
+            Python
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3+%3A%3A+Only">
+            Python :: 3 :: Only
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Scientific%2FEngineering">
+            Scientific/Engineering
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries">
+            Software Development :: Libraries
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+        <div class="sidebar-section" data-ea-publisher="psf" data-ea-type="psf" data-ea-keywords="pypi-sidebar"></div>
+
+      </div>
+      <div class="vertical-tabs__panel">
+        <!-- mobile menu -->
+        <nav aria-label="Navigation for scikit-image">
+          <ul class="vertical-tabs__list" role="tablist">
+            <li role="tab">
+              <a id="mobile-description-tab" href="#description" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile vertical-tabs__tab--no-top-border vertical-tabs__tab--is-active" aria-selected="true" aria-label="Project description. Focus will be moved to the description.">
+                <i class="fa fa-align-left" aria-hidden="true"></i>
+                Project description
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-data-tab" href="#data" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Project details. Focus will be moved to the project details.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                Project details
+              </a>
+            </li>
+            <li role="tab">
+              <a id="mobile-history-tab" href="#history" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Release history. Focus will be moved to the history panel.">
+              <i class="fa fa-history" aria-hidden="true"></i>
+              Release history
+            </a>
+            </li>
+            
+            <li role="tab">
+              <a id="mobile-files-tab" href="#files" data-project-tabs-target="mobileTab" data-action="project-tabs#onTabClick" class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--mobile" aria-label="Download files. Focus will be moved to the project files.">
+                <i class="fa fa-download" aria-hidden="true"></i>
+                Download files
+              </a>
+            </li>
+            
+          </ul>
+        </nav>
+
+        
+        <div id="description" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="description-tab mobile-description-tab" tabindex="-1">
+          <h2 class="page-title">Project description</h2>
+          
+          <div class="project-description">
+            <h1>scikit-image: Image processing in Python</h1>
+<p><a href="https://forum.image.sc/tags/scikit-image" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/f3aca2703161d409422fb56a0282993202f28555/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f64796e616d69632f6a736f6e2e7376673f6c6162656c3d666f72756d2675726c3d6874747073253341253246253246666f72756d2e696d6167652e7363253246746167732532467363696b69742d696d6167652e6a736f6e2671756572793d2532342e746f7069635f6c6973742e746167732e302e746f7069635f636f756e7426636f6c6f72423d627269676874677265656e267375666669783d253230746f70696373266c6f676f3d646174613a696d6167652f706e673b6261736536342c6956424f5277304b47676f414141414e5355684555674141414134414141414f43415941414141665343335241414142506b6c4551565234326d335379797146555254413859324245523054447945785a2b615350494b556c50494954467a4b655157587768426c51726d4667557a4d4d464c4b5a656775427535792b2f2f31376450336e633576755064656536323939676f685559596144474f7979414371344a6d51566f46756a4f4d523737684e664f41474d2b68424f51714239546a484433367868416130345243757558654b4f7677485657494b4c396a434b326252695632383451674c384d77456a416e65656f39564e4f456142687a414c47746f5279303263496357684533346a6a35597867572b45355a346954506b4d5970504c434e593368644f5945664e624b59646d4e6e675a316a79457a77376837414962336652545139354f415a367951704759484d4d744f54676f756b745977787558734867574c4c6c2b34782b2b4b7831464a726a4c5461674137376254507659677731725271593536652b7737474e59737158364a665077693761522b593553412b4258744b4952666b664a4159676a313474704f46362b49343663342f63414d3355684d334a78794b7378694f49684830494f3653482f41314b6231574265556a626b4141414141456c46546b5375516d4343" alt="Image.sc forum"></a>
+<a href="https://stackoverflow.com/questions/tagged/scikit-image" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/684215739a5176fe1a9826cada721d771df6b358/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f737461636b6f766572666c6f772d41736b2532307175657374696f6e732d626c75652e737667" alt=Stackoverflow></a>
+<a href="https://skimage.zulipchat.com" rel=nofollow><img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/5b00aacc3c995361b400de32b29e10ebf75a4d7b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7a756c69702d6a6f696e5f636861742d627269676874677265656e2e737667" alt="project chat"></a></p>
+<ul>
+<li><strong>Website (including documentation):</strong> <a href="https://scikit-image.org" rel=nofollow>https://scikit-image.org/</a></li>
+<li><strong>User forum:</strong> <a href="https://forum.image.sc/tag/scikit-image" rel=nofollow>https://forum.image.sc/tag/scikit-image</a></li>
+<li><strong>Developer forum:</strong> <a href="https://discuss.scientific-python.org/c/contributor/skimage" rel=nofollow>https://discuss.scientific-python.org/c/contributor/skimage</a></li>
+<li><strong>Source:</strong> <a href="https://github.com/scikit-image/scikit-image" rel=nofollow>https://github.com/scikit-image/scikit-image</a></li>
+<li><strong>Benchmarks:</strong> <a href="https://pandas.pydata.org/speed/scikit-image/" rel=nofollow>https://pandas.pydata.org/speed/scikit-image/</a></li>
+</ul>
+<h2>Installation from binaries</h2>
+<ul>
+<li><strong>pip:</strong> <code>pip install scikit-image</code></li>
+<li><strong>conda:</strong> <code>conda install -c conda-forge scikit-image</code></li>
+</ul>
+<p>Also see <a href=INSTALL.rst rel=nofollow>installing <code>scikit-image</code></a>.</p>
+<h2>Installation from source</h2>
+<p>Install dependencies using:</p>
+<pre><code>pip install -r requirements.txt
+</code></pre>
+<p>Then, install scikit-image using:</p>
+<pre><code>$ pip install .
+</code></pre>
+<p>If you plan to develop the package, you may run it directly from source:</p>
+<pre><code>$ pip install -e .  # Do this once to add package to Python path
+</code></pre>
+<p>Every time you modify Cython files, also run:</p>
+<pre><code>$ python setup.py build_ext -i  # Build binary extensions
+</code></pre>
+<h2>License (Modified BSD)</h2>
+<p>Copyright (C) 2011, the scikit-image team
+All rights reserved.</p>
+<p>Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:</p>
+<ol>
+<li>Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in
+the documentation and/or other materials provided with the
+distribution.</li>
+<li>Neither the name of skimage nor the names of its contributors may be
+used to endorse or promote products derived from this software without
+specific prior written permission.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.</p>
+<h2>Citation</h2>
+<p>If you find this project useful, please cite:</p>
+<blockquote>
+<p>Stéfan van der Walt, Johannes L. Schönberger, Juan Nunez-Iglesias,
+François Boulogne, Joshua D. Warner, Neil Yager, Emmanuelle
+Gouillart, Tony Yu, and the scikit-image contributors.
+<em>scikit-image: Image processing in Python</em>. PeerJ 2:e453 (2014)
+<a href="https://doi.org/10.7717/peerj.453" rel=nofollow>https://doi.org/10.7717/peerj.453</a></p>
+</blockquote>
+
+          </div>
+          
+        </div>
+
+        
+        <div id="data" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="mobile-data-tab" tabindex="-1">
+          <h2 class="page-title">Project details</h2>
+          
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Project links</h3>
+  <ul class="vertical-tabs__list">
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://scikit-image.org" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-home" aria-hidden="true"></i>Homepage
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://scikit-image.org/docs/stable" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-book" aria-hidden="true"></i>Documentation
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://pypi.org/project/scikit-image/#files" rel="nofollow">
+        
+
+
+   
+
+
+<i class="fas fa-cloud-download-alt" aria-hidden="true"></i>Download
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/scikit-image/scikit-image" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fab fa-github" aria-hidden="true"></i>Source
+      </a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed" href="https://github.com/scikit-image/scikit-image/issues" rel="nofollow">
+        
+
+
+  
+
+
+<i class="fas fa-bug" aria-hidden="true"></i>Tracker
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Statistics</h3>
+  
+  <div class="hidden github-repo-info" data-controller="github-repo-info">
+    GitHub statistics:
+    <ul class="vertical-tabs__list">
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="stargazersUrl" rel="noopener">
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <strong>Stars:</strong>
+          <span data-github-repo-info-target="stargazersCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="forksUrl" rel="noopener">
+          <i class="fa fa-code-branch" aria-hidden="true"></i>
+          <strong>Forks:</strong>
+          <span data-github-repo-info-target="forksCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openIssuesUrl" rel="noopener">
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <strong>Open issues:</strong>
+          <span data-github-repo-info-target="openIssuesCount"></span>
+        </a>
+      </li>
+      <li>
+        <a class="vertical-tabs__tab vertical-tabs__tab--with-icon vertical-tabs__tab--condensed"
+           data-github-repo-info-target="openPRsUrl" rel="noopener">
+          <i class="fa fa-code-pull-request" aria-hidden="true"></i>
+          <strong>Open PRs:</strong>
+          <span data-github-repo-info-target="openPRsCount"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  <p>
+    View statistics for this project via <a href="https://libraries.io/pypi/scikit-image" title="External link" target="_blank" rel="noopener">Libraries.io</a>, or by using <a href="https://packaging.python.org/guides/analyzing-pypi-package-downloads/" target="_blank" rel="noopener">our public dataset on Google BigQuery</a>
+  </p>
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Meta</h3>
+  
+  <p><strong>License:</strong> BSD License (Files: * Copyright: 2009-2022 the scikit-image team License: BSD-3-Clause  Files: doc/source/themes/...)</p>
+  
+  
+  
+    <p><strong>Maintainer:</strong> <a href="mailto:scikit-image developers &lt;skimage-core@discuss.scientific-python.org&gt;">scikit-image developers &lt;skimage-core@discuss.scientific-python.org&gt;</a></p>
+  
+  
+  
+  <p>
+    <strong>Requires:</strong> Python &gt;=3.8
+  </p>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Maintainers</h3>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/Emmanuelle/" aria-label="Emmanuelle">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/aae806a0b069775ac2c9a8adcf465777be7dba57/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62613962326135336536623564386366313933353866353631346133623236373f73697a653d3530" height="50" width="50" alt="Avatar for Emmanuelle from gravatar.com" title="Avatar for Emmanuelle from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          Emmanuelle
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/grlee77/" aria-label="grlee77">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/58e7245551733cd46b3143cca911f6f945a46d99/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64346531663963393530623766643538353863623966306237633763383566643f73697a653d3530" height="50" width="50" alt="Avatar for grlee77 from gravatar.com" title="Avatar for grlee77 from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          grlee77
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/hmaarrfk/" aria-label="hmaarrfk">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0c86d9987861352f4c2b73718a870a15a6c4ca18/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f38613634343766366466393233633961616163373461336234376131653831633f73697a653d3530" height="50" width="50" alt="Avatar for hmaarrfk from gravatar.com" title="Avatar for hmaarrfk from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          hmaarrfk
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jarrodmillman/" aria-label="jarrodmillman">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/0354b3aa1d9685db6261600559f9ff2b07f6f173/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f35343736363537393061303731626237346336366666313063633361333738613f73697a653d3530" height="50" width="50" alt="Avatar for jarrodmillman from gravatar.com" title="Avatar for jarrodmillman from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jarrodmillman
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/jni/" aria-label="jni">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8fc6e263cb1f4484622f1fb22314dacbc530914c/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f30303862353530333063666662396134633466376438343232653130333433653f73697a653d3530" height="50" width="50" alt="Avatar for jni from gravatar.com" title="Avatar for jni from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          jni
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/matthew.brett/" aria-label="matthew.brett">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/54713a5a3bc7c9274a1382b73b76ef9906f3ddc7/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f62343932393239343431376539616334346331373936376261616537356133363f73697a653d3530" height="50" width="50" alt="Avatar for matthew.brett from gravatar.com" title="Avatar for matthew.brett from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          matthew.brett
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/NelleV/" aria-label="NelleV">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/669179ef09b12ea4777cfa998c160da018832953/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f31386637313961373163643935376463366637393635353434386361636164313f73697a653d3530" height="50" width="50" alt="Avatar for NelleV from gravatar.com" title="Avatar for NelleV from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          NelleV
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/sjvdwalt/" aria-label="sjvdwalt">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/af9080bc025fcf648c962772e409fa03dc316f81/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f64396163393231336164613461383037333232663939303831323936373834623f73697a653d3530" height="50" width="50" alt="Avatar for sjvdwalt from gravatar.com" title="Avatar for sjvdwalt from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          sjvdwalt
+        </span>
+      </a>
+    </span>
+  
+    
+    <span class="sidebar-section__maintainer">
+      <a href="/user/soupault/" aria-label="soupault">
+        <span class="sidebar-section__user-gravatar">
+          <img src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b8000f8cc9e92b448129bc479ce9be2ae9fe078b/68747470733a2f2f7365637572652e67726176617461722e636f6d2f6176617461722f61303961646630353737636461353339313762623330386565666333623934633f73697a653d3530" height="50" width="50" alt="Avatar for soupault from gravatar.com" title="Avatar for soupault from gravatar.com">
+        </span>
+        <span class="sidebar-section__user-gravatar-text">
+          soupault
+        </span>
+      </a>
+    </span>
+  
+</div>
+
+
+<div class="sidebar-section">
+  <h3 class="sidebar-section__title">Classifiers</h3>
+  <ul class="sidebar-section__classifiers">
+    
+    <li>
+      <strong>Development Status</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Development+Status+%3A%3A+4+-+Beta">
+            4 - Beta
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Environment</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Environment+%3A%3A+Console">
+            Console
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Intended Audience</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Developers">
+            Developers
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Intended+Audience+%3A%3A+Science%2FResearch">
+            Science/Research
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>License</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=License+%3A%3A+OSI+Approved+%3A%3A+BSD+License">
+            OSI Approved :: BSD License
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Operating System</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+MacOS">
+            MacOS
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Microsoft+%3A%3A+Windows">
+            Microsoft :: Windows
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+POSIX">
+            POSIX
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Operating+System+%3A%3A+Unix">
+            Unix
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Programming Language</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+C">
+            C
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python">
+            Python
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3">
+            Python :: 3
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3+%3A%3A+Only">
+            Python :: 3 :: Only
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.8">
+            Python :: 3.8
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.9">
+            Python :: 3.9
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.10">
+            Python :: 3.10
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Programming+Language+%3A%3A+Python+%3A%3A+3.11">
+            Python :: 3.11
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li>
+      <strong>Topic</strong>
+      <ul>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Scientific%2FEngineering">
+            Scientific/Engineering
+          </a>
+        </li>
+        
+        <li>
+          <a href="/search/?c=Topic+%3A%3A+Software+Development+%3A%3A+Libraries">
+            Software Development :: Libraries
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+</div>
+
+          <br>
+        </div>
+
+        
+        <div id="history" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="history-tab mobile-history-tab" tabindex="-1">
+          <h2 class="page-title split-layout">
+            <span>Release history</span>
+            <span class="reset-text margin-top">
+              <a href="/help/#project-release-notifications">Release notifications</a> |
+              <a href="/rss/project/scikit-image/releases.xml">RSS feed <i class="fa fa-rss" aria-hidden="true"></i></a>
+            </span>
+          </h2>
+
+          <div class="release-timeline">
+            
+            
+            
+            
+            <div class="release release--latest release--current">
+              <div class="release__meta">
+                
+                <span class="badge">This version</span>
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/blue-cube.572a5bfb.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0/">
+                <p class="release__version">
+                  0.20.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-28T23:31:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc8/">
+                <p class="release__version">
+                  0.20.0rc8
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-20T16:50:46+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 20, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc7/">
+                <p class="release__version">
+                  0.20.0rc7
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                  <span class="badge badge--danger">
+                    yanked
+                  </span>
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-17T10:34:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 17, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc6/">
+                <p class="release__version">
+                  0.20.0rc6
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                  <span class="badge badge--danger">
+                    yanked
+                  </span>
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-16T20:04:51+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 16, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc5/">
+                <p class="release__version">
+                  0.20.0rc5
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-13T19:44:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 13, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc4/">
+                <p class="release__version">
+                  0.20.0rc4
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-07T03:19:31+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 7, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc3/">
+                <p class="release__version">
+                  0.20.0rc3
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                  <span class="badge badge--danger">
+                    yanked
+                  </span>
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-01T23:59:38+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 1, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0rc2/">
+                <p class="release__version">
+                  0.20.0rc2
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                  <span class="badge badge--danger">
+                    yanked
+                  </span>
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-01T20:36:46+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 1, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.20.0.dev0/">
+                <p class="release__version">
+                  0.20.0.dev0
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                  <span class="badge badge--danger">
+                    yanked
+                  </span>
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2023-02-01T20:35:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 1, 2023
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.19.3/">
+                <p class="release__version">
+                  0.19.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-06-12T18:11:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 12, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.19.2/">
+                <p class="release__version">
+                  0.19.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2022-02-17T18:24:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 17, 2022
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.19.1/">
+                <p class="release__version">
+                  0.19.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-12-15T17:04:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 15, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.19.0/">
+                <p class="release__version">
+                  0.19.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-12-03T07:49:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 3, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.19.0rc0/">
+                <p class="release__version">
+                  0.19.0rc0
+                  
+                  <span class="badge badge--warning">
+                    pre-release
+                  </span>
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-11-22T06:24:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Nov 22, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.18.3/">
+                <p class="release__version">
+                  0.18.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-08-24T18:09:55+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Aug 24, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.18.2/">
+                <p class="release__version">
+                  0.18.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2021-06-29T01:49:12+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 29, 2021
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.18.1/">
+                <p class="release__version">
+                  0.18.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-12-23T06:36:46+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 23, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.18.0/">
+                <p class="release__version">
+                  0.18.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-12-15T10:15:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Dec 15, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.17.2/">
+                <p class="release__version">
+                  0.17.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-05-13T11:35:56+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 13, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.17.1/">
+                <p class="release__version">
+                  0.17.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2020-05-08T16:11:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 8, 2020
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.16.2/">
+                <p class="release__version">
+                  0.16.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-10-22T06:24:15+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 22, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.16.1/">
+                <p class="release__version">
+                  0.16.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-10-14T08:04:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 14, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.15.0/">
+                <p class="release__version">
+                  0.15.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-04-03T03:00:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 3, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.5/">
+                <p class="release__version">
+                  0.14.5
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-09-10T09:34:26+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 10, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.4/">
+                <p class="release__version">
+                  0.14.4
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-09-04T22:01:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 4, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.3/">
+                <p class="release__version">
+                  0.14.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-06-12T00:22:50+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 12, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.2/">
+                <p class="release__version">
+                  0.14.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2019-01-18T08:27:59+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jan 18, 2019
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.1/">
+                <p class="release__version">
+                  0.14.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-10-02T08:39:19+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 2, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.14.0/">
+                <p class="release__version">
+                  0.14.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2018-05-29T08:40:29+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 29, 2018
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.13.1/">
+                <p class="release__version">
+                  0.13.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-09-28T01:48:02+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Sep 28, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.13.0/">
+                <p class="release__version">
+                  0.13.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2017-03-29T15:06:44+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 29, 2017
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.12.3/">
+                <p class="release__version">
+                  0.12.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-03-08T09:32:37+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 8, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.12.2/">
+                <p class="release__version">
+                  0.12.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-03-07T20:40:53+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 7, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.12.1/">
+                <p class="release__version">
+                  0.12.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-03-07T09:46:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 7, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.12.0/">
+                <p class="release__version">
+                  0.12.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2016-03-07T02:03:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 7, 2016
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.11.3/">
+                <p class="release__version">
+                  0.11.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-04-01T08:32:14+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Apr 1, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.11.2/">
+                <p class="release__version">
+                  0.11.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2015-03-05T20:01:52+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 5, 2015
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.10.1/">
+                <p class="release__version">
+                  0.10.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-06-30T21:25:45+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Jun 30, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.10.0/">
+                <p class="release__version">
+                  0.10.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2014-05-28T01:42:01+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  May 28, 2014
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.9.3/">
+                <p class="release__version">
+                  0.9.3
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-10-27T07:28:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 27, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.9.2/">
+                <p class="release__version">
+                  0.9.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-10-27T07:03:06+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 27, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.9.1/">
+                <p class="release__version">
+                  0.9.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-10-19T18:26:11+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 19, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.9.0/">
+                <p class="release__version">
+                  0.9.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-10-19T14:25:05+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 19, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.8.2/">
+                <p class="release__version">
+                  0.8.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-03-06T22:18:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 6, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.8.1/">
+                <p class="release__version">
+                  0.8.1
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-03-06T15:53:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 6, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.8.0/">
+                <p class="release__version">
+                  0.8.0
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2013-03-04T22:11:16+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Mar 4, 2013
+</time>
+                </p>
+              </a>
+            </div>
+            
+            
+            <div class="release release--oldest">
+              <div class="release__meta">
+                
+              </div>
+
+              <div class="release__graphic">
+                
+                <div class="release__line"></div>
+                
+                
+                <img class="release__node" alt="" src="https://pypi.org/static/images/white-cube.2351a86c.svg">
+                
+              </div>
+
+              <a class="card release__card" href="/project/scikit-image/0.7.2/">
+                <p class="release__version">
+                  0.7.2
+                  
+                  
+                </p>
+                <p class="release__version-date">
+                  <time datetime="2012-10-14T06:51:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Oct 14, 2012
+</time>
+                </p>
+              </a>
+            </div>
+            
+          </div>
+        </div>
+
+        
+          
+          <div id="files" data-project-tabs-target="content" class="vertical-tabs__content" role="tabpanel" aria-labelledby="files-tab mobile-files-tab" tabindex="-1">
+            <h2 class="page-title">Download files</h2>
+            <p>Download the file for your platform. If you're not sure which to choose, learn more about <a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">installing packages</a>.</p>
+            <h3>
+              Source Distribution
+            </h3>
+
+            
+              
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/03/55/0ff6e41c39c64d9ad18bf31c953c28f525533609c7371fa2790558ca8197/scikit_image-0.20.0.tar.gz">
+          scikit_image-0.20.0.tar.gz
+        </a>
+        (22.9 MB
+        <a href="#copy-hash-modal-051cad7d-0525-4a09-9607-d3726d465fa5">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:30+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>source</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+
+            
+            <h3>
+              Built Distributions
+            </h3>
+
+            
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/0f/7e/0f179314325927ce64e8858802664ed7086433b01bd8d0ee9913810fca14/scikit_image-0.20.0-cp311-cp311-win_amd64.whl">
+          scikit_image-0.20.0-cp311-cp311-win_amd64.whl
+        </a>
+        (23.7 MB
+        <a href="#copy-hash-modal-01f9a3e6-c08c-4471-be13-9d325ae5bec6">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:49+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/0a/80/501ff38068c79269165d859c3c06e037ca96220d0fbf4fabea682e3d6174/scikit_image-0.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          scikit_image-0.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (12.9 MB
+        <a href="#copy-hash-modal-72975cd0-6b9e-4859-a20d-8509f60f7de2">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:46+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/71/67/70537be311c580773b8bc07dfd67599e818605a6a0e904283ba5395fb2b4/scikit_image-0.20.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          scikit_image-0.20.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (12.5 MB
+        <a href="#copy-hash-modal-23025be7-a0f6-444a-98f0-eaef77571479">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:42+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/1b/f2/1a7fc04045016f29e52199ada86adbb1fdd4680b5710e2bf4d02299c2f06/scikit_image-0.20.0-cp311-cp311-macosx_12_0_arm64.whl">
+          scikit_image-0.20.0-cp311-cp311-macosx_12_0_arm64.whl
+        </a>
+        (12.6 MB
+        <a href="#copy-hash-modal-175312af-a592-4744-b661-1dd3ea7717fb">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:39+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/b4/0c/aa184fe45c7ceb7c6aa08d71b1ab1e6f9933da50088866acf58ac8ce8dc6/scikit_image-0.20.0-cp311-cp311-macosx_10_9_x86_64.whl">
+          scikit_image-0.20.0-cp311-cp311-macosx_10_9_x86_64.whl
+        </a>
+        (13.0 MB
+        <a href="#copy-hash-modal-9e81a260-6484-4ecd-b6ca-e80456cc29a1">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:36+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp311</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/2f/2e/14cbb86b2df8a1ffbbf01c7a42743bb1614ddc2c087a040c08a7ccba8b56/scikit_image-0.20.0-cp310-cp310-win_amd64.whl">
+          scikit_image-0.20.0-cp310-cp310-win_amd64.whl
+        </a>
+        (23.7 MB
+        <a href="#copy-hash-modal-2638a680-cf3e-4698-8bb3-57732bb7ddab">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:32+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/29/ca/c9bae22bcc25df0e6f95456ddf418319d2e698062c5e86a10e5fb6691503/scikit_image-0.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          scikit_image-0.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.2 MB
+        <a href="#copy-hash-modal-d7f2f1fe-11ce-4bde-8bde-5a9a362977a0">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:28+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/ac/d3/02dce70673fa04f4340a834eed248752f0691333c930b6907a1f7a865bef/scikit_image-0.20.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          scikit_image-0.20.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-d2cdacc0-2665-48af-a437-470e752e21a4">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:24+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/53/3c/a34feb601c80c788c4c6600fae0323e6989a8aecda6d01ec471e16cebfe8/scikit_image-0.20.0-cp310-cp310-macosx_12_0_arm64.whl">
+          scikit_image-0.20.0-cp310-cp310-macosx_12_0_arm64.whl
+        </a>
+        (12.7 MB
+        <a href="#copy-hash-modal-c2edc696-47aa-4029-b210-162fbfc083d7">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:21+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/5a/61/1a3009f72600cbf3bf14a160b8e1d152bf5bd5717778af52c8e1d37612f7/scikit_image-0.20.0-cp310-cp310-macosx_10_9_x86_64.whl">
+          scikit_image-0.20.0-cp310-cp310-macosx_10_9_x86_64.whl
+        </a>
+        (13.0 MB
+        <a href="#copy-hash-modal-a90a5659-b03f-4486-9a51-c31cb70c8059">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp310</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/6b/13/9483a2ba316d2925e36a7d2359561c18bcb0b6d4ce25b17ff570ba77a53c/scikit_image-0.20.0-cp39-cp39-win_amd64.whl">
+          scikit_image-0.20.0-cp39-cp39-win_amd64.whl
+        </a>
+        (23.9 MB
+        <a href="#copy-hash-modal-4d74c1f7-9215-4df4-96b4-2164c21f0099">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:25+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/82/e7/c2ac9801403de908462437c05485c806ae8744edcf8d640862f9501e0c48/scikit_image-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          scikit_image-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.2 MB
+        <a href="#copy-hash-modal-9057b5ba-d3ae-43a9-90d6-4213c8b0798c">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:21+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/92/2e/7b608ca06baadb834d9acbb832c794b1fad5956ee754dbc628d7985c8905/scikit_image-0.20.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          scikit_image-0.20.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (12.8 MB
+        <a href="#copy-hash-modal-377db29b-43f8-4b54-bb75-a4dde2d0ae6d">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:17+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/b4/dc/21d3f4658e456faee6a9e60dd9b0cefbd646756d0651d9678c321b2b3fef/scikit_image-0.20.0-cp39-cp39-macosx_12_0_arm64.whl">
+          scikit_image-0.20.0-cp39-cp39-macosx_12_0_arm64.whl
+        </a>
+        (12.8 MB
+        <a href="#copy-hash-modal-97f7464e-ce56-4f1f-8da8-43df7310b138">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:14+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/9f/09/57636d8e7d471f7e28d71c6980b5dd098eb7f2516800c86a51716247d150/scikit_image-0.20.0-cp39-cp39-macosx_10_9_x86_64.whl">
+          scikit_image-0.20.0-cp39-cp39-macosx_10_9_x86_64.whl
+        </a>
+        (13.1 MB
+        <a href="#copy-hash-modal-b334df30-4723-4c9e-ba76-bde46ab9d268">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:10+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp39</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/62/0f/3d1dd9037ed2ac140fa46adef4cf29a7228c2e2c1bf0c111167db72e7630/scikit_image-0.20.0-cp38-cp38-win_amd64.whl">
+          scikit_image-0.20.0-cp38-cp38-win_amd64.whl
+        </a>
+        (23.6 MB
+        <a href="#copy-hash-modal-5b285c63-49ea-41ff-8336-4e2cd13f458b">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:07+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/54/0f/c50440b496cd3e2d81f4760171ca5e536185b6c3fcfe22b2fc50156f8a31/scikit_image-0.20.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl">
+          scikit_image-0.20.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+        </a>
+        (13.4 MB
+        <a href="#copy-hash-modal-19747885-07e9-4a4f-9527-a393da788f8b">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:04+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e1/67/4ad8b9cf97e9c90d7a69d91f41bfa59ea7a75b6c4e060a604c16ef73896c/scikit_image-0.20.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl">
+          scikit_image-0.20.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+        </a>
+        (12.8 MB
+        <a href="#copy-hash-modal-cb67303d-72ce-4485-b69f-fb7c7a33ea3b">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:32:00+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/ce/96/844978b6f28da23f517be908bb0cce2e8a9bc22f2d8824e91ee8fbe692b2/scikit_image-0.20.0-cp38-cp38-macosx_12_0_arm64.whl">
+          scikit_image-0.20.0-cp38-cp38-macosx_12_0_arm64.whl
+        </a>
+        (12.6 MB
+        <a href="#copy-hash-modal-8ca5e866-1715-4ec0-8f0e-2ebfb11ca8d8">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:57+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+    <div class="file">
+      <div class="file__graphic">
+        <i class="far fa-file" aria-hidden="true"></i>
+      </div>
+
+      <div class="card file__card">
+        <a href="https://files.pythonhosted.org/packages/e8/0a/605c34d06a9e7809def50229f81ff5b14d4771ddf83298018878a6250d64/scikit_image-0.20.0-cp38-cp38-macosx_10_9_x86_64.whl">
+          scikit_image-0.20.0-cp38-cp38-macosx_10_9_x86_64.whl
+        </a>
+        (13.0 MB
+        <a href="#copy-hash-modal-006ab096-658e-448a-bd73-3b38c8cbc2ac">view hashes</a>)
+        <p class="file__meta">
+          Uploaded <time datetime="2023-02-28T23:31:54+0000" data-controller="localized-time" data-localized-time-relative="true" data-localized-time-show-time="false">
+  Feb 28, 2023
+</time>
+          
+          
+          <code>cp38</code>
+          
+          
+        </p>
+      </div>
+    </div>
+  
+            
+          </div>
+
+          
+          <div id="copy-hash-modal-051cad7d-0525-4a09-9607-d3726d465fa5" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0.tar.gz
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0.tar.gz</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>2cd784fce18bd31d71ade62c6221440199ead03acf7544086261ee032264cf61</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2cd784fce18bd31d71ade62c6221440199ead03acf7544086261ee032264cf61">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2e1bf1e886c0dd4f6339ab3d2a9d2d5f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2e1bf1e886c0dd4f6339ab3d2a9d2d5f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>03550ff6e41c39c64d9ad18bf31c953c28f525533609c7371fa2790558ca8197</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="03550ff6e41c39c64d9ad18bf31c953c28f525533609c7371fa2790558ca8197">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-01f9a3e6-c08c-4471-be13-9d325ae5bec6" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp311-cp311-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp311-cp311-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>fdd1fd258e78c86e382fd687177431088a40880bd785e0ab40ee5f3794366710</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="fdd1fd258e78c86e382fd687177431088a40880bd785e0ab40ee5f3794366710">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>9ed79e3c24d53c2a8fb174b611e92f38</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9ed79e3c24d53c2a8fb174b611e92f38">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>0f7e0f179314325927ce64e8858802664ed7086433b01bd8d0ee9913810fca14</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0f7e0f179314325927ce64e8858802664ed7086433b01bd8d0ee9913810fca14">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-72975cd0-6b9e-4859-a20d-8509f60f7de2" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>8d719242ea7e7250d49e38d1e33c44c2dd59c3414ae085881d168b98cbb6059a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8d719242ea7e7250d49e38d1e33c44c2dd59c3414ae085881d168b98cbb6059a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>966d6bb29140ddd9e5560d4d9b3bb6aa</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="966d6bb29140ddd9e5560d4d9b3bb6aa">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>0a80501ff38068c79269165d859c3c06e037ca96220d0fbf4fabea682e3d6174</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0a80501ff38068c79269165d859c3c06e037ca96220d0fbf4fabea682e3d6174">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-23025be7-a0f6-444a-98f0-eaef77571479" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>3943d7355d02b40c066fd87cd5fe1b4f6637a16448e62333c4191a65ebf40a1c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3943d7355d02b40c066fd87cd5fe1b4f6637a16448e62333c4191a65ebf40a1c">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>efe029394d52d2bdc2fa66532066b508</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="efe029394d52d2bdc2fa66532066b508">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>716770537be311c580773b8bc07dfd67599e818605a6a0e904283ba5395fb2b4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="716770537be311c580773b8bc07dfd67599e818605a6a0e904283ba5395fb2b4">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-175312af-a592-4744-b661-1dd3ea7717fb" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp311-cp311-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp311-cp311-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>a503ee85b444234ee88f34bf8674872dc37c6124ff60b7eb9242813de012ff4e</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a503ee85b444234ee88f34bf8674872dc37c6124ff60b7eb9242813de012ff4e">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>20e7e3e84c84a4d71c1ea113c72ebc7a</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="20e7e3e84c84a4d71c1ea113c72ebc7a">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>1bf21a7fc04045016f29e52199ada86adbb1fdd4680b5710e2bf4d02299c2f06</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1bf21a7fc04045016f29e52199ada86adbb1fdd4680b5710e2bf4d02299c2f06">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-9e81a260-6484-4ecd-b6ca-e80456cc29a1" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp311-cp311-macosx_10_9_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp311-cp311-macosx_10_9_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>049d955869620453b9e0568c2da62c8fec47bf3714be48b5d46bbaebb91bdc1f</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="049d955869620453b9e0568c2da62c8fec47bf3714be48b5d46bbaebb91bdc1f">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>c3891c3785611ffd925a0f8642be67ba</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c3891c3785611ffd925a0f8642be67ba">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>b40caa184fe45c7ceb7c6aa08d71b1ab1e6f9933da50088866acf58ac8ce8dc6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b40caa184fe45c7ceb7c6aa08d71b1ab1e6f9933da50088866acf58ac8ce8dc6">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-2638a680-cf3e-4698-8bb3-57732bb7ddab" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp310-cp310-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp310-cp310-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>79a400ffe35fc7f64d1d043f3d043e062015689ad5637c35cd5569edae87ae13</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="79a400ffe35fc7f64d1d043f3d043e062015689ad5637c35cd5569edae87ae13">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>a8b0340479774a09c91a9580832817c4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a8b0340479774a09c91a9580832817c4">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>2f2e14cbb86b2df8a1ffbbf01c7a42743bb1614ddc2c087a040c08a7ccba8b56</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2f2e14cbb86b2df8a1ffbbf01c7a42743bb1614ddc2c087a040c08a7ccba8b56">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-d7f2f1fe-11ce-4bde-8bde-5a9a362977a0" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>f667dcf01737248bc5bd0a99fad58475abeb6b6a8229aecee9fdb96cf988ae85</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="f667dcf01737248bc5bd0a99fad58475abeb6b6a8229aecee9fdb96cf988ae85">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>8a6fd597b85a1314560ae0476b2e8903</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8a6fd597b85a1314560ae0476b2e8903">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>29cac9bae22bcc25df0e6f95456ddf418319d2e698062c5e86a10e5fb6691503</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="29cac9bae22bcc25df0e6f95456ddf418319d2e698062c5e86a10e5fb6691503">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-d2cdacc0-2665-48af-a437-470e752e21a4" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>c6797e3ef5fc53897bde131cfc3ceba6ce247d89cfe194fc8d3aba7f5c12aaf6</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="c6797e3ef5fc53897bde131cfc3ceba6ce247d89cfe194fc8d3aba7f5c12aaf6">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>4a5c2d4377383e6152a960db9fd7c816</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="4a5c2d4377383e6152a960db9fd7c816">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>acd302dce70673fa04f4340a834eed248752f0691333c930b6907a1f7a865bef</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="acd302dce70673fa04f4340a834eed248752f0691333c930b6907a1f7a865bef">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-c2edc696-47aa-4029-b210-162fbfc083d7" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp310-cp310-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp310-cp310-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>0ab378822fadc93db7e917a266d489ea33df3b42edfef197caaebbabbc2e4ecc</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="0ab378822fadc93db7e917a266d489ea33df3b42edfef197caaebbabbc2e4ecc">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>3df97f3d05f854b7145439af65a6eaa3</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3df97f3d05f854b7145439af65a6eaa3">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>533ca34feb601c80c788c4c6600fae0323e6989a8aecda6d01ec471e16cebfe8</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="533ca34feb601c80c788c4c6600fae0323e6989a8aecda6d01ec471e16cebfe8">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-a90a5659-b03f-4486-9a51-c31cb70c8059" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp310-cp310-macosx_10_9_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp310-cp310-macosx_10_9_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>3cec8c5e8412ee19642a916648144186eb6b60c39fb6608ab478b4d1a4575e25</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="3cec8c5e8412ee19642a916648144186eb6b60c39fb6608ab478b4d1a4575e25">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>d18a7e74baffc7cfeba4d2594f729329</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="d18a7e74baffc7cfeba4d2594f729329">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>5a611a3009f72600cbf3bf14a160b8e1d152bf5bd5717778af52c8e1d37612f7</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5a611a3009f72600cbf3bf14a160b8e1d152bf5bd5717778af52c8e1d37612f7">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-4d74c1f7-9215-4df4-96b4-2164c21f0099" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp39-cp39-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp39-cp39-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>a600374394b76b7fc260cef54e1be21047c4de0ecffb0b7f2f7392cd8ba16ffa</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="a600374394b76b7fc260cef54e1be21047c4de0ecffb0b7f2f7392cd8ba16ffa">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2257a1da24a7ba35285a5f10fd4b1dde</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2257a1da24a7ba35285a5f10fd4b1dde">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>6b139483a2ba316d2925e36a7d2359561c18bcb0b6d4ce25b17ff570ba77a53c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6b139483a2ba316d2925e36a7d2359561c18bcb0b6d4ce25b17ff570ba77a53c">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-9057b5ba-d3ae-43a9-90d6-4213c8b0798c" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>b856efc75e3051bea6d40a8ffcdaabd5682783ece1aa91c3f6777c3372a98ca1</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b856efc75e3051bea6d40a8ffcdaabd5682783ece1aa91c3f6777c3372a98ca1">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>85f928f599bd43f464eca7a212f54c20</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="85f928f599bd43f464eca7a212f54c20">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>82e7c2ac9801403de908462437c05485c806ae8744edcf8d640862f9501e0c48</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="82e7c2ac9801403de908462437c05485c806ae8744edcf8d640862f9501e0c48">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-377db29b-43f8-4b54-bb75-a4dde2d0ae6d" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>df14f8a55dae511749b081d9402ea215ea7c641bd6f74f06aa7b623e132817df</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="df14f8a55dae511749b081d9402ea215ea7c641bd6f74f06aa7b623e132817df">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>8a89ca4d7fee1b64ff54e7421ab8d211</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="8a89ca4d7fee1b64ff54e7421ab8d211">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>922e7b608ca06baadb834d9acbb832c794b1fad5956ee754dbc628d7985c8905</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="922e7b608ca06baadb834d9acbb832c794b1fad5956ee754dbc628d7985c8905">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-97f7464e-ce56-4f1f-8da8-43df7310b138" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp39-cp39-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp39-cp39-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1794889d2dbb385c7ad5656363371ba0057b7a3335cda093a11415af84bb96e2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1794889d2dbb385c7ad5656363371ba0057b7a3335cda093a11415af84bb96e2">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>11807c334b63e1ace3be5470e808f622</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="11807c334b63e1ace3be5470e808f622">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>b4dc21d3f4658e456faee6a9e60dd9b0cefbd646756d0651d9678c321b2b3fef</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="b4dc21d3f4658e456faee6a9e60dd9b0cefbd646756d0651d9678c321b2b3fef">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-b334df30-4723-4c9e-ba76-bde46ab9d268" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp39-cp39-macosx_10_9_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp39-cp39-macosx_10_9_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>13a5c1c81ee5bcb64ee8ca8f1a2cf371b0c4345ea6fb67c3052e1c6d5edbd936</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="13a5c1c81ee5bcb64ee8ca8f1a2cf371b0c4345ea6fb67c3052e1c6d5edbd936">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>5652aa270bd3bd4e941fb0c9252f6962</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="5652aa270bd3bd4e941fb0c9252f6962">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>9f0957636d8e7d471f7e28d71c6980b5dd098eb7f2516800c86a51716247d150</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="9f0957636d8e7d471f7e28d71c6980b5dd098eb7f2516800c86a51716247d150">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-5b285c63-49ea-41ff-8336-4e2cd13f458b" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp38-cp38-win_amd64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp38-cp38-win_amd64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>2118d610096754bca44b5d37328e1382e5fa7c6493803685100c9238e257d848</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2118d610096754bca44b5d37328e1382e5fa7c6493803685100c9238e257d848">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>47a4bdaac7bc7ba15bfb7b27f2be1e54</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="47a4bdaac7bc7ba15bfb7b27f2be1e54">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>620f3d1dd9037ed2ac140fa46adef4cf29a7228c2e2c1bf0c111167db72e7630</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="620f3d1dd9037ed2ac140fa46adef4cf29a7228c2e2c1bf0c111167db72e7630">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-19747885-07e9-4a4f-9527-a393da788f8b" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>76f2fd12b537daea806a078df9ea76f5cc5a529d5bd7c41d7d0a101e9c5f91c4</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="76f2fd12b537daea806a078df9ea76f5cc5a529d5bd7c41d7d0a101e9c5f91c4">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>6a7dd6c0d04840b356f379dbbfd29a69</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="6a7dd6c0d04840b356f379dbbfd29a69">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>540fc50440b496cd3e2d81f4760171ca5e536185b6c3fcfe22b2fc50156f8a31</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="540fc50440b496cd3e2d81f4760171ca5e536185b6c3fcfe22b2fc50156f8a31">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-cb67303d-72ce-4485-b69f-fb7c7a33ea3b" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1c123e6b0677dc1697c04b5bf2efb7110bcca511b4bc6967a38fa395ae5edf44</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1c123e6b0677dc1697c04b5bf2efb7110bcca511b4bc6967a38fa395ae5edf44">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>96f8dad6ea78fb7b82119009f642d7c9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="96f8dad6ea78fb7b82119009f642d7c9">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e1674ad8b9cf97e9c90d7a69d91f41bfa59ea7a75b6c4e060a604c16ef73896c</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e1674ad8b9cf97e9c90d7a69d91f41bfa59ea7a75b6c4e060a604c16ef73896c">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-8ca5e866-1715-4ec0-8f0e-2ebfb11ca8d8" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp38-cp38-macosx_12_0_arm64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp38-cp38-macosx_12_0_arm64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>2e9026161d0a698f532352dda6455a0bc13b1c9d831ea9279726b59d064df574</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2e9026161d0a698f532352dda6455a0bc13b1c9d831ea9279726b59d064df574">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>48ad7743502222d87161e7b09a9577ed</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="48ad7743502222d87161e7b09a9577ed">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>ce96844978b6f28da23f517be908bb0cce2e8a9bc22f2d8824e91ee8fbe692b2</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="ce96844978b6f28da23f517be908bb0cce2e8a9bc22f2d8824e91ee8fbe692b2">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+          <div id="copy-hash-modal-006ab096-658e-448a-bd73-3b38c8cbc2ac" class="modal modal--wide">
+  <div class="modal__content" role="dialog">
+    <a href="#modal-close" title="Close" class="modal__close">
+      <i class="fa fa-times" aria-hidden="true"></i>
+      <span class="sr-only">Close</span>
+    </a>
+    <div class="modal__body">
+      <h3 class="modal__title">
+        <a href="https://pip.pypa.io/en/stable/cli/pip_install/#hash-checking-mode" title="External link" target="_blank" rel="noopener">Hashes</a> for scikit_image-0.20.0-cp38-cp38-macosx_10_9_x86_64.whl
+      </h3>
+      <table class="table table--hashes">
+        <caption class="sr-only">Hashes for scikit_image-0.20.0-cp38-cp38-macosx_10_9_x86_64.whl</caption>
+        <thead>
+          <tr>
+            <th scope="col">Algorithm</th>
+            <th scope="col">Hash digest</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">SHA256</th>
+            <td><code>1cd0486cb769d906307a3ec3884630be822d8ec2f41069e197336f904f584a33</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="1cd0486cb769d906307a3ec3884630be822d8ec2f41069e197336f904f584a33">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">MD5</th>
+            <td><code>2fc5c8feffcce7a4c7aa30305fbb09c9</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="2fc5c8feffcce7a4c7aa30305fbb09c9">
+                Copy
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">BLAKE2b-256</th>
+            <td><code>e80a605c34d06a9e7809def50229f81ff5b14d4771ddf83298018878a6250d64</code></td>
+            <td class="table__align-right">
+              <button type="button" class="button button--small copy-tooltip copy-tooltip-w" data-tooltip-label="Copy to clipboard" data-clipboard-text="e80a605c34d06a9e7809def50229f81ff5b14d4771ddf83298018878a6250d64">
+                Copy
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="modal__footer">
+      <a href="#modal-close" class="button button--primary modal__action">Close</a>
+    </div>
+  </div>
+</div>
+          
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="/static/images/white-cube.2351a86c.svg" alt="" class="-js-white-cube">
+      </div>
+
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <h2>Help</h2>
+          <nav aria-label="Help navigation">
+            <ul>
+              <li><a href="https://packaging.python.org/installing/" title="External link" target="_blank" rel="noopener">Installing packages</a></li>
+              <li><a href="https://packaging.python.org/tutorials/packaging-projects/" title="External link" target="_blank" rel="noopener">Uploading packages</a></li>
+              <li><a href="https://packaging.python.org/" title="External link" target="_blank" rel="noopener">User guide</a></li>
+              <li><a href="https://www.python.org/dev/peps/pep-0541/" title="External link" target="_blank" rel="noopener">Project name retention</a></li>
+              <li><a href="/help/">FAQs</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>About PyPI</h2>
+          <nav aria-label="About PyPI navigation">
+            <ul>
+              <li><a href="https://twitter.com/PyPI" title="External link" target="_blank" rel="noopener">PyPI on Twitter</a></li>
+              <li><a href="https://dtdg.co/pypi" title="External link" target="_blank" rel="noopener">Infrastructure dashboard</a></li>
+              <li><a href="/stats/">Statistics</a></li>
+              <li><a href="/trademarks/">Logos & trademarks</a></li>
+              <li><a href="/sponsors/">Our sponsors</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Contributing to PyPI</h2>
+          <nav aria-label="How to contribute navigation">
+            <ul>
+              <li><a href="/help/#feedback">Bugs and feedback</a></li>
+              <li><a href="https://github.com/pypi/warehouse" title="External link" target="_blank" rel="noopener">Contribute on GitHub</a></li>
+              <li><a href="https://hosted.weblate.org/projects/pypa/warehouse/" title="External link" target="_blank" rel="noopener">Translate PyPI</a></li>
+              <li><a href="/sponsors/">Sponsor PyPI</a></li>
+              <li><a href="https://github.com/pypi/warehouse/graphs/contributors" title="External link" target="_blank" rel="noopener">Development credits</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="footer__menu">
+          <h2>Using PyPI</h2>
+          <nav aria-label="Using PyPI navigation">
+            <ul>
+              <li><a href="https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md" title="External link" target="_blank" rel="noopener">Code of conduct</a></li>
+              <li><a href="/security/">Report security issue</a></li>
+              <li><a href="https://www.python.org/privacy/" title="External link" target="_blank" rel="noopener">Privacy policy</a></li>
+              <li><a href="/policy/terms-of-use/">Terms of use</a></li>
+              <li><a href="/policy/acceptable-use-policy/">Acceptable Use Policy</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <hr class="footer__divider">
+
+      <div class="footer__text">
+        
+        <p>Status:<a href="https://status.python.org/" title="External link" target="_blank" rel="noopener">
+          <span data-statuspage-domain="https://2p66nmmycsj3.statuspage.io">all systems operational</span></a>
+        </p>
+        
+        <p>
+          Developed and maintained by the Python community, for the Python community.
+          <br>
+          <a href="https://donate.pypi.org">Donate today!</a>
+        </p>
+        <p>
+          
+"PyPI", "Python Package Index", and the blocks logos are registered <a href="/trademarks/">trademarks</a> of the <a href="https://python.org/psf-landing" target="_blank" rel="noopener">Python Software Foundation</a>.
+<br>
+        </p>
+        <p>
+          © 2023 <a href="https://www.python.org/psf-landing/" title="External link" target="_blank" rel="noopener">Python Software Foundation</a><br>
+          <a href="/sitemap/">Site map</a>
+        </p>
+      </div>
+
+      <div class="centered hide-on-desktop">
+        <button type="button" class="button button--switch-to-desktop hidden" data-viewport-toggle-target="switchToDesktop" data-action="viewport-toggle#switchToDesktop">
+          Switch to desktop version
+        </button>
+      </div>
+    </footer>
+
+
+    <div class="language-switcher">
+      <form action="/locale/">
+        <ul>
+          
+          <li>
+            <button
+              
+              class="language-switcher__selected"
+              
+              name="locale_id" value="en" type="submit"
+            >
+              English
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="es" type="submit"
+            >
+              español
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="fr" type="submit"
+            >
+              français
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ja" type="submit"
+            >
+              日本語
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="pt_BR" type="submit"
+            >
+              português (Brasil)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="uk" type="submit"
+            >
+              українська
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="el" type="submit"
+            >
+              Ελληνικά
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="de" type="submit"
+            >
+              Deutsch
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hans" type="submit"
+            >
+              中文 (简体)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="zh_Hant" type="submit"
+            >
+              中文 (繁體)
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="ru" type="submit"
+            >
+              русский
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="he" type="submit"
+            >
+              עברית
+            </button>
+          </li>
+          
+          <li>
+            <button
+              
+              name="locale_id" value="eo" type="submit"
+            >
+              esperanto
+            </button>
+          </li>
+          
+        </ul>
+      </form>
+    </div>
+
+
+    <div class="sponsors">
+  <p class="sponsors__title">Supported by</p>
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://aws.amazon.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/ed7074cadad1a06f56bc520ad9bd3e00d0704c5b/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6177732d77686974652d6c6f676f2d7443615473387a432e706e67" alt=AWS loading=lazy>
+          <span class="sponsors__name">AWS</span>
+          <span class="sponsors__service">
+          
+          
+            Cloud computing
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.datadoghq.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/8855f7c063a3bdb5b0ce8d91bfc50cf851cc5c51/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f64617461646f672d77686974652d6c6f676f2d6668644c4e666c6f2e706e67" alt=Datadog loading=lazy>
+          <span class="sponsors__name">Datadog</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://research.fb.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/e338a8302eed851d9793e0a4a92f57b315eb5998/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f66616365626f6f6b2d696e7374616772616d2d77686974652d6c6f676f2d6750686a57647a722e706e67" alt="Facebook / Instagram" loading=lazy>
+          <span class="sponsors__name">Facebook / Instagram</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.fastly.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/df6fe8829cbff2d7f668d98571df1fd011f36192/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f666173746c792d77686974652d6c6f676f2d65684d3077735f6f2e706e67" alt=Fastly loading=lazy>
+          <span class="sponsors__name">Fastly</span>
+          <span class="sponsors__service">
+          
+          
+            CDN
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://careers.google.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/420cc8cf360bac879e24c923b2f50ba7d1314fb0/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f676f6f676c652d77686974652d6c6f676f2d616734424e3774332e706e67" alt=Google loading=lazy>
+          <span class="sponsors__name">Google</span>
+          <span class="sponsors__service">
+          
+          
+            Object Storage and Download Analytics
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#huawei">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/656ae2011c837dba1e2de4c8f85815eed86c0878/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6875617765692d77686974652d6c6f676f2d416a465f553652312e706e67" alt=Huawei loading=lazy>
+          <span class="sponsors__name">Huawei</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#microsoft">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/524d1ce72f7772294ca4c1fe05d21dec8fa3f8ea/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6d6963726f736f66742d77686974652d6c6f676f2d5a443172685444462e706e67" alt=Microsoft loading=lazy>
+          <span class="sponsors__name">Microsoft</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#nvidia">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/19eae9e26a9a9ffacc134095642b1392737c58fb/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f6e76696469612d77686974652d6c6f676f2d46394c393761474c2e706e67" alt=NVIDIA loading=lazy>
+          <span class="sponsors__name">NVIDIA</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.pingdom.com/">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/d01053c02f3a626b73ffcb06b96367fdbbf9e230/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f70696e67646f6d2d77686974652d6c6f676f2d67355831547546362e706e67" alt=Pingdom loading=lazy>
+          <span class="sponsors__name">Pingdom</span>
+          <span class="sponsors__service">
+          
+          
+            Monitoring
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://www.python.org/psf/sponsors/#salesforce">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/932f54a6c688f0bbc0e2f4e7b7dc5c067eed6c55/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73616c6573666f7263652d77686974652d6c6f676f2d4539677a3053782d2e706e67" alt=Salesforce loading=lazy>
+          <span class="sponsors__name">Salesforce</span>
+          <span class="sponsors__service">
+          
+          
+            PSF Sponsor
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://getsentry.com/for/python">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b1dc2c04aa1a8efbacd6dc6254bb63429af47b41/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f73656e7472792d77686974652d6c6f676f2d31556836754c32452e706e67" alt=Sentry loading=lazy>
+          <span class="sponsors__name">Sentry</span>
+          <span class="sponsors__service">
+          
+          
+            Error logging
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+      
+      
+        <a class="sponsors__sponsor" target="_blank" rel="noopener" href="https://statuspage.io">
+          <img class=sponsors__image src="https://warehouse-camo.ingress.cmh1.psfhosted.org/b611884ff90435a0575dbab7d9b0d3e60f136466/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f707970692d6173736574732f73706f6e736f726c6f676f732f737461747573706167652d77686974652d6c6f676f2d5467476c6a4a2d502e706e67" alt=StatusPage loading=lazy>
+          <span class="sponsors__name">StatusPage</span>
+          <span class="sponsors__service">
+          
+          
+            Status page
+          
+          </span>
+        </a>
+      
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+</div>
+
+    
+  </body>
+
+</html>

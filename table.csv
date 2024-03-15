@@ -1,0 +1,916 @@
+package,rank,item,label
+pandas,32,home,Homepage
+pandas,32,book,Documentation
+pandas,32,github,Repository
+numpy,31,home,Homepage
+numpy,31,book,Documentation
+numpy,31,cloud-download-alt,Download
+numpy,31,scroll,Release notes
+numpy,31,github,Source
+numpy,31,bug,Tracker
+requests,31,home,Homepage
+requests,31,book,Documentation
+requests,31,github,Source
+Django,30,home,Homepage
+Django,30,book,Documentation
+Django,30,donate,Funding
+Django,30,scroll,Release notes
+Django,30,github,Source
+Django,30,bug,Tracker
+Flask,30,scroll,Changes
+Flask,30,discord,Chat
+Flask,30,book,Documentation
+Flask,30,donate,Donate
+Flask,30,bug,Issue Tracker
+Flask,30,github,Source Code
+Pillow,29,scroll,Changelog
+Pillow,29,book,Documentation
+Pillow,29,donate,Funding
+Pillow,29,home,Homepage
+Pillow,29,mastodon,Mastodon
+Pillow,29,scroll,Release notes
+Pillow,29,github,Source
+Pillow,29,twitter,Twitter
+Sphinx,29,scroll,Changelog
+Sphinx,29,github,Code
+Sphinx,29,cloud-download-alt,Download
+Sphinx,29,home,Homepage
+Sphinx,29,bug,Issue tracker
+matplotlib,29,home,Homepage
+matplotlib,29,cloud-download-alt,Download
+matplotlib,29,bug,Bug Tracker
+matplotlib,29,book,Documentation
+matplotlib,29,donate,Donate
+matplotlib,29,external-link-square-alt,Forum
+matplotlib,29,github,Source Code
+scikit-learn,29,home,Homepage
+scikit-learn,29,cloud-download-alt,Download
+scikit-learn,29,bug,Bug Tracker
+scikit-learn,29,book,Documentation
+scikit-learn,29,github,Source Code
+urllib3,29,scroll,Changelog
+urllib3,29,github,Code
+urllib3,29,book,Documentation
+urllib3,29,bug,Issue tracker
+Jinja2,28,home,Homepage
+Jinja2,28,scroll,Changes
+Jinja2,28,discord,Chat
+Jinja2,28,book,Documentation
+Jinja2,28,donate,Donate
+Jinja2,28,bug,Issue Tracker
+Jinja2,28,github,Source Code
+Pygments,28,bug,Bug Tracker
+Pygments,28,scroll,Changelog
+Pygments,28,book,Documentation
+Pygments,28,home,Homepage
+Pygments,28,github,Source
+SQLAlchemy,28,home,Homepage
+SQLAlchemy,28,book,Documentation
+SQLAlchemy,28,bug,Issue Tracker
+black,28,scroll,Changelog
+black,28,home,Homepage
+click,28,home,Homepage
+click,28,scroll,Changes
+click,28,discord,Chat
+click,28,book,Documentation
+click,28,donate,Donate
+click,28,bug,Issue Tracker
+click,28,github,Source Code
+flake8,28,home,Homepage
+ipython,28,book,Documentation
+ipython,28,donate,Funding
+ipython,28,home,Homepage
+ipython,28,github,Source
+ipython,28,bug,Tracker
+protobuf,28,home,Homepage
+pylint,28,bug,Bug Tracker
+pylint,28,discord,Discord Server
+pylint,28,book,Docs: Contributor Guide
+pylint,28,book,Docs: User Guide
+pylint,28,home,homepage
+pylint,28,github,Source Code
+pylint,28,scroll,What's New
+scipy,28,home,Homepage
+scipy,28,book,Documentation
+scipy,28,cloud-download-alt,Download
+scipy,28,github,Source
+scipy,28,bug,Tracker
+torch,28,home,Homepage
+torch,28,cloud-download-alt,Download
+aiohttp,27,home,Homepage
+aiohttp,27,external-link-square-alt,Chat: Matrix
+aiohttp,27,external-link-square-alt,Chat: Matrix Space
+aiohttp,27,github,CI: GitHub Actions
+aiohttp,27,tasks,Coverage: codecov
+aiohttp,27,book,Docs: Changelog
+aiohttp,27,book,Docs: RTD
+aiohttp,27,github,GitHub: issues
+aiohttp,27,github,GitHub: repo
+attrs,27,scroll,Changelog
+attrs,27,book,Documentation
+attrs,27,donate,Funding
+attrs,27,github,GitHub
+attrs,27,external-link-square-alt,Tidelift
+boto3,27,home,Homepage
+boto3,27,book,Documentation
+boto3,27,github,Source
+certifi,27,home,Homepage
+certifi,27,github,Source
+coverage,27,home,Homepage
+coverage,27,book,Documentation
+coverage,27,donate,Funding
+coverage,27,bug,Issues
+coverage,27,mastodon,Mastodon
+coverage,27,external-link-square-alt,Mastodon (nedbat)
+isort,27,home,Homepage
+isort,27,scroll,Changelog
+isort,27,book,Documentation
+isort,27,github,Repository
+mypy,27,home,Homepage
+mypy,27,scroll,Changelog
+mypy,27,book,Documentation
+mypy,27,bug,Issues
+mypy,27,github,Repository
+networkx,27,bug,Bug Tracker
+networkx,27,book,Documentation
+networkx,27,home,Homepage
+networkx,27,github,Source Code
+psutil,27,home,Homepage
+python-dotenv,27,home,Homepage
+redis,27,home,Homepage
+redis,27,scroll,Changes
+redis,27,github,Code
+redis,27,book,Documentation
+redis,27,bug,Issue tracker
+setuptools,27,home,Homepage
+setuptools,27,scroll,Changelog
+setuptools,27,book,Documentation
+PyYAML,26,home,Homepage
+PyYAML,26,cloud-download-alt,Download
+PyYAML,26,bug,Bug Tracker
+PyYAML,26,github,CI
+PyYAML,26,book,Documentation
+PyYAML,26,external-link-square-alt,Mailing lists
+PyYAML,26,github,Source Code
+Scrapy,26,home,Homepage
+Scrapy,26,book,Documentation
+Scrapy,26,github,Source
+Scrapy,26,bug,Tracker
+Werkzeug,26,scroll,Changes
+Werkzeug,26,discord,Chat
+Werkzeug,26,book,Documentation
+Werkzeug,26,donate,Donate
+Werkzeug,26,bug,Issue Tracker
+Werkzeug,26,github,Source Code
+chardet,26,home,Homepage
+chardet,26,book,Documentation
+chardet,26,github,GitHub Project
+chardet,26,bug,Issue Tracker
+cryptography,26,scroll,changelog
+cryptography,26,book,documentation
+cryptography,26,home,homepage
+cryptography,26,bug,issues
+cryptography,26,github,source
+future,26,home,Homepage
+future,26,github,Source
+grpcio,26,home,Homepage
+grpcio,26,bug,Bug Tracker
+grpcio,26,book,Documentation
+grpcio,26,github,Source Code
+gunicorn,26,home,Homepage
+gunicorn,26,book,Documentation
+gunicorn,26,bug,Issue tracker
+gunicorn,26,github,Source code
+jsonschema,26,scroll,Changelog
+jsonschema,26,book,Documentation
+jsonschema,26,donate,Funding
+jsonschema,26,home,Homepage
+jsonschema,26,bug,Issues
+jsonschema,26,github,Source
+jsonschema,26,external-link-square-alt,Tidelift
+lxml,26,home,Homepage
+lxml,26,github,Source
+opencv-python,26,home,Homepage
+pre-commit,26,home,Homepage
+pyspark,26,home,Homepage
+pytz,26,home,Homepage
+pytz,26,cloud-download-alt,Download
+scikit-image,26,home,Homepage
+scikit-image,26,book,Documentation
+scikit-image,26,cloud-download-alt,Download
+scikit-image,26,github,Source
+scikit-image,26,bug,Tracker
+six,26,home,Homepage
+tox,26,book,Documentation
+tox,26,home,Homepage
+tox,26,scroll,Release Notes
+tox,26,github,Source
+tox,26,bug,Tracker
+tqdm,26,scroll,changelog
+tqdm,26,home,homepage
+tqdm,26,github,repository
+tqdm,26,github,wiki
+Cython,25,home,Homepage
+Cython,25,bug,Bug Tracker
+Cython,25,book,Documentation
+Cython,25,book,Donate
+Cython,25,github,Source Code
+Cython,25,google,User Group
+Faker,25,home,Homepage
+Faker,25,bug,Bug Tracker
+Faker,25,scroll,Changes
+Faker,25,book,Documentation
+Faker,25,github,Source Code
+MarkupSafe,25,home,Homepage
+MarkupSafe,25,scroll,Changes
+MarkupSafe,25,discord,Chat
+MarkupSafe,25,book,Documentation
+MarkupSafe,25,donate,Donate
+MarkupSafe,25,bug,Issue Tracker
+MarkupSafe,25,github,Source Code
+celery,25,home,Homepage
+celery,25,scroll,Changelog
+celery,25,github,Code
+celery,25,book,Documentation
+celery,25,donate,Funding
+celery,25,bug,Tracker
+colorama,25,home,Homepage
+grpcio-tools,25,home,Homepage
+grpcio-tools,25,bug,Bug Tracker
+grpcio-tools,25,github,Source Code
+h5py,25,external-link-square-alt,Discussion forum
+h5py,25,book,Documentation
+h5py,25,home,Homepage
+h5py,25,scroll,Release notes
+h5py,25,github,Source
+idna,25,scroll,Changelog
+idna,25,bug,Issue tracker
+idna,25,github,Source
+joblib,25,home,Homepage
+joblib,25,github,Source
+notebook,25,book,Documentation
+notebook,25,home,Homepage
+notebook,25,github,Source
+notebook,25,bug,Tracker
+packaging,25,book,Documentation
+packaging,25,github,Source
+peewee,25,home,Homepage
+peewee,25,book,Documentation
+peewee,25,github,Source
+pip,25,scroll,Changelog
+pip,25,book,Documentation
+pip,25,home,Homepage
+pip,25,github,Source
+pydantic,25,scroll,Changelog
+pydantic,25,book,Documentation
+pydantic,25,donate,Funding
+pydantic,25,home,Homepage
+pydantic,25,github,Source
+pytest-cov,25,home,Homepage
+pytest-cov,25,scroll,Changelog
+pytest-cov,25,book,Documentation
+pytest-cov,25,bug,Issue Tracker
+seaborn,25,book,Docs
+seaborn,25,github,Source
+sphinx-rtd-theme,25,home,Homepage
+sphinx-rtd-theme,25,bug,Issue Tracker
+sphinx-rtd-theme,25,github,Source Code
+tornado,25,home,Homepage
+tornado,25,github,Source
+twine,25,home,Homepage
+twine,25,book,Documentation
+twine,25,python,Packaging tutorial
+twine,25,github,Source
+typing-extensions,25,bug,Bug Tracker
+typing-extensions,25,scroll,Changes
+typing-extensions,25,book,Documentation
+typing-extensions,25,home,Home
+typing-extensions,25,github,Q & A
+typing-extensions,25,github,Repository
+watchdog,25,home,Homepage
+watchdog,25,scroll,Changelog
+watchdog,25,book,Documentation
+watchdog,25,bug,Issues
+watchdog,25,github,Source
+Flask-Login,24,home,Homepage
+Flask-Login,24,scroll,Changes
+Flask-Login,24,book,Documentation
+Flask-Login,24,bug,Issue Tracker
+Flask-Login,24,github,Source Code
+GitPython,24,home,Homepage
+Markdown,24,scroll,Changelog
+Markdown,24,book,Documentation
+Markdown,24,home,Homepage
+Markdown,24,bug,Issue Tracker
+Markdown,24,github,Repository
+PyGithub,24,book,Documentation
+PyGithub,24,github,Source
+PyGithub,24,bug,Tracker
+Twisted,24,scroll,Changelog
+Twisted,24,book,Documentation
+Twisted,24,home,Homepage
+Twisted,24,bug,Issues
+Twisted,24,github,Source
+Twisted,24,twitter,Twitter
+XlsxWriter,24,home,Homepage
+ansible,24,home,Homepage
+ansible,24,github,Build Data
+ansible,24,book,Code of Conduct
+ansible,24,book,Documentation
+ansible,24,external-link-square-alt,Forum
+ansible,24,book,Mailing lists
+arrow,24,book,Documentation
+arrow,24,bug,Issues
+arrow,24,github,Source
+awscli,24,home,Homepage
+awscli,24,scroll,Changelog
+awscli,24,book,Reference
+awscli,24,github,Source
+bandit,24,home,Homepage
+bandit,24,bug,Issue Tracker
+bandit,24,scroll,Release Notes
+bandit,24,github,Source Code
+bcrypt,24,home,homepage
+bokeh,24,book,documentation
+bokeh,24,home,homepage
+bokeh,24,github,repository
+boto,24,home,Homepage
+dask,24,home,Homepage
+discord.py,24,home,Homepage
+discord.py,24,book,Documentation
+discord.py,24,bug,Issue tracker
+django-filter,24,bug,Bug Tracker
+django-filter,24,scroll,Changelog
+django-filter,24,book,Documentation
+django-filter,24,home,Homepage
+django-filter,24,github,Source Code
+djangorestframework,24,home,Homepage
+djangorestframework,24,scroll,Changelog
+djangorestframework,24,donate,Funding
+djangorestframework,24,github,Source
+docker,24,home,Homepage
+docker,24,scroll,Changelog
+docker,24,book,Documentation
+docker,24,github,Source
+docker,24,bug,Tracker
+elasticsearch,24,home,Homepage
+elasticsearch,24,book,Documentation
+elasticsearch,24,bug,Issue Tracker
+elasticsearch,24,github,Source Code
+fake-useragent,24,home,Homepage
+fastapi,24,book,Documentation
+fastapi,24,home,Homepage
+fastapi,24,github,Repository
+freezegun,24,home,Homepage
+freezegun,24,bug,Bug Tracker
+freezegun,24,scroll,Changes
+freezegun,24,book,Documentation
+freezegun,24,github,Source Code
+geopy,24,home,Homepage
+geopy,24,cloud-download-alt,Download
+gevent,24,home,Homepage
+gevent,24,bug,Bug Tracker
+gevent,24,book,Documentation
+gevent,24,github,Source Code
+google-api-python-client,24,home,Homepage
+jupyterlab,24,scroll,Changelog
+jupyterlab,24,book,Documentation
+jupyterlab,24,gitter,Gitter
+jupyterlab,24,home,Homepage
+jupyterlab,24,bug,Issues
+jupyterlab,24,cube,Pypi
+jupyterlab,24,github,Source
+loguru,24,home,Homepage
+loguru,24,cloud-download-alt,Download
+loguru,24,scroll,Changelog
+loguru,24,book,Documentation
+marshmallow,24,scroll,Changelog
+marshmallow,24,donate,Funding
+marshmallow,24,bug,Issues
+marshmallow,24,github,Source
+marshmallow,24,external-link-square-alt,Tidelift
+more-itertools,24,home,Homepage
+moto,24,home,Homepage
+moto,24,scroll,Changelog
+moto,24,book,Documentation
+moto,24,bug,Issue tracker
+nltk,24,home,Homepage
+nltk,24,book,Documentation
+nltk,24,bug,Issue Tracker
+nltk,24,github,Source Code
+nose,24,home,Homepage
+paramiko,24,home,Homepage
+paramiko,24,scroll,Changelog
+paramiko,24,tasks,CI
+paramiko,24,book,Docs
+paramiko,24,bug,Issues
+paramiko,24,github,Source
+pluggy,24,home,Homepage
+psycopg2,24,home,Homepage
+psycopg2,24,github,Code
+psycopg2,24,book,Documentation
+psycopg2,24,cloud-download-alt,Download
+psycopg2,24,bug,Issue Tracker
+pyarrow,24,home,Homepage
+pyarrow,24,book,Documentation
+pyarrow,24,github,Source
+pycodestyle,24,home,Homepage
+pycodestyle,24,scroll,Changes
+pymongo,24,home,Homepage
+pyparsing,24,home,Homepage
+pytest,24,scroll,Changelog
+pytest,24,home,Homepage
+pytest,24,github,Source
+pytest,24,bug,Tracker
+pytest,24,twitter,Twitter
+pyzmq,24,home,Homepage
+pyzmq,24,github,Source
+sanic,24,home,Homepage
+schedule,24,home,Homepage
+schedule,24,cloud-download-alt,Download
+selenium,24,home,Homepage
+statsmodels,24,home,Homepage
+statsmodels,24,bug,Bug Tracker
+statsmodels,24,book,Documentation
+statsmodels,24,github,Source Code
+sympy,24,home,Homepage
+sympy,24,github,Source
+toml,24,home,Homepage
+transformers,24,home,Homepage
+ujson,24,home,Homepage
+ujson,24,cloud-download-alt,Download
+ujson,24,github,Source
+virtualenv,24,book,Documentation
+virtualenv,24,home,Homepage
+virtualenv,24,github,Source
+virtualenv,24,bug,Tracker
+wagtail,24,home,Homepage
+wagtail,24,scroll,Changelog
+wagtail,24,book,Documentation
+wagtail,24,github,Source
+wagtail,24,bug,Tracker
+websocket-client,24,home,Homepage
+websocket-client,24,cloud-download-alt,Download
+websocket-client,24,book,Documentation
+websocket-client,24,github,Source
+wheel,24,scroll,Changelog
+wheel,24,book,Documentation
+wheel,24,bug,Issue Tracker
+wheel,24,github,Source
+xarray,24,book,Documentation
+xarray,24,home,homepage
+xarray,24,bug,issue-tracker
+xarray,24,youtube,SciPy2015-talk
+xarray,24,github,source-code
+xgboost,24,book,documentation
+xgboost,24,github,repository
+youtube_dl,24,home,Homepage
+Babel,23,home,Homepage
+Babel,23,github,Source
+Flask-SQLAlchemy,23,scroll,Changes
+Flask-SQLAlchemy,23,discord,Chat
+Flask-SQLAlchemy,23,book,Documentation
+Flask-SQLAlchemy,23,donate,Donate
+Flask-SQLAlchemy,23,bug,Issue Tracker
+Flask-SQLAlchemy,23,github,Source Code
+Flask-WTF,23,scroll,Changes
+Flask-WTF,23,discord,Chat
+Flask-WTF,23,book,Documentation
+Flask-WTF,23,bug,Issue Tracker
+Flask-WTF,23,github,Source Code
+Mako,23,home,Homepage
+Mako,23,book,Documentation
+Mako,23,bug,Issue Tracker
+PyJWT,23,home,Homepage
+WTForms,23,scroll,Changes
+WTForms,23,discord,Chat
+WTForms,23,book,Documentation
+WTForms,23,bug,Issue Tracker
+WTForms,23,github,Source Code
+alembic,23,home,Homepage
+alembic,23,scroll,Changelog
+alembic,23,book,Documentation
+alembic,23,bug,Issue Tracker
+alembic,23,github,Source
+appdirs,23,home,Homepage
+argcomplete,23,home,Homepage
+argcomplete,23,scroll,Change Log
+argcomplete,23,book,Documentation
+argcomplete,23,bug,Issue Tracker
+argcomplete,23,github,Source Code
+astroid,23,bug,Bug tracker
+astroid,23,discord,Discord server
+astroid,23,book,Docs
+astroid,23,github,Source Code
+autopep8,23,home,Homepage
+azure-common,23,home,Homepage
+azure-storage-blob,23,home,Homepage
+biopython,23,home,Homepage
+biopython,23,book,Documentation
+biopython,23,github,Source
+biopython,23,bug,Tracker
+bleach,23,home,Homepage
+blinker,23,discord,Chat
+blinker,23,book,Documentation
+blinker,23,home,Homepage
+blinker,23,bug,Issue Tracker
+blinker,23,github,Source Code
+botocore,23,home,Homepage
+bottle,23,home,Homepage
+cachetools,23,home,Homepage
+cloudpickle,23,home,Homepage
+cookiecutter,23,home,Homepage
+cookiecutter,23,discord,Discord
+cookiecutter,23,book,Documentation
+cookiecutter,23,bug,Issues
+dash,23,home,Homepage
+dash,23,book,Documentation
+dash,23,bug,Issue Tracker
+dash,23,github,Source
+datasets,23,home,Homepage
+datasets,23,cloud-download-alt,Download
+dateparser,23,home,Homepage
+dateparser,23,scroll,History
+decorator,23,home,Homepage
+django-allauth,23,home,Homepage
+django-allauth,23,scroll,Changelog
+django-allauth,23,book,Documentation
+django-allauth,23,donate,Donate
+django-allauth,23,github,Source
+django-allauth,23,bug,Tracker
+dnspython,23,book,documentation
+dnspython,23,home,homepage
+dnspython,23,bug,issues
+dnspython,23,github,repository
+feedparser,23,home,Homepage
+feedparser,23,cloud-download-alt,Download
+fire,23,home,Homepage
+gensim,23,home,Homepage
+gensim,23,cloud-download-alt,Download
+gensim,23,github,Source
+greenlet,23,home,Homepage
+greenlet,23,bug,Bug Tracker
+greenlet,23,book,Documentation
+greenlet,23,github,Source Code
+gym,23,home,Homepage
+httpx,23,scroll,Changelog
+httpx,23,book,Documentation
+httpx,23,home,Homepage
+httpx,23,github,Source
+hypothesis,23,home,Homepage
+hypothesis,23,scroll,Changelog
+hypothesis,23,book,Documentation
+hypothesis,23,bug,Issues
+hypothesis,23,github,Source
+importlib-metadata,23,home,Homepage
+ipykernel,23,book,Documentation
+ipykernel,23,donate,Funding
+ipykernel,23,home,Homepage
+ipykernel,23,github,Source
+ipykernel,23,bug,Tracker
+itsdangerous,23,home,Homepage
+itsdangerous,23,scroll,Changes
+itsdangerous,23,discord,Chat
+itsdangerous,23,book,Documentation
+itsdangerous,23,donate,Donate
+itsdangerous,23,bug,Issue Tracker
+itsdangerous,23,github,Source Code
+itsdangerous,23,twitter,Twitter
+jmespath,23,home,Homepage
+kafka-python,23,home,Homepage
+kiwisolver,23,scroll,changelog
+kiwisolver,23,book,documentation
+kiwisolver,23,home,homepage
+kiwisolver,23,github,repository
+kubernetes,23,home,Homepage
+mistune,23,book,Documentation
+mistune,23,donate,Donate
+mistune,23,github,Source
+mkdocs,23,book,Documentation
+mkdocs,23,scroll,History
+mkdocs,23,bug,Issues
+mkdocs,23,github,Source
+mock,23,home,Homepage
+mock,23,github,Source
+mysqlclient,23,book,Documentation
+mysqlclient,23,github,Project
+nbconvert,23,home,Homepage
+netaddr,23,scroll,Changelog
+netaddr,23,book,Documentation
+netaddr,23,cloud-download-alt,Download
+netaddr,23,bug,Issue tracker
+netaddr,23,github,Repository
+oauthlib,23,home,Homepage
+pendulum,23,home,Homepage
+pendulum,23,book,Documentation
+pendulum,23,github,Repository
+pendulum,23,home,Homepage
+pendulum,23,book,Documentation
+pendulum,23,github,Repository
+pexpect,23,home,Homepage
+pexpect,23,bug,Bug Tracker
+pexpect,23,book,Documentation
+pexpect,23,scroll,History
+pexpect,23,github,Source Code
+phonenumbers,23,home,Homepage
+pip-tools,23,scroll,changelog
+pip-tools,23,book,documentation
+pip-tools,23,home,homepage
+pip-tools,23,github,repository
+poetry,23,home,Homepage
+poetry,23,scroll,Changelog
+poetry,23,book,Documentation
+poetry,23,github,Repository
+psycopg2-binary,23,home,Homepage
+psycopg2-binary,23,github,Code
+psycopg2-binary,23,book,Documentation
+psycopg2-binary,23,cloud-download-alt,Download
+psycopg2-binary,23,bug,Issue Tracker
+pyOpenSSL,23,home,Homepage
+pyOpenSSL,23,github,Source
+pybind11,23,home,Homepage
+pybind11,23,cloud-download-alt,Download
+pybind11,23,bug,Bug Tracker
+pybind11,23,scroll,Changelog
+pybind11,23,gitter,Chat
+pybind11,23,github,Discussions
+pybind11,23,book,Documentation
+pyflakes,23,home,Homepage
+pygame,23,home,Homepage
+pygame,23,bug,Bug Tracker
+pygame,23,book,Documentation
+pygame,23,github,Source
+pygame,23,twitter,Twitter
+pytest-django,23,scroll,Changelog
+pytest-django,23,book,Documentation
+pytest-django,23,github,Repository
+pytest-xdist,23,home,Homepage
+pytest-xdist,23,scroll,Changelog
+pytest-xdist,23,book,Documentation
+pytest-xdist,23,github,Source
+pytest-xdist,23,bug,Tracker
+python-docx,23,scroll,Changelog
+python-docx,23,book,Documentation
+python-docx,23,home,Homepage
+python-docx,23,github,Repository
+python-slugify,23,home,Homepage
+python-socketio,23,bug,Bug Tracker
+python-socketio,23,home,Homepage
+ray,23,home,Homepage
+requests-oauthlib,23,home,Homepage
+responses,23,home,Homepage
+responses,23,bug,Bug Tracker
+responses,23,scroll,Changes
+responses,23,book,Documentation
+responses,23,github,Source Code
+rich,23,home,Homepage
+rich,23,book,Documentation
+robotframework,23,home,Homepage
+robotframework,23,cloud-download-alt,Download
+robotframework,23,book,Documentation
+robotframework,23,bug,Issue Tracker
+robotframework,23,scroll,Release Notes
+robotframework,23,slack,Slack
+robotframework,23,github,Source
+robotframework,23,home,Homepage
+robotframework,23,cloud-download-alt,Download
+robotframework,23,book,Documentation
+robotframework,23,bug,Issue Tracker
+robotframework,23,scroll,Release Notes
+robotframework,23,slack,Slack
+robotframework,23,github,Source
+simplejson,23,home,Homepage
+spacy,23,home,Homepage
+spacy,23,scroll,Release notes
+spacy,23,github,Source
+sphinx-autobuild,23,scroll,Changelog
+sphinx-autobuild,23,book,Documentation
+sphinx-autobuild,23,cloud-download-alt,Download
+sphinx-autobuild,23,bug,Issue tracker
+sphinx-autobuild,23,github,Source
+sqlparse,23,book,Documentation
+sqlparse,23,home,Home
+sqlparse,23,scroll,Release Notes
+sqlparse,23,github,Source
+sqlparse,23,bug,Tracker
+structlog,23,scroll,Changelog
+structlog,23,book,Documentation
+structlog,23,donate,Funding
+structlog,23,github,GitHub
+structlog,23,mastodon,Mastodon
+structlog,23,external-link-square-alt,Tidelift
+structlog,23,twitter,Twitter
+tabulate,23,home,Homepage
+tensorboard,23,home,Homepage
+tensorboardX,23,home,Homepage
+torchvision,23,home,Homepage
+traitlets,23,book,Documentation
+traitlets,23,donate,Funding
+traitlets,23,home,Homepage
+traitlets,23,github,Source
+traitlets,23,bug,Tracker
+waitress,23,home,Homepage
+waitress,23,scroll,Changelog
+waitress,23,book,Documentation
+waitress,23,bug,Issue Tracker
+wcwidth,23,home,Homepage
+websockets,23,scroll,Changelog
+websockets,23,book,Documentation
+websockets,23,donate,Funding
+websockets,23,home,Homepage
+websockets,23,bug,Tracker
+wrapt,23,home,Homepage
+wrapt,23,bug,Bug Tracker
+wrapt,23,scroll,Changelog
+wrapt,23,book,Documentation
+Brotli,22,home,Homepage
+Flask-Migrate,22,bug,Bug Tracker
+Flask-Migrate,22,home,Homepage
+PySimpleGUI,22,home,Homepage
+PySocks,22,home,Homepage
+QtPy,22,home,Homepage
+QtPy,22,bug,Bug Tracker
+QtPy,22,github,Github
+QtPy,22,external-link-square-alt,Parent Project
+absl-py,22,home,Homepage
+acme,22,home,Homepage
+altair,22,book,Documentation
+altair,22,github,Source
+asn1crypto,22,home,Homepage
+asyncpg,22,github,github
+azure-mgmt-compute,22,home,Homepage
+cached-property,22,home,Homepage
+ccxt,22,home,Homepage
+ccxt,22,discord,Discord
+ccxt,22,book,Documentation
+ccxt,22,donate,Funding
+ccxt,22,twitter,Twitter
+configparser,22,home,Homepage
+confluent-kafka,22,home,Homepage
+coveralls,22,home,Homepage
+coveralls,22,scroll,Changelog
+coveralls,22,book,Docs
+discord,22,home,Homepage
+distributed,22,home,Homepage
+distributed,22,github,Source
+django-cms,22,home,Homepage
+django-cms,22,external-link-square-alt,Community
+django-cms,22,book,Documentation
+django-cms,22,scroll,Release notes
+django-cms,22,github,Source
+django-cors-headers,22,scroll,Changelog
+django-cors-headers,22,donate,Funding
+django-cors-headers,22,github,Repository
+django-extensions,22,home,Homepage
+django-extensions,22,scroll,Changelog
+django-extensions,22,book,Documentation
+django-extensions,22,github,Source
+django-extensions,22,bug,Tracker
+dominate,22,home,Homepage
+dominate,22,github,Source
+factory-boy,22,home,Homepage
+fonttools,22,home,Homepage
+fsspec,22,home,Homepage
+fsspec,22,scroll,Changelog
+fsspec,22,book,Documentation
+geopandas,22,home,Home
+geopandas,22,github,Repository
+google-auth,22,home,Homepage
+google-cloud-bigquery,22,home,Homepage
+html2text,22,home,Homepage
+html5lib,22,home,Homepage
+invoke,22,home,Homepage
+invoke,22,scroll,Changelog
+invoke,22,tasks,CI
+invoke,22,book,Docs
+invoke,22,bug,Issues
+invoke,22,github,Source
+jieba,22,home,Homepage
+jsonpickle,22,home,Homepage
+jupyter-client,22,book,Documentation
+jupyter-client,22,home,Homepage
+jupyter-client,22,github,Source
+keras,22,home,Homepage
+keyring,22,home,Homepage
+kombu,22,home,Homepage
+kombu,22,github,Source
+motor,22,home,Homepage
+msgpack,22,scroll,Changelog
+msgpack,22,book,Documentation
+msgpack,22,home,Homepage
+msgpack,22,github,Repository
+msgpack,22,bug,Tracker
+mutagen,22,home,Homepage
+nbformat,22,scroll,Changelog
+nbformat,22,book,Documentation
+nbformat,22,home,Homepage
+nbformat,22,github,Repository
+netCDF4,22,book,Documentation
+netCDF4,22,github,Repository
+nibabel,22,github,Development
+nibabel,22,home,Homepage
+numexpr,22,home,Homepage
+numpydoc,22,home,Homepage
+numpydoc,22,github,Source
+onnx,22,home,Homepage
+onnx,22,github,Repository
+parse,22,home,homepage
+parso,22,home,Homepage
+pelican,22,book,Documentation
+pelican,22,donate,Funding
+pelican,22,home,Homepage
+pelican,22,bug,Issue tracker
+pelican,22,github,Repository
+pika,22,home,Homepage
+pika,22,github,Source
+pycrypto,22,home,Homepage
+pycryptodomex,22,home,Homepage
+pycryptodomex,22,scroll,Changelog
+pycryptodomex,22,github,Source
+pydicom,22,book,documentation
+pydicom,22,cloud-download-alt,download
+pydicom,22,home,homepage
+pydicom,22,github,repository
+pydot,22,bug,Bug Tracker
+pydot,22,scroll,Changelog
+pydot,22,home,Homepage
+pyfiglet,22,home,Homepage
+pypandoc,22,home,Homepage
+pyproj,22,home,Homepage
+pyproj,22,scroll,changelog
+pyproj,22,book,documentation
+pyproj,22,home,homepage
+pyproj,22,github,repository
+pyqtgraph,22,home,Homepage
+pyqtgraph,22,book,Documentation
+pyqtgraph,22,github,Source
+pytest-flask,22,home,Homepage
+pytest-flask,22,bug,Issue tracker
+pytest-flask,22,github,Source
+pytest-html,22,home,Homepage
+pytest-html,22,github,Source
+pytest-html,22,bug,Tracker
+pytest-sugar,22,home,Homepage
+pytest-sugar,22,bug,Issue Tracker
+python-telegram-bot,22,home,Homepage
+python-telegram-bot,22,cloud-download-alt,Download
+python-telegram-bot,22,bug,Bug Tracker
+python-telegram-bot,22,scroll,Changelog
+python-telegram-bot,22,book,Documentation
+python-telegram-bot,22,scroll,News
+python-telegram-bot,22,github,Source Code
+qrcode,22,home,Homepage
+requests-cache,22,home,Homepage
+requests-cache,22,scroll,Changelog
+requests-cache,22,book,Documentation
+requests-cache,22,bug,Issues
+requests-cache,22,github,Repository
+rsa,22,home,Homepage
+rsa,22,github,Repository
+s3fs,22,home,Homepage
+s3transfer,22,home,Homepage
+semver,22,home,Homepage
+semver,22,bug,Bug Tracker
+semver,22,scroll,Changelog
+semver,22,book,Documentation
+semver,22,github,Releases
+smart-open,22,home,Homepage
+smart-open,22,cloud-download-alt,Download
+social-auth-core,22,home,Homepage
+sphinx-autodoc-typehints,22,scroll,Changelog
+sphinx-autodoc-typehints,22,home,Homepage
+sphinx-autodoc-typehints,22,github,Source
+sphinx-autodoc-typehints,22,bug,Tracker
+tenacity,22,home,Homepage
+tensorflow-probability,22,home,Homepage
+tinydb,22,home,Homepage
+tinydb,22,scroll,Changelog
+tinydb,22,book,Documentation
+tinydb,22,bug,Issues
+tldextract,22,home,Homepage
+toolz,22,home,Homepage
+troposphere,22,home,Homepage
+troposphere,22,scroll,Changelog
+troposphere,22,github,Source
+troposphere,22,bug,Tracker
+uWSGI,22,home,Homepage
+uvicorn,22,scroll,Changelog
+uvicorn,22,donate,Funding
+uvicorn,22,home,Homepage
+uvicorn,22,github,Source
+uvloop,22,github,github
+web3,22,home,Homepage
+xmltodict,22,home,Homepage
+yapf,22,scroll,changelog
+yapf,22,github,url
+yarl,22,home,Homepage
+yarl,22,external-link-square-alt,Chat: Matrix
+yarl,22,external-link-square-alt,Chat: Matrix Space
+yarl,22,github,CI: GitHub Workflows
+yarl,22,github,Code of Conduct
+yarl,22,tasks,Coverage: codecov
+yarl,22,book,Docs: Changelog
+yarl,22,book,Docs: RTD
+yarl,22,github,GitHub: issues
+yarl,22,github,GitHub: repo
+zipp,22,home,Homepage

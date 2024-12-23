@@ -18,13 +18,13 @@ all: requirements.txt dev-requirements.txt ../binder/requirements.txt
 
 .PHONY: install
 install: requirements.txt dev-requirements.txt
-	pip-sync $^
+	uv pip sync $^
 
 dev-requirements.txt: dev-requirements.in requirements.txt
-	pip-compile $<
+	uv pip compile $< --output-file $@
 
 ../binder/requirements.txt: requirements.in requirements.txt
 	cat requirements.in | awk -F"[<=>~!]" '{print $$1}' | xargs -I{} sed -n '/^{}==/p' requirements.txt > $@
 
 %.txt: %.in
-	pip-compile $<
+	uv pip compile $< --output-file $@

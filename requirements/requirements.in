@@ -6,8 +6,8 @@ ipywidgets
 jupytext
 lxml
 matplotlib
-nbclient==0.6.8
+nbclient
 pandas
 python-dotenv
 requests
-voila==0.5.0a0
+voila

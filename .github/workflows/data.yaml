@@ -18,8 +18,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./requirements/dev-requirements.txt
-          make install-requirements
+          pip install uv
+          uv pip install --system -r ./requirements/requirements.txt
       - name: Generate data
         env:
           LIBRARIES_API_KEY: ${{secrets.LIBRARIES_API_KEY}}

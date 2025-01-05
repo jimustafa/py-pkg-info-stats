@@ -44,7 +44,7 @@ data: ./data/table.csv | ./build
 	cp ./data/table.csv ./build/
 
 ./data/table.csv: generate-data.py
-	mkdir -p ./data/html
+	mkdir -p ./data/json
 	python generate-data.py
 
 .PHONY: check

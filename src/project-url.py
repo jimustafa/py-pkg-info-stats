@@ -19,7 +19,7 @@ df = pd.read_csv(pathlib.Path().resolve() / 'table.csv')
 query_string = os.environ.get('QUERY_STRING', '')
 query_parameters = urllib.parse.parse_qs(query_string)
 
-initial_item = query_parameters.get('item', ['home'])[0]
+initial_item = query_parameters.get('item', ['homepage'])[0]
 
 parameters = {
     'item': initial_item,
@@ -81,7 +81,7 @@ class Figure():
         self.ax.set_axisbelow(True)
         self.ax.grid(True, which='both')
 
-        self.fig.canvas.draw()
+        self.fig.canvas.draw_idle()
 
     def plot(self):
         df_tmp = df[df['item']==parameters['item']]['label']
@@ -156,14 +156,15 @@ table = Table()
 item = v.Select(
     label='Item',
     items=[
-        'home',
-        'book',
-        'bug',
-        'scroll',
-        'donate',
+        'homepage',
+        'documentation',
+        'issues',
+        'changelog',
+        'funding',
         'github',
         'gitlab',
         'bitbucket',
+        'other',
         ],
     value=parameters['item'],
 )

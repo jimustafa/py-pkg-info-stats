@@ -1,0 +1,8 @@
+{
+  "CI": "https://app.circleci.com/pipelines/github/paramiko/paramiko",
+  "Changelog": "https://www.paramiko.org/changelog.html",
+  "Docs": "https://docs.paramiko.org",
+  "Homepage": "https://paramiko.org",
+  "Issues": "https://github.com/paramiko/paramiko/issues",
+  "Source": "https://github.com/paramiko/paramiko"
+}

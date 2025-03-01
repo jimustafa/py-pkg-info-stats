@@ -1,0 +1,6 @@
+{
+  "Changelog": "https://wheel.readthedocs.io/en/stable/news.html",
+  "Documentation": "https://wheel.readthedocs.io/",
+  "Issue Tracker": "https://github.com/pypa/wheel/issues",
+  "Source": "https://github.com/pypa/wheel"
+}

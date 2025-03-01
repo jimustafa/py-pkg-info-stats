@@ -1,0 +1,8 @@
+{
+  "Changelog": "https://codeberg.org/allauth/django-allauth/src/branch/main/ChangeLog.rst",
+  "Documentation": "https://docs.allauth.org/en/latest/",
+  "Donate": "https://github.com/sponsors/pennersr",
+  "Homepage": "https://allauth.org",
+  "Source": "https://codeberg.org/allauth/django-allauth",
+  "Tracker": "https://codeberg.org/allauth/django-allauth/issues"
+}

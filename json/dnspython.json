@@ -1,0 +1,6 @@
+{
+  "documentation": "https://dnspython.readthedocs.io/en/stable/",
+  "homepage": "https://www.dnspython.org",
+  "issues": "https://github.com/rthalley/dnspython/issues",
+  "repository": "https://github.com/rthalley/dnspython.git"
+}

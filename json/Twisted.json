@@ -1,0 +1,9 @@
+{
+  "Changelog": "https://github.com/twisted/twisted/blob/HEAD/NEWS.rst",
+  "Documentation": "https://docs.twisted.org/",
+  "Funding-GitHub": "https://github.com/sponsors/twisted",
+  "Funding-PSF": "https://psfmember.org/civicrm/contribute/transact/?reset=1&id=44",
+  "Homepage": "https://twisted.org/",
+  "Issues": "https://github.com/twisted/twisted/issues",
+  "Source": "https://github.com/twisted/twisted"
+}

@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://hypothesis.readthedocs.io/en/latest/changes.html",
+  "Documentation": "https://hypothesis.readthedocs.io",
+  "Homepage": "https://hypothesis.works",
+  "Issues": "https://github.com/HypothesisWorks/hypothesis/issues",
+  "Source": "https://github.com/HypothesisWorks/hypothesis/tree/master/hypothesis-python"
+}

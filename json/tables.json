@@ -1,0 +1,7 @@
+{
+  "changelog": "http://www.pytables.org/release_notes.html",
+  "documentation": "http://www.pytables.org",
+  "homepage": "http://www.pytables.org",
+  "repository": "https://github.com/PyTables/PyTables",
+  "tracker": "https://github.com/PyTables/PyTables/issues"
+}

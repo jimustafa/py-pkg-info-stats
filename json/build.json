@@ -1,0 +1,6 @@
+{
+  "changelog": "https://build.pypa.io/en/stable/changelog.html",
+  "homepage": "https://build.pypa.io",
+  "issues": "https://github.com/pypa/build/issues",
+  "source": "https://github.com/pypa/build"
+}

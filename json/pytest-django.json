@@ -1,0 +1,5 @@
+{
+  "Changelog": "https://pytest-django.readthedocs.io/en/latest/changelog.html",
+  "Documentation": "https://pytest-django.readthedocs.io/",
+  "Repository": "https://github.com/pytest-dev/pytest-django"
+}

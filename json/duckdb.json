@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://github.com/duckdb/duckdb/releases",
+  "Documentation": "https://duckdb.org/docs/api/python/overview",
+  "Homepage": "https://www.duckdb.org",
+  "Issues": "https://github.com/duckdb/duckdb/issues",
+  "Source": "https://github.com/duckdb/duckdb/blob/main/tools/pythonpkg"
+}

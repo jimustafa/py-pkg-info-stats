@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://docs.gunicorn.org/en/stable/news.html",
+  "Documentation": "https://docs.gunicorn.org",
+  "Homepage": "https://gunicorn.org",
+  "Issue tracker": "https://github.com/benoitc/gunicorn/issues",
+  "Source code": "https://github.com/benoitc/gunicorn"
+}

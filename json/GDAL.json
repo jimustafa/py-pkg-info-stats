@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://github.com/OSGeo/gdal/blob/master/NEWS.md",
+  "Documentation": "https://gdal.org",
+  "Homepage": "https://gdal.org",
+  "Issues": "https://github.com/OSGeo/gdal/issues",
+  "Repository": "https://github.com/OSGeo/GDAL.git"
+}

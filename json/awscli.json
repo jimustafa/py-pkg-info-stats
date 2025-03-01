@@ -1,0 +1,6 @@
+{
+  "Changelog": "https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst",
+  "Homepage": "http://aws.amazon.com/cli/",
+  "Reference": "https://docs.aws.amazon.com/cli/latest/reference/",
+  "Source": "https://github.com/aws/aws-cli"
+}

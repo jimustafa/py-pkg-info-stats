@@ -1,0 +1,5 @@
+{
+  "Changelog": "https://filesystem-spec.readthedocs.io/en/latest/changelog.html",
+  "Documentation": "https://filesystem-spec.readthedocs.io/en/latest/",
+  "Homepage": "https://github.com/fsspec/filesystem_spec"
+}

@@ -1,0 +1,7 @@
+{
+  "documentation": "https://docs.scipy.org/doc/scipy/",
+  "download": "https://github.com/scipy/scipy/releases",
+  "homepage": "https://scipy.org/",
+  "source": "https://github.com/scipy/scipy",
+  "tracker": "https://github.com/scipy/scipy/issues"
+}

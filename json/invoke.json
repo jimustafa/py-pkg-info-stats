@@ -1,0 +1,7 @@
+{
+  "CI": "https://app.circleci.com/pipelines/github/pyinvoke/invoke",
+  "Changelog": "https://www.pyinvoke.org/changelog.html",
+  "Docs": "https://docs.pyinvoke.org",
+  "Issues": "https://github.com/pyinvoke/invoke/issues",
+  "Source": "https://github.com/pyinvoke/invoke"
+}

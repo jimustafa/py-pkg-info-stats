@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://alembic.sqlalchemy.org/en/latest/changelog.html",
+  "Documentation": "https://alembic.sqlalchemy.org/en/latest/",
+  "Homepage": "https://alembic.sqlalchemy.org",
+  "Issue Tracker": "https://github.com/sqlalchemy/alembic/issues/",
+  "Source": "https://github.com/sqlalchemy/alembic/"
+}

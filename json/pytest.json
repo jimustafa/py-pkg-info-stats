@@ -1,0 +1,8 @@
+{
+  "Changelog": "https://docs.pytest.org/en/stable/changelog.html",
+  "Contact": "https://docs.pytest.org/en/stable/contact.html",
+  "Funding": "https://docs.pytest.org/en/stable/sponsor.html",
+  "Homepage": "https://docs.pytest.org/en/latest/",
+  "Source": "https://github.com/pytest-dev/pytest",
+  "Tracker": "https://github.com/pytest-dev/pytest/issues"
+}

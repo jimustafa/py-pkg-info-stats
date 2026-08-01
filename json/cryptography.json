@@ -1,0 +1,7 @@
+{
+  "changelog": "https://cryptography.io/en/latest/changelog/",
+  "documentation": "https://cryptography.io/",
+  "homepage": "https://github.com/pyca/cryptography",
+  "issues": "https://github.com/pyca/cryptography/issues",
+  "source": "https://github.com/pyca/cryptography/"
+}

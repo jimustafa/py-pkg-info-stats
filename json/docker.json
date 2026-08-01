@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://docker-py.readthedocs.io/en/stable/change-log.html",
+  "Documentation": "https://docker-py.readthedocs.io",
+  "Homepage": "https://github.com/docker/docker-py",
+  "Source": "https://github.com/docker/docker-py",
+  "Tracker": "https://github.com/docker/docker-py/issues"
+}

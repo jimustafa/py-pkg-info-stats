@@ -1,0 +1,7 @@
+{
+  "Changelog": "https://pytest-xdist.readthedocs.io/en/latest/changelog.html",
+  "Documentation": "https://pytest-xdist.readthedocs.io/en/latest",
+  "Homepage": "https://github.com/pytest-dev/pytest-xdist",
+  "Source": "https://github.com/pytest-dev/pytest-xdist",
+  "Tracker": "https://github.com/pytest-dev/pytest-xdist/issues"
+}

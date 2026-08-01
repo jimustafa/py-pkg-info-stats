@@ -1,0 +1,9 @@
+{
+  "Bug Tracker": "https://github.com/yaml/pyyaml/issues",
+  "CI": "https://github.com/yaml/pyyaml/actions",
+  "Documentation": "https://pyyaml.org/wiki/PyYAMLDocumentation",
+  "Download": "https://pypi.org/project/PyYAML/",
+  "Homepage": "https://pyyaml.org/",
+  "Mailing lists": "http://lists.sourceforge.net/lists/listinfo/yaml-core",
+  "Source Code": "https://github.com/yaml/pyyaml"
+}

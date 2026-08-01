@@ -1,0 +1,9 @@
+{
+  "Changelog": "https://jupyterlab.readthedocs.io/en/stable/getting_started/changelog.html",
+  "Documentation": "https://jupyterlab.readthedocs.io",
+  "Homepage": "https://jupyter.org",
+  "Issues": "https://github.com/jupyterlab/jupyterlab/issues/new/choose",
+  "Pypi": "https://pypi.org/project/jupyterlab",
+  "Source": "https://github.com/jupyterlab/jupyterlab",
+  "Zulip": "https://jupyter.zulipchat.com/#narrow/channel/469762-jupyterlab"
+}

@@ -1,0 +1,9 @@
+{
+  "Changelog": "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+  "Documentation": "https://python-jsonschema.readthedocs.io/",
+  "Funding": "https://github.com/sponsors/Julian",
+  "Homepage": "https://github.com/python-jsonschema/jsonschema",
+  "Issues": "https://github.com/python-jsonschema/jsonschema/issues/",
+  "Source": "https://github.com/python-jsonschema/jsonschema",
+  "Tidelift": "https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link"
+}

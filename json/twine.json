@@ -1,0 +1,6 @@
+{
+  "Documentation": "https://twine.readthedocs.io/en/latest/",
+  "Homepage": "https://twine.readthedocs.io/",
+  "Packaging tutorial": "https://packaging.python.org/tutorials/packaging-projects/",
+  "Source": "https://github.com/pypa/twine/"
+}

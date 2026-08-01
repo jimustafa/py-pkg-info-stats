@@ -1,0 +1,10 @@
+{
+  "Changelog": "https://github.com/langchain-ai/langchain/releases?q=%22langchain-anthropic%22",
+  "Documentation": "https://reference.langchain.com/python/integrations/langchain_anthropic/",
+  "Homepage": "https://docs.langchain.com/oss/python/integrations/providers/anthropic",
+  "Issues": "https://github.com/langchain-ai/langchain/issues",
+  "Reddit": "https://www.reddit.com/r/LangChain/",
+  "Repository": "https://github.com/langchain-ai/langchain",
+  "Slack": "https://www.langchain.com/join-community",
+  "Twitter": "https://x.com/langchain_oss"
+}

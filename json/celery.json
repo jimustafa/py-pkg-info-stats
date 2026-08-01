@@ -1,0 +1,8 @@
+{
+  "Changelog": "https://docs.celeryq.dev/en/stable/changelog.html",
+  "Code": "https://github.com/celery/celery",
+  "Documentation": "https://docs.celeryq.dev/en/stable/",
+  "Funding": "https://opencollective.com/celery",
+  "Homepage": "https://docs.celeryq.dev/",
+  "Tracker": "https://github.com/celery/celery/issues"
+}

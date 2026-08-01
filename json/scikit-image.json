@@ -1,0 +1,7 @@
+{
+  "documentation": "https://scikit-image.org/docs/stable",
+  "download": "https://pypi.org/project/scikit-image/#files",
+  "homepage": "https://scikit-image.org",
+  "source": "https://github.com/scikit-image/scikit-image",
+  "tracker": "https://github.com/scikit-image/scikit-image/issues"
+}

@@ -1,0 +1,6 @@
+{
+  "changelog": "https://github.com/pyg-team/pytorch_geometric/blob/master/CHANGELOG.md",
+  "documentation": "https://pytorch-geometric.readthedocs.io",
+  "homepage": "https://pyg.org",
+  "repository": "https://github.com/pyg-team/pytorch_geometric.git"
+}
